@@ -15,7 +15,8 @@ public class Tile {
       hasBomb = false ;
       identifier = "0" ;
     }
-    visible, flagged = false ;
+    visible = false ;
+    flagged = false ;
   }
 
   // Accessors Methods
@@ -31,25 +32,35 @@ public class Tile {
   public String getIdentifier() {
     return identifier ;
   }
-  public int numberOfBombsAround(){
-    //not implemented yet
-  }
-
   // Mutator Methods
   public void setIdentifier(String n){
+
+  }
+  public void setVisible(boolean parameter) {
+    visible = parameter ;
+  }
+  public void setFlagged(boolean parameter) {
+    flagged = parameter ;
+  }
+
+  //action methods
+  public int numberOfBombsAround(){
+
+  }
+  public void flag() {
+
+  }
+  public void unflag() {
+
+  }
+  public void reveal() {
+
+  }
+  public void blowUpNormal() {
+
+  }
+  public void blowUpCrazy() {
+
+  }
+
 }
-//action methods
-  public void flag(){
-  }
-
-  public void unflag(){
-  }
-
-  public void reveal(){
-  }
-
-  public void blowUpNormal(){
-  }
-
-  public void blowUpCrazy(){
-  }
