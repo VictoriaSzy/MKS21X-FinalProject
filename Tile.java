@@ -45,7 +45,7 @@ public class Tile {
 
   //action methods
   public int numberOfBombsAround(){
-
+    return 0 ;
   }
   public void flag() {
 
