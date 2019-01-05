@@ -23,7 +23,7 @@ public class Tile {
   public boolean isBomb() {
     return hasBomb ;
   }
-  public boolean isVisble() {
+  public boolean isVisible() {
     return visible ;
   }
   public boolean isFlagged() {
