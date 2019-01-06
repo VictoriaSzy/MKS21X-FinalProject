@@ -20,7 +20,7 @@ public class Board {
     if (mode.equals("Normal")) {
       // This is simple code that will be used for easy mode (Phase 1)
       layout = new Tile[5][5] ;
-      // This part generates the random locations of the bombs
+      // This part generates the random locations of the bombs (3 to 5 bombs)
       Random ran = new Random() ;
       int randomNumberOfBombs = Math.abs(ran.nextInt() % 3) + 3 ;
       locationsOfBombs = new int[randomNumberOfBombs] ;
@@ -45,7 +45,33 @@ public class Board {
       }
     }
     if (mode.equals("Crazy")) {
-      // This is what happens during crazy mode
+      // This is just for easy mode:
+      layout = new Tile[8][8] ;
+      // This part generates the random locations of the bombs (10 to 20 bombs)
+      Random ran = new Random() ;
+      int randomNumberOfBombs = Math.abs(ran.nextInt() % 11) + 10 ;
+      /////////////////////////////////////////////////////////////////////////
+      // We might be able to remove this code from the if-else statements and put it after the closing to save line space
+      locationsOfBombs = new int[randomNumberOfBombs] ;
+      // This part stores the locations of the generated bombs in the array locationsOfBombs
+      for (int i = 0 ; i < locationsOfBombs.length ; i ++) {
+        Random rand = new Random() ;
+        int randomBombLocation = Math.abs(rand.nextInt() % 25) ;
+        while (!uniqueLocation(randomBombLocation)) {
+          // the random integer generated has been used so we need to generate a new int
+          rand = new Random() ;
+          randomBombLocation = Math.abs(rand.nextInt() % 25) ;
+        }
+        locationsOfBombs[i] = randomBombLocation ;
+      }
+      // This part adds the tiles to layout
+      int i = 0 ; // i will be used as a counter that we will check with the array locationsOfBombs
+      for (int r = 0 ; r < 5 ; r++) {
+        for (int c = 0 ; c < 5 ; c++) {
+          layout[r][c] = new Tile(isARandomBomb(i)) ;
+          i++ ;
+        }
+      }
     }
   }
   // Determines whether the tile that is going to be created is supposed to be a bomb or not
@@ -64,7 +90,18 @@ public class Board {
   }
   // We can use this to print out a visual representation of the board
   public String toString() {
-    return "" ;
+    String result = "";
+    for(int r=0; r < layout.length; r++){
+      for(int c=0; c < layout.length; c++){
+        if (layout[r][c].isVisible()) {
+          result += layout[r][c].getIdentifier() + " ";
+        }
+        else {
+          result += "  ";
+        }
+      }
+    }
+    return result;
   }
 
 }
