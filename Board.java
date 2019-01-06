@@ -102,4 +102,25 @@ public class Board {
     return result;
   }
 
+  private void gameOver() {
+  System.out.println();
+  System.out.println(" Yikes,You revealed a mine!");
+  System.out.println("_____");
+  System.out.println("|  __ \  ");
+  System.out.println("| |  \/ __ _ _ __ ___   ___  _____   _____ _ __");
+  System.out.println("| | __ / _` | '_ ` _ \ / _ \/ _ \ \ / / _ \ '__|");
+  System.out.println("| |_\ \ (_| | | | | | |  __/ (_) \ V /  __/ |");
+  System.out.println(" \____/\__,_|_| |_| |_|\___|\___/ \_/ \___|_|");
+  System.out.println();
+  System.exit(0);
+}
+ private void welcome(){
+   System.out.println(" _    _      _                          _ ");
+   System.out.println("| |  | |    | |                        | |");
+   System.out.println("| |  | | ___| | ___ ___  _ __ ___   ___| |");
+   System.out.println("| |/\| |/ _ \ |/ __/ _ \| '_ ` _ \ / _ \ |");
+   System.out.println("\  /\  /  __/ | (_| (_) | | | | | |  __/_|");
+   System.out.println(" \/  \/ \___|_|\___\___/|_| |_| |_|\___(_)")
+ }
+
 }
