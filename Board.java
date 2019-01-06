@@ -5,7 +5,7 @@ public class Board {
   // Variables:
   private Tile[][] layout ;
   private int[] locationsOfBombs ;
-  private String mode ;
+  private String mode,level ;
   private int numberFlagged ;
 
   public static void main(String[] args) {
@@ -24,20 +24,19 @@ public class Board {
       Random ran = new Random() ;
       int randomNumberOfBombs = Math.abs(ran.nextInt() % 3) + 3 ;
       locationsOfBombs = new int[randomNumberOfBombs] ;
-      int index = 0 ;
+      // This part stores the locations of the generated bombs in the array locationsOfBombs
       for (int i = 0 ; i < locationsOfBombs.length ; i ++) {
         Random rand = new Random() ;
-        int randomBombLocations = Math.abs(rand.nextInt() % 25) ;
-        while (!uniqueLocation(randomBombLocations)) {
+        int randomBombLocation = Math.abs(rand.nextInt() % 25) ;
+        while (!uniqueLocation(randomBombLocation)) {
           // the random integer generated has been used so we need to generate a new int
           rand = new Random() ;
-          randomBombLocations = Math.abs(rand.nextInt() % 25) ;
+          randomBombLocation = Math.abs(rand.nextInt() % 25) ;
         }
-        locationsOfBombs[index] = randomBombLocations ;
-        index++ ;
+        locationsOfBombs[i] = randomBombLocation ;
       }
       // This part adds the tiles to layout
-      int i = 0 ; // i will be used as a counter
+      int i = 0 ; // i will be used as a counter that we will check with the array locationsOfBombs
       for (int r = 0 ; r < 5 ; r++) {
         for (int c = 0 ; c < 5 ; c++) {
           layout[r][c] = new Tile(isARandomBomb(i)) ;
