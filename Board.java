@@ -9,11 +9,8 @@ public class Board {
   private int numberFlagged ;
 
   public static void main(String[] args) {
-    for (int i = 0 ; i < 5; i ++) {
-      Random rand = new Random() ;
-      int randomBombLocations = Math.abs(rand.nextInt() % 25) ;
-      System.out.println(randomBombLocations) ;
-    }
+    Board test = new Board("Normal") ;
+    System.out.println(test.toString()) ;
   }
   // Constructor
   public Board(String mode) {
@@ -66,8 +63,8 @@ public class Board {
       }
       // This part adds the tiles to layout
       int i = 0 ; // i will be used as a counter that we will check with the array locationsOfBombs
-      for (int r = 0 ; r < 5 ; r++) {
-        for (int c = 0 ; c < 5 ; c++) {
+      for (int r = 0 ; r < 8 ; r++) {
+        for (int c = 0 ; c < 8 ; c++) {
           layout[r][c] = new Tile(isARandomBomb(i)) ;
           i++ ;
         }
@@ -100,6 +97,7 @@ public class Board {
           result += "  ";
         }
       }
+      result += "\n" ;
     }
     return result;
   }
