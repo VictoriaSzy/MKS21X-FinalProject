@@ -13,3 +13,5 @@ Victoria: I worked on the constructor in Board.java, specifically on what to do 
                                                                                                                                             
 01-05-2019:                                                                                                                                
 Victoria: I finished working on the Normal and Crazy mode parts for the easy level in the constructor. I also added the code for the toString method that Jionghao and I worked on in class on 1/04.
+
+Jionghao: i added the ascii art for the welcome and gameover page.
