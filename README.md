@@ -10,3 +10,6 @@ Victoria: I created the Board and Tile classes. I also added the variables(field
                                                                                                                                             
 01-04-2019:                                                                                                                                
 Victoria: I worked on the constructor in Board.java, specifically on what to do during Normal Mode and the easy level.
+                                                                                                                                            
+01-05-2019:                                                                                                                                
+Victoria: I finished working on the Normal and Crazy mode parts for the easy level in the constructor. I also added the code for the toString method that Jionghao and I worked on in class on 1/04.
