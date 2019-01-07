@@ -6,14 +6,18 @@ public class Board {
   private Tile[][] layout ;
   private int[] locationsOfBombs ;
   private String mode,level ;
-  private int numberFlagged ;
+  private int numberFlagged, numberOfBombsClicked ;
 
   public static void main(String[] args) {
-    Board test = new Board("Normal") ;
+    Board test = new Board("Normal","Easy") ;
     System.out.println(test.toString()) ;
   }
   // Constructor
-  public Board(String mode) {
+  public Board(String m, String l) {
+    numberOfBombsClicked = 0 ;
+    numberFlagged = 0 ;
+    mode = m ;
+    level = l ;
     if (mode.equals("Normal")) {
       ///////////// EASY LEVEL //////////////////////////////////////////////////
       if (level.equals("Easy")) {
