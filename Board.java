@@ -15,31 +15,34 @@ public class Board {
   // Constructor
   public Board(String mode) {
     if (mode.equals("Normal")) {
-      // This is simple code that will be used for easy mode (Phase 1)
-      layout = new Tile[5][5] ;
-      // This part generates the random locations of the bombs (3 to 5 bombs)
-      Random ran = new Random() ;
-      int randomNumberOfBombs = Math.abs(ran.nextInt() % 3) + 3 ;
-      locationsOfBombs = new int[randomNumberOfBombs] ;
-      // This part stores the locations of the generated bombs in the array locationsOfBombs
-      for (int i = 0 ; i < locationsOfBombs.length ; i ++) {
-        Random rand = new Random() ;
-        int randomBombLocation = Math.abs(rand.nextInt() % 25) ;
-        while (!uniqueLocation(randomBombLocation)) {
-          // the random integer generated has been used so we need to generate a new int
-          rand = new Random() ;
-          randomBombLocation = Math.abs(rand.nextInt() % 25) ;
+      if (level.equals("Easy")) {
+        // This is simple code that will be used for easy mode (Phase 1)
+        layout = new Tile[5][5] ;
+        // This part generates the random locations of the bombs (3 to 5 bombs)
+        Random ran = new Random() ;
+        int randomNumberOfBombs = Math.abs(ran.nextInt() % 3) + 3 ;
+        locationsOfBombs = new int[randomNumberOfBombs] ;
+        // This part stores the locations of the generated bombs in the array locationsOfBombs
+        for (int i = 0 ; i < locationsOfBombs.length ; i ++) {
+          Random rand = new Random() ;
+          int randomBombLocation = Math.abs(rand.nextInt() % 25) ;
+          while (!uniqueLocation(randomBombLocation)) {
+            // the random integer generated has been used so we need to generate a new int
+            rand = new Random() ;
+            randomBombLocation = Math.abs(rand.nextInt() % 25) ;
+          }
+          locationsOfBombs[i] = randomBombLocation ;
         }
-        locationsOfBombs[i] = randomBombLocation ;
-      }
-      // This part adds the tiles to layout
-      int i = 0 ; // i will be used as a counter that we will check with the array locationsOfBombs
-      for (int r = 0 ; r < 5 ; r++) {
-        for (int c = 0 ; c < 5 ; c++) {
-          layout[r][c] = new Tile(isARandomBomb(i)) ;
-          i++ ;
+        // This part adds the tiles to layout
+        int i = 0 ; // i will be used as a counter that we will check with the array locationsOfBombs
+        for (int r = 0 ; r < 5 ; r++) {
+          for (int c = 0 ; c < 5 ; c++) {
+            layout[r][c] = new Tile(isARandomBomb(i)) ;
+            i++ ;
+          }
         }
       }
+      
     }
     if (mode.equals("Crazy")) {
       // This is just for easy mode:
@@ -47,8 +50,6 @@ public class Board {
       // This part generates the random locations of the bombs (10 to 20 bombs)
       Random ran = new Random() ;
       int randomNumberOfBombs = Math.abs(ran.nextInt() % 11) + 10 ;
-      /////////////////////////////////////////////////////////////////////////
-      // We might be able to remove this code from the if-else statements and put it after the closing to save line space
       locationsOfBombs = new int[randomNumberOfBombs] ;
       // This part stores the locations of the generated bombs in the array locationsOfBombs
       for (int i = 0 ; i < locationsOfBombs.length ; i ++) {
@@ -102,25 +103,25 @@ public class Board {
     return result;
   }
 
-  private void gameOver() {
+  public void gameOverMessage() {
   System.out.println();
-  System.out.println(" Yikes,You revealed a mine!");
+  System.out.println(" Yikes, you revealed a mine!") ;
   System.out.println("_____");
-  System.out.println("|  __ \  ");
-  System.out.println("| |  \/ __ _ _ __ ___   ___  _____   _____ _ __");
-  System.out.println("| | __ / _` | '_ ` _ \ / _ \/ _ \ \ / / _ \ '__|");
-  System.out.println("| |_\ \ (_| | | | | | |  __/ (_) \ V /  __/ |");
-  System.out.println(" \____/\__,_|_| |_| |_|\___|\___/ \_/ \___|_|");
+  System.out.println("|  __ \\  ");
+  System.out.println("| |  \\/ __ _ _ __ ___   ___  _____   _____ _ __");
+  System.out.println("| | __ / _` | '_ ` _ \\ / _ \\/ _ \\ \\ / / _ \\ '__|");
+  System.out.println("| |_\\ \\ (_| | | | | | |  __/ (_) \\ V /  __/ |");
+  System.out.println(" \\____/\\__,_|_| |_| |_|\\___|\\___/ \\_/ \\___|_|");
   System.out.println();
-  System.exit(0);
+  System.exit(0) ;
 }
- private void welcome(){
+ public void welcomeMessage() {
    System.out.println(" _    _      _                          _ ");
    System.out.println("| |  | |    | |                        | |");
    System.out.println("| |  | | ___| | ___ ___  _ __ ___   ___| |");
-   System.out.println("| |/\| |/ _ \ |/ __/ _ \| '_ ` _ \ / _ \ |");
-   System.out.println("\  /\  /  __/ | (_| (_) | | | | | |  __/_|");
-   System.out.println(" \/  \/ \___|_|\___\___/|_| |_| |_|\___(_)")
+   System.out.println("| |/\\| |/ _ \\ |/ __/ _ \\| '_ ` _ \\ / _ \\ |");
+   System.out.println("\\  /\\  /  __/ | (_| (_) | | | | | |  __/_|");
+   System.out.println(" \\/  \\/ \\___|_|\\___\\___/|_| |_| |_|\\___(_)") ;
  }
 
 }
