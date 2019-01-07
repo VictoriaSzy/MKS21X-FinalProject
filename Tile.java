@@ -34,6 +34,7 @@ public class Tile {
   }
   // Mutator Methods
   public void setIdentifier(String n){
+    identifier = n;
 
   }
   public void setVisible(boolean parameter) {

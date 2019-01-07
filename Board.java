@@ -150,6 +150,38 @@ public class Board {
     }
     return true ;
   }
+  // counts the number of bombs on the board
+  public int numberOfBombs(){
+    int bombs = 0;
+    for(int r=0; r < layout.length; r++){
+      for(int c=0; c < layout.length; c++){
+        if(layout[r][c].getIdentifier().equals("*")){
+          bombs = bombs + 1;
+        }
+      }
+    }
+    return bombs;
+  }
+    public void numberOfBombsAround(Tile n){
+      int result = 0;
+      for(int r=0; r < layout.length; r++){
+        for(int c=0; c < layout.length; c++){
+          if(r == 0 && c == 0){
+            if(layout[1][0].getIdentifier().equals("*")){
+              result = result + 1;
+            }
+            if(layout[1][1].getIdentifier().equals("*")){
+              result = result + 1;
+            }
+            if(layout[0][1].getIdentifier().equals("*")){
+              result = result + 1;
+            }
+          }
+        }
+      }
+
+    }
+
   // We can use this to print out a visual representation of the board
   public String toString() {
     String result = "";
@@ -169,7 +201,7 @@ public class Board {
 
   public void gameOverMessage() {
   System.out.println();
-  System.out.println(" Yikes, you revealed a mine!") ;
+  System.out.println(" That's a Mine :(") ;
   System.out.println("_____");
   System.out.println("|  __ \\  ");
   System.out.println("| |  \\/ __ _ _ __ ___   ___  _____   _____ _ __");
