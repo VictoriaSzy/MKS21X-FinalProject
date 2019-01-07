@@ -15,6 +15,7 @@ public class Board {
   // Constructor
   public Board(String mode) {
     if (mode.equals("Normal")) {
+      ///////////// EASY LEVEL //////////////////////////////////////////////////
       if (level.equals("Easy")) {
         // This is simple code that will be used for easy mode (Phase 1)
         layout = new Tile[5][5] ;
@@ -42,8 +43,34 @@ public class Board {
           }
         }
       }
-      
+      ///////////// HARD LEVEL //////////////////////////////////////////////////
+      if (level.equals("Hard")) {
+        layout = new Tile[8][8] ;
+        // This part generates the random locations of the bombs (6 to 12 bombs)
+        Random ran = new Random() ;
+        int randomNumberOfBombs = Math.abs(ran.nextInt() % 7) + 6 ;
+        // This part stores the locations of the generated bombs in the array locationsOfBombs
+        for (int i = 0 ; i < locationsOfBombs.length ; i ++) {
+          Random rand = new Random() ;
+          int randomBombLocation = Math.abs(rand.nextInt() % 64) ;
+          while (!uniqueLocation(randomBombLocation)) {
+            // the random integer generated has been used so we need to generate a new int
+            rand = new Random() ;
+            randomBombLocation = Math.abs(rand.nextInt() % 64) ;
+          }
+          locationsOfBombs[i] = randomBombLocation ;
+        }
+        // This part adds the tiles to layout
+        int i = 0 ; // i will be used as a counter that we will check with the array locationsOfBombs
+        for (int r = 0 ; r < 8 ; r++) {
+          for (int c = 0 ; c < 8 ; c++) {
+            layout[r][c] = new Tile(isARandomBomb(i)) ;
+            i++ ;
+          }
+        }
+      }
     }
+    ///////////// CRAZY MODE //////////////////////////////////////////////////
     if (mode.equals("Crazy")) {
       // This is just for easy mode:
       layout = new Tile[8][8] ;
@@ -54,11 +81,11 @@ public class Board {
       // This part stores the locations of the generated bombs in the array locationsOfBombs
       for (int i = 0 ; i < locationsOfBombs.length ; i ++) {
         Random rand = new Random() ;
-        int randomBombLocation = Math.abs(rand.nextInt() % 25) ;
+        int randomBombLocation = Math.abs(rand.nextInt() % 64) ;
         while (!uniqueLocation(randomBombLocation)) {
           // the random integer generated has been used so we need to generate a new int
           rand = new Random() ;
-          randomBombLocation = Math.abs(rand.nextInt() % 25) ;
+          randomBombLocation = Math.abs(rand.nextInt() % 64) ;
         }
         locationsOfBombs[i] = randomBombLocation ;
       }
