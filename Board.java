@@ -6,7 +6,7 @@ public class Board {
   private Tile[][] layout ;
   private int[] locationsOfBombs ;
   private String mode,level ;
-  private int numberFlagged, numberOfBombsClicked ;
+  private int numberFlagged, numberOfBombsClicked, numberOfChances ;
 
   public static void main(String[] args) {
     Board test = new Board("Normal","Easy") ;
@@ -19,6 +19,7 @@ public class Board {
     mode = m ;
     level = l ;
     if (mode.equals("Normal")) {
+      numberOfChances = 1 ; // will be decreased if a bomb goes off in normal mode
       ///////////// EASY LEVEL //////////////////////////////////////////////////
       if (level.equals("Easy")) {
         // This is simple code that will be used for easy mode (Phase 1)
@@ -78,6 +79,7 @@ public class Board {
     if (mode.equals("Crazy")) {
       ///////////// EASY LEVEL //////////////////////////////////////////////////
       if (level.equals("Easy")) {
+        numberOfChances = 2 ;
         // This is just for easy mode:
         layout = new Tile[8][8] ;
         // This part generates the random locations of the bombs (10 to 20 bombs)
@@ -106,6 +108,7 @@ public class Board {
       }
       ///////////// HARD LEVEL //////////////////////////////////////////////////
       if (level.equals("Hard")) {
+        numberOfChances = 1 ;
         layout = new Tile[10][10] ;
         // This part generates the random locations of the bombs (5 to 10 bombs)
         Random ran = new Random() ;
