@@ -1,4 +1,4 @@
-// in the terminal type javac -cp lanterna.jar:. TerminalDemo.java
+// in the terminal type javac -cp lanterna.jar:. Main.java
 
 //API : http://mabe02.github.io/lanterna/apidocs/2.1/
 import com.googlecode.lanterna.terminal.Terminal.SGR;
@@ -30,7 +30,7 @@ public class Main {
 
 		Terminal terminal = TerminalFacade.createTextTerminal() ;
 		terminal.enterPrivateMode() ; // this prevents scrolling
-		terminal.setCursorPosition(5,5) ;
+		terminal.moveCursor(5,5) ;
 		// text printing always starts at the cursor's position so we need to make sure it goes where we want it to go
 
 		TerminalSize size = terminal.getTerminalSize(); // gets the size of the terminal
@@ -49,22 +49,22 @@ public class Main {
 		while(running){
 			terminal.moveCursor(x,y); // we can also do terminal.setCursorPosition(x,y) ;
 			// moveCursor(..) places the cursor somewhere else after writing something until the end of the row
-			terminal.applyBackgroundColor(Terminal.ANSI.WHITE);
-			terminal.applyForegroundColor(Terminal.ANSI.BLACK);
+			terminal.applyBackgroundColor(Terminal.Color.WHITE);
+			terminal.applyForegroundColor(Terminal.Color.BLACK);
 			// Examples of other colors: BLACK, RED,GREEN,YELLOW,BLUE,MAGENTA,CYAN,WHITE,DEFAULT (depends on user)
 			//applySGR(a,b) for multiple modifiers (bold,blink) etc.
 			terminal.applySGR(Terminal.SGR.ENTER_UNDERLINE);
 			terminal.putCharacter('\u2B1B'); // this is a black square that will go over the tiles
 			// I got this Unicode character from https://www.fileformat.info/info/unicode/char/2b1b/index.htm along with the flag
 			//terminal.putCharacter(' ');
-			terminal.applyBackgroundColor(Terminal.ANSI.DEFAULT);
-			terminal.applyForegroundColor(Terminal.ANSI.DEFAULT);
+			terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
+			terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 			terminal.applySGR(Terminal.SGR.RESET_ALL);
 
 
 			terminal.moveCursor(size.getColumns() - 5, 5);
-			terminal.applyBackgroundColor(Terminal.ANSI.RED);
-			terminal.applyForegroundColor(Terminal.ANSI.YELLOW);
+			terminal.applyBackgroundColor(Terminal.Color.RED);
+			terminal.applyForegroundColor(Terminal.Color.YELLOW);
 			terminal.applySGR(Terminal.SGR.ENTER_BOLD);
 			terminal.putCharacter(' ');
 			terminal.putCharacter(' ');
@@ -75,8 +75,8 @@ public class Main {
 			terminal.putCharacter(' ');
 			terminal.putCharacter(' ');
 			terminal.putCharacter(' ');
-			terminal.applyBackgroundColor(Terminal.ANSI.DEFAULT);
-			terminal.applyForegroundColor(Terminal.ANSI.DEFAULT);
+			terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
+			terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 
 			Key key = terminal.readInput(); // determines what and whether the user typed a key in
 
@@ -123,34 +123,17 @@ public class Main {
 				}
 				//flag button
 				if (key.getCharacter() == 'f') {
-					terminal.putCharacter('\u1F6A9');
+					terminal.putCharacter('\u2691') ;
 				}
 				//pause button
 				if (key.getCharacter() == 'P') {
 				 mode++;
 				 mode%=2;//2 modes
 				 terminal.clearScreen();
-				 lastTime = System.currentTimeMillis();
-				 currentTime = System.currentTimeMillis();
+				 lastSecond = System.currentTimeMillis();
+				 long currentTime = System.currentTimeMillis();
 			 }
 		 }
-		 		if(mode==0){
-        lastTime = currentTime;
-        currentTime = System.currentTimeMillis();
-        timer += (currentTime -lastTime);//add the amount of time since the last frame.
-        //DO GAME STUFF HERE
-        putString(13,15,terminal, "Game here...",Terminal.Color.WHITE,Terminal.Color.DEFAULT);
-        putString(15,17,terminal, "Time: "+timer,Terminal.Color.WHITE,Terminal.Color.DEFAULT);
-
-				putString(0,0,terminal, "This is mode "+mode,Terminal.Color.WHITE,Terminal.Color.RED);
-				putString(1,4,terminal,"["+key.getCharacter() +"]"); // This puts out what key the user pressed
-				putString(1,1,terminal,key+"        ");//to clear leftover letters pad withspaces
-			}else{
-				terminal.applySGR(Terminal.SGR.ENTER_BOLD,Terminal.SGR.ENTER_BLINK);
-        putString(1,3,terminal, "Pause menu",Terminal.Color.RED,Terminal.Color.DEFAULT);
-        terminal.applySGR(Terminal.SGR.RESET_ALL);
-
-			}
 
 			//DO EVEN WHEN NO KEY PRESSED:
 			long tEnd = System.currentTimeMillis();
