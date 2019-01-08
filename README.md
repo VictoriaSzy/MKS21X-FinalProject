@@ -23,3 +23,5 @@ Jionghao: I added number of bombs and bombsaround method.
 
 01-07-2019:                                                                                                                                
 Victoria: I incorporated the lanterna imports by using Mr. K's TerminalDemo from class. I added the characters that we will be using as unicode characters and what happens when the enter key is hit (the tile may or may not be revealed, depending on whether it was revealed before). I also created a new branch to experiment with and comment on the TerminalDemo code from class.
+
+Jionghao:I added the menu demo and a victory ascii art. i also added the flag and pause button.
