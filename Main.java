@@ -30,14 +30,14 @@ public class Main {
 
 		Terminal terminal = TerminalFacade.createTextTerminal() ;
 		terminal.enterPrivateMode() ; // this prevents scrolling
-		terminal.setCursorPosition(5,5) ; 
+		terminal.setCursorPosition(5,5) ;
 		// text printing always starts at the cursor's position so we need to make sure it goes where we want it to go
 
 		TerminalSize size = terminal.getTerminalSize(); // gets the size of the terminal
 		/* We can also use size.getRows() and size.getColumns() to put things or labels into corners or sides
-		I think that we can display the timer and number of chances left on the bottom of the screen by using 
+		I think that we can display the timer and number of chances left on the bottom of the screen by using
 		size.getColumns()/2 and size.getRows() - 1 */
-		
+
 		terminal.setCursorVisible(false);
 
 		boolean running = true ;
@@ -47,21 +47,23 @@ public class Main {
 
 		while(running){
 			terminal.moveCursor(x,y); // we can also do terminal.setCursorPosition(x,y) ;
-			terminal.applyBackgroundColor(Terminal.Color.WHITE);
-			terminal.applyForegroundColor(Terminal.Color.BLACK);
+			// moveCursor(..) places the cursor somewhere else after writing something until the end of the row
+			terminal.applyBackgroundColor(Terminal.ANSI.WHITE);
+			terminal.applyForegroundColor(Terminal.ANSI.BLACK);
+			// Examples of other colors: BLACK, RED,GREEN,YELLOW,BLUE,MAGENTA,CYAN,WHITE,DEFAULT (depends on user)
 			//applySGR(a,b) for multiple modifiers (bold,blink) etc.
 			terminal.applySGR(Terminal.SGR.ENTER_UNDERLINE);
 			terminal.putCharacter('\u2B1B'); // this is a black square that will go over the tiles
 			// I got this Unicode character from https://www.fileformat.info/info/unicode/char/2b1b/index.htm along with the flag
 			//terminal.putCharacter(' ');
-			terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
-			terminal.applyForegroundColor(Terminal.Color.DEFAULT);
+			terminal.applyBackgroundColor(Terminal.ANSI.DEFAULT);
+			terminal.applyForegroundColor(Terminal.ANSI.DEFAULT);
 			terminal.applySGR(Terminal.SGR.RESET_ALL);
 
 
-			terminal.moveCursor(size.getColumns()-5,5);
-			terminal.applyBackgroundColor(Terminal.Color.RED);
-			terminal.applyForegroundColor(Terminal.Color.YELLOW);
+			terminal.moveCursor(size.getColumns() - 5, 5);
+			terminal.applyBackgroundColor(Terminal.ANSI.RED);
+			terminal.applyForegroundColor(Terminal.ANSI.YELLOW);
 			terminal.applySGR(Terminal.SGR.ENTER_BOLD);
 			terminal.putCharacter(' ');
 			terminal.putCharacter(' ');
@@ -72,41 +74,39 @@ public class Main {
 			terminal.putCharacter(' ');
 			terminal.putCharacter(' ');
 			terminal.putCharacter(' ');
-			terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
-			terminal.applyForegroundColor(Terminal.Color.DEFAULT);
+			terminal.applyBackgroundColor(Terminal.ANSI.DEFAULT);
+			terminal.applyForegroundColor(Terminal.ANSI.DEFAULT);
 
-			Key key = terminal.readInput();
+			Key key = terminal.readInput(); // determines what and whether the user typed a key in
 
-			if (key != null)
-			{
-
+			if (key != null) {
 				if (key.getKind() == Key.Kind.Escape) {
-
-					terminal.exitPrivateMode();
-					running = false;
+					// we need to exit the program --> THIS CAN STAY
+					terminal.exitPrivateMode() ;
+					running = false ;
 				}
 
 				if (key.getKind() == Key.Kind.ArrowLeft) {
 					terminal.moveCursor(x,y);
-					terminal.putCharacter(' ');
+					terminal.putCharacter('\u2B1B');
 					x--;
 				}
 
 				if (key.getKind() == Key.Kind.ArrowRight) {
 					terminal.moveCursor(x,y);
-					terminal.putCharacter(' ');
+					terminal.putCharacter('\u2B1B');
 					x++;
 				}
 
 				if (key.getKind() == Key.Kind.ArrowUp) {
 					terminal.moveCursor(x,y);
-					terminal.putCharacter(' ');
+					terminal.putCharacter('\u2B1B');
 					y--;
 				}
 
 				if (key.getKind() == Key.Kind.ArrowDown) {
 					terminal.moveCursor(x,y);
-					terminal.putCharacter(' ');
+					terminal.putCharacter('\u2B1B');
 					y++;
 				}
 				//space moves it diagonally
