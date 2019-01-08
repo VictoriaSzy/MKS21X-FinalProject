@@ -23,7 +23,7 @@ public class Tile {
   public boolean isBomb() {
     return hasBomb ;
   }
-  public boolean isVisble() {
+  public boolean isVisible() {
     return visible ;
   }
   public boolean isFlagged() {
@@ -45,7 +45,7 @@ public class Tile {
 
   //action methods
   public int numberOfBombsAround(){
-
+    return 0;
   }
   public void flag() {
 
