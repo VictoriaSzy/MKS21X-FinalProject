@@ -109,6 +109,10 @@ public class Main {
 					terminal.putCharacter('\u2B1B');
 					y++;
 				}
+				if (key.getKind() == Key.Kind.Enter) {
+					/* the user has hit down so we should check the tile here to see if it's revealed or not
+					*/
+				}
 				//space moves it diagonally
 				if (key.getCharacter() == ' ') {
 					terminal.moveCursor(x,y);
@@ -128,11 +132,10 @@ public class Main {
 			if(millis/1000 > lastSecond){
 				lastSecond = millis / 1000;
 				//one second has passed.
-				//putString(1,3,terminal,"Seconds since start of program: "+lastSecond);
+				putString(size.getRows()-1, size.getColumns()/2, terminal,"Seconds since start of program: "+lastSecond);
+				// this line will place the time left on the bottom middle
 
 			}
-
-
 		}
 	}
 }
