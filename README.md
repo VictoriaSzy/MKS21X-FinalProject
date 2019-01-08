@@ -18,3 +18,6 @@ Jionghao: i added the ascii art for the welcome and gameover page.
 
 01-06-2019:                                                                                                                                
 Victoria: I corrected the Ascii art to be printed out correctly, added the hard levels in the constructor, and added 3 new variables: level, numberOfChances, and numberOfBombsClicked.
+
+01-07-2019:                                                                                                                                
+Victoria: I incorporated the lanterna imports by using Mr. K's TerminalDemo from class. I added the characters that we will be using as unicode characters and what happens when the enter key is hit (the tile may or may not be revealed, depending on whether it was revealed before). I also created a new branch to experiment with and comment on the TerminalDemo code from class.
