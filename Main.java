@@ -44,6 +44,7 @@ public class Main {
 		///////// TIME //////////////////////////////////////////////
 		long tStart = System.currentTimeMillis() ;
 		long lastSecond = 0 ;
+		int mode = 0;
 
 		while(running){
 			terminal.moveCursor(x,y); // we can also do terminal.setCursorPosition(x,y) ;
@@ -120,8 +121,35 @@ public class Main {
 					y++;
 					x++;
 				}
+				//flag button
+				if (key.getCharacter() == 'f') {
+					terminal.putCharacter('\u1F6A9');
+				}
+				//pause button
+				if (key.getCharacter() == 'P') {
+				 mode++;
+				 mode%=2;//2 modes
+				 terminal.clearScreen();
+				 lastTime = System.currentTimeMillis();
+				 currentTime = System.currentTimeMillis();
+			 }
+		 }
+		 		if(mode==0){
+        lastTime = currentTime;
+        currentTime = System.currentTimeMillis();
+        timer += (currentTime -lastTime);//add the amount of time since the last frame.
+        //DO GAME STUFF HERE
+        putString(13,15,terminal, "Game here...",Terminal.Color.WHITE,Terminal.Color.DEFAULT);
+        putString(15,17,terminal, "Time: "+timer,Terminal.Color.WHITE,Terminal.Color.DEFAULT);
+
+				putString(0,0,terminal, "This is mode "+mode,Terminal.Color.WHITE,Terminal.Color.RED);
 				putString(1,4,terminal,"["+key.getCharacter() +"]"); // This puts out what key the user pressed
 				putString(1,1,terminal,key+"        ");//to clear leftover letters pad withspaces
+			}else{
+				terminal.applySGR(Terminal.SGR.ENTER_BOLD,Terminal.SGR.ENTER_BLINK);
+        putString(1,3,terminal, "Pause menu",Terminal.Color.RED,Terminal.Color.DEFAULT);
+        terminal.applySGR(Terminal.SGR.RESET_ALL);
+
 			}
 
 			//DO EVEN WHEN NO KEY PRESSED:

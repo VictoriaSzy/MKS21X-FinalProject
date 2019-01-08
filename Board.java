@@ -219,5 +219,12 @@ public class Board {
    System.out.println("\\  /\\  /  __/ | (_| (_) | | | | | |  __/_|");
    System.out.println(" \\/  \\/ \\___|_|\\___\\___/|_| |_| |_|\\___(_)") ;
  }
-
+public void welcomeMessage() {
+ System.out.println("__   __            _    _ _       _");
+ System.out.println("\ \ / /           | |  | (_)     | |");
+ System.out.println(" \ V /___  _   _  | |  | |_ _ __ | |");
+ System.out.println("  \ // _ \| | | | | |/\| | | '_ \| |");
+ System.out.println("  | | (_) | |_| | \  /\  / | | | |_|");
+ System.out.println("  \_/\___/ \__,_|  \/  \/|_|_| |_(_)");
+}
 }
