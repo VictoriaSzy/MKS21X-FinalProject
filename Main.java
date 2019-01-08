@@ -17,38 +17,42 @@ import com.googlecode.lanterna.input.KeyMappingProfile;
 
 
 public class Main {
-
+	// So this part places a string onto the terminal screen
 	public static void putString(int r, int c,Terminal t, String s){
 		t.moveCursor(r,c);
 		for(int i = 0; i < s.length();i++){
-			t.putCharacter(s.charAt(i));
+			t.putCharacter(s.charAt(i)) ;
 		}
 	}
 	public static void main(String[] args) {
+		int x = 10 ;
+		int y = 10 ;
 
+		Terminal terminal = TerminalFacade.createTextTerminal() ;
+		terminal.enterPrivateMode() ; // this prevents scrolling
+		terminal.setCursorPosition(5,5) ; 
+		// text printing always starts at the cursor's position so we need to make sure it goes where we want it to go
 
-		int x = 10;
-		int y = 10;
-
-		Terminal terminal = TerminalFacade.createTextTerminal();
-		terminal.enterPrivateMode();
-
-		TerminalSize size = terminal.getTerminalSize();
+		TerminalSize size = terminal.getTerminalSize(); // gets the size of the terminal
+		/* We can also use size.getRows() and size.getColumns() to put things or labels into corners or sides
+		I think that we can display the timer and number of chances left on the bottom of the screen by using 
+		size.getColumns()/2 and size.getRows() - 1 */
+		
 		terminal.setCursorVisible(false);
 
-		boolean running = true;
-
-		long tStart = System.currentTimeMillis();
-		long lastSecond = 0;
+		boolean running = true ;
+		///////// TIME //////////////////////////////////////////////
+		long tStart = System.currentTimeMillis() ;
+		long lastSecond = 0 ;
 
 		while(running){
-
-			terminal.moveCursor(x,y);
+			terminal.moveCursor(x,y); // we can also do terminal.setCursorPosition(x,y) ;
 			terminal.applyBackgroundColor(Terminal.Color.WHITE);
 			terminal.applyForegroundColor(Terminal.Color.BLACK);
 			//applySGR(a,b) for multiple modifiers (bold,blink) etc.
 			terminal.applySGR(Terminal.SGR.ENTER_UNDERLINE);
 			terminal.putCharacter('\u2B1B'); // this is a black square that will go over the tiles
+			// I got this Unicode character from https://www.fileformat.info/info/unicode/char/2b1b/index.htm along with the flag
 			//terminal.putCharacter(' ');
 			terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
 			terminal.applyForegroundColor(Terminal.Color.DEFAULT);
