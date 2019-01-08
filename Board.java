@@ -150,6 +150,7 @@ public class Board {
     }
     return true ;
   }
+  /*
   // counts the number of bombs on the board
   public int numberOfBombs(){
     int bombs = 0;
@@ -162,25 +163,25 @@ public class Board {
     }
     return bombs;
   }
-    public void numberOfBombsAround(Tile n){
-      int result = 0;
-      for(int r=0; r < layout.length; r++){
-        for(int c=0; c < layout.length; c++){
-          if(r == 0 && c == 0){
-            if(layout[1][0].getIdentifier().equals("*")){
-              result = result + 1;
-            }
-            if(layout[1][1].getIdentifier().equals("*")){
-              result = result + 1;
-            }
-            if(layout[0][1].getIdentifier().equals("*")){
-              result = result + 1;
-            }
+  */
+  public void numberOfBombsAround(Tile n){
+    int result = 0;
+    for(int r=0; r < layout.length; r++){
+      for(int c=0; c < layout.length; c++){
+        if(r == 0 && c == 0){
+          if(layout[1][0].getIdentifier().equals("*")){
+            result = result + 1;
+          }
+          if(layout[1][1].getIdentifier().equals("*")){
+            result = result + 1;
+          }
+          if(layout[0][1].getIdentifier().equals("*")){
+            result = result + 1;
           }
         }
       }
-
     }
+  }
 
   // We can use this to print out a visual representation of the board
   public String toString() {
