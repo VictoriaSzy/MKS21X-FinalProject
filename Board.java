@@ -201,31 +201,31 @@ public class Board {
   }
 
   public void gameOverMessage() {
-  System.out.println();
-  System.out.println(" That's a Mine :(") ;
-  System.out.println("_____");
-  System.out.println("|  __ \\  ");
-  System.out.println("| |  \\/ __ _ _ __ ___   ___  _____   _____ _ __");
-  System.out.println("| | __ / _` | '_ ` _ \\ / _ \\/ _ \\ \\ / / _ \\ '__|");
-  System.out.println("| |_\\ \\ (_| | | | | | |  __/ (_) \\ V /  __/ |");
-  System.out.println(" \\____/\\__,_|_| |_| |_|\\___|\\___/ \\_/ \\___|_|");
-  System.out.println();
-  System.exit(0) ;
-}
- public void welcomeMessage() {
-   System.out.println(" _    _      _                          _ ");
-   System.out.println("| |  | |    | |                        | |");
-   System.out.println("| |  | | ___| | ___ ___  _ __ ___   ___| |");
-   System.out.println("| |/\\| |/ _ \\ |/ __/ _ \\| '_ ` _ \\ / _ \\ |");
-   System.out.println("\\  /\\  /  __/ | (_| (_) | | | | | |  __/_|");
-   System.out.println(" \\/  \\/ \\___|_|\\___\\___/|_| |_| |_|\\___(_)") ;
- }
-public void welcomeMessage() {
- System.out.println("__   __            _    _ _       _");
- System.out.println("\ \ / /           | |  | (_)     | |");
- System.out.println(" \ V /___  _   _  | |  | |_ _ __ | |");
- System.out.println("  \ // _ \| | | | | |/\| | | '_ \| |");
- System.out.println("  | | (_) | |_| | \  /\  / | | | |_|");
- System.out.println("  \_/\___/ \__,_|  \/  \/|_|_| |_(_)");
-}
+    System.out.println();
+    System.out.println(" That's a Mine :(") ;
+    System.out.println("_____");
+    System.out.println("|  __ \\  ");
+    System.out.println("| |  \\/ __ _ _ __ ___   ___  _____   _____ _ __");
+    System.out.println("| | __ / _` | '_ ` _ \\ / _ \\/ _ \\ \\ / / _ \\ '__|");
+    System.out.println("| |_\\ \\ (_| | | | | | |  __/ (_) \\ V /  __/ |");
+    System.out.println(" \\____/\\__,_|_| |_| |_|\\___|\\___/ \\_/ \\___|_|");
+    System.out.println();
+    System.exit(0) ;
+  }
+  public void welcomeMessage() {
+    System.out.println(" _    _      _                          _ ");
+    System.out.println("| |  | |    | |                        | |");
+    System.out.println("| |  | | ___| | ___ ___  _ __ ___   ___| |");
+    System.out.println("| |/\\| |/ _ \\ |/ __/ _ \\| '_ ` _ \\ / _ \\ |");
+    System.out.println("\\  /\\  /  __/ | (_| (_) | | | | | |  __/_|");
+    System.out.println(" \\/  \\/ \\___|_|\\___\\___/|_| |_| |_|\\___(_)") ;
+  }
+  public void winMessage() {
+    System.out.println("__   __            _    _ _       _");
+    System.out.println("\\ \\ / /           | |  | (_)     | |");
+    System.out.println(" \\ V /___  _   _  | |  | |_ _ __ | |");
+    System.out.println("  \\ // _ \\| | | | | |/\\| | | '_ \\| |");
+    System.out.println("  | | (_) | |_| | \\  /\\  / | | | |_|");
+    System.out.println("  \\_/\\___/ \\__,_|  \\/  \\/|_|_| |_(_)");
+  }
 }
