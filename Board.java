@@ -5,14 +5,6 @@ public class Board {
   // Variables:
   private Tile[][] layout ;
   private int[] locationsOfBombs ;
-<<<<<<< HEAD
-  private String mode ;
-  private int numberFlagged ;
-
-  // Constructor
-  public Board(String mode) {
-  }
-=======
   private String mode,level ;
   private int numberFlagged, numberOfBombsClicked, numberOfChances ;
 
@@ -158,6 +150,7 @@ public class Board {
     }
     return true ;
   }
+  /*
   // counts the number of bombs on the board
   public int numberOfBombs(){
     int bombs = 0;
@@ -170,40 +163,32 @@ public class Board {
     }
     return bombs;
   }
-    public void numberOfBombsAround(Tile n){
-      int result = 0;
-      for(int r=0; r < layout.length; r++){
-        for(int c=0; c < layout.length; c++){
-          if(r == 0 && c == 0){
-            if(layout[1][0].getIdentifier().equals("*")){
-              result = result + 1;
-            }
-            if(layout[1][1].getIdentifier().equals("*")){
-              result = result + 1;
-            }
-            if(layout[0][1].getIdentifier().equals("*")){
-              result = result + 1;
-            }
+  */
+  public void numberOfBombsAround(Tile n){
+    int result = 0;
+    for(int r=0; r < layout.length; r++){
+      for(int c=0; c < layout.length; c++){
+        if(r == 0 && c == 0){
+          if(layout[1][0].getIdentifier().equals("*")){
+            result = result + 1;
+          }
+          if(layout[1][1].getIdentifier().equals("*")){
+            result = result + 1;
+          }
+          if(layout[0][1].getIdentifier().equals("*")){
+            result = result + 1;
           }
         }
       }
-
     }
->>>>>>> ad141c829c5084de51ead0811a85c3868009ea51
+<<<<<<< HEAD
+=======
+  }
+>>>>>>> 82ef4dfe881999dc677b517408605446b33e06f4
 
   // We can use this to print out a visual representation of the board
   public String toString() {
     String result = "";
-<<<<<<< HEAD
-    for(int i =0; i < layout.length; i++){
-      for(int n =0; n < layout[0].length; n++){
-        if (layout[i][n].isVisible()){
-        result = result + layout[i][n].getIdentifier() + " ";
-      }else{
-        result = result + "  ";
-      }
-      }
-=======
     for(int r=0; r < layout.length; r++){
       for(int c=0; c < layout.length; c++){
         if (layout[r][c].isVisible()) {
@@ -214,14 +199,12 @@ public class Board {
         }
       }
       result += "\n" ;
->>>>>>> ad141c829c5084de51ead0811a85c3868009ea51
     }
     return result;
   }
 
-<<<<<<< HEAD
-=======
   public void gameOverMessage() {
+<<<<<<< HEAD
   System.out.println();
   System.out.println(" That's a Mine :(") ;
   System.out.println("_____");
@@ -249,5 +232,33 @@ public void welcomeMessage() {
  System.out.println("  | | (_) | |_| | \  /\  / | | | |_|");
  System.out.println("  \_/\___/ \__,_|  \/  \/|_|_| |_(_)");
 }
->>>>>>> ad141c829c5084de51ead0811a85c3868009ea51
+=======
+    System.out.println();
+    System.out.println(" That's a Mine :(") ;
+    System.out.println("_____");
+    System.out.println("|  __ \\  ");
+    System.out.println("| |  \\/ __ _ _ __ ___   ___  _____   _____ _ __");
+    System.out.println("| | __ / _` | '_ ` _ \\ / _ \\/ _ \\ \\ / / _ \\ '__|");
+    System.out.println("| |_\\ \\ (_| | | | | | |  __/ (_) \\ V /  __/ |");
+    System.out.println(" \\____/\\__,_|_| |_| |_|\\___|\\___/ \\_/ \\___|_|");
+    System.out.println();
+    System.exit(0) ;
+  }
+  public void welcomeMessage() {
+    System.out.println(" _    _      _                          _ ");
+    System.out.println("| |  | |    | |                        | |");
+    System.out.println("| |  | | ___| | ___ ___  _ __ ___   ___| |");
+    System.out.println("| |/\\| |/ _ \\ |/ __/ _ \\| '_ ` _ \\ / _ \\ |");
+    System.out.println("\\  /\\  /  __/ | (_| (_) | | | | | |  __/_|");
+    System.out.println(" \\/  \\/ \\___|_|\\___\\___/|_| |_| |_|\\___(_)") ;
+  }
+  public void winMessage() {
+    System.out.println("__   __            _    _ _       _");
+    System.out.println("\\ \\ / /           | |  | (_)     | |");
+    System.out.println(" \\ V /___  _   _  | |  | |_ _ __ | |");
+    System.out.println("  \\ // _ \\| | | | | |/\\| | | '_ \\| |");
+    System.out.println("  | | (_) | |_| | \\  /\\  / | | | |_|");
+    System.out.println("  \\_/\\___/ \\__,_|  \\/  \\/|_|_| |_(_)");
+  }
+>>>>>>> 82ef4dfe881999dc677b517408605446b33e06f4
 }
