@@ -46,11 +46,8 @@ public class Tile {
 
   //action methods
   public int numberOfBombsAround(){
-<<<<<<< HEAD
-    return 0;
-=======
+
     return 0 ;
->>>>>>> ad141c829c5084de51ead0811a85c3868009ea51
   }
   public void flag() {
 
