@@ -7,7 +7,7 @@ public class Board {
   private int[][] neighbors;
   private int[] locationsOfBombs ;
   private String mode,level ;
-  private int numberFlagged, numberOfBombsClicked, numberOfChances ;
+  private int numberFlagged, numberOfBombsClicked, numberOfChances, neighbor ;
 
   public static void main(String[] args) {
     Board test = new Board("Normal","Easy") ;
@@ -49,6 +49,18 @@ public class Board {
           }
         }
       }
+      // for (int r = 0 ; r < 5 ; r++) {
+      //   for (int c = 0 ; c < 5 ; c++) {
+      //     neighbor = 0;
+      //     for (int i = 0 ; i < 5 ; i++) {
+      //       for (int j = 0 ; j < 5 ; i++) {
+      //         neighbor++;
+      //       }
+      //     }
+      //     neighbors[r][c]
+      //   }
+      // }
+
       ///////////// HARD LEVEL //////////////////////////////////////////////////
       if (level.equals("Hard")) {
         layout = new Tile[8][8] ;
