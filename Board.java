@@ -221,6 +221,17 @@ public class Board {
       result = result + 1;
     }
   }
+  if(x == 0 && y == 0){
+    if(contains(locationsOfBombs , (y*5) + (x + 2))) {
+      result = result + 1;
+    }
+    if(contains(locationsOfBombs,((y+1)*5) + (x + 1))){
+      result = result + 1;
+    }
+    if(contains(locationsOfBombs,((y+1)*5) + (x + 2) )){
+      result = result + 1;
+    }
+  }
     return result;
   }
 
