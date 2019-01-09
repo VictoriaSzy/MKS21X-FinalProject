@@ -196,42 +196,42 @@ public class Board {
   public int numberOfBombsAround(int x, int y){
     int result = 0;
     if(x != 0 && y != 0 && x != 4 && y != 4){
-    if(contains(locationsOfBombs,((y-1)*5) + x )) {
-      result = result + 1;
+      if(contains(locationsOfBombs,((y-1)*5) + x )) {
+        result = result + 1;
+      }
+      if(contains(locationsOfBombs, ((y-1)*5) + (x + 1) )) {
+        result = result + 1;
+      }
+      if(contains(locationsOfBombs,((y-1)*5) + (x + 2) )){
+        result = result + 1;
+      }
+      if(contains(locationsOfBombs, (y*5) + x )){
+        result = result + 1;
+      }
+      if(contains(locationsOfBombs , (y*5) + (x + 2))) {
+        result = result + 1;
+      }
+      if(contains(locationsOfBombs,((y+1)*5) + x)){
+        result = result + 1;
+      }
+      if(contains(locationsOfBombs,((y+1)*5) + (x + 1))){
+        result = result + 1;
+      }
+      if(contains(locationsOfBombs,((y+1)*5) + (x + 2) )){
+        result = result + 1;
+      }
     }
-    if(contains(locationsOfBombs, ((y-1)*5) + (x + 1) )) {
-      result = result + 1;
+    if(x == 0 && y == 0){
+      if(contains(locationsOfBombs , (y*5) + (x + 2))) {
+        result = result + 1;
+      }
+      if(contains(locationsOfBombs,((y+1)*5) + (x + 1))){
+        result = result + 1;
+      }
+      if(contains(locationsOfBombs,((y+1)*5) + (x + 2) )){
+        result = result + 1;
+      }
     }
-    if(contains(locationsOfBombs,((y-1)*5) + (x + 2) )){
-      result = result + 1;
-    }
-    if(contains(locationsOfBombs, (y*5) + x )){
-      result = result + 1;
-    }
-    if(contains(locationsOfBombs , (y*5) + (x + 2))) {
-      result = result + 1;
-    }
-    if(contains(locationsOfBombs,((y+1)*5) + x)){
-      result = result + 1;
-    }
-    if(contains(locationsOfBombs,((y+1)*5) + (x + 1))){
-      result = result + 1;
-    }
-    if(contains(locationsOfBombs,((y+1)*5) + (x + 2) )){
-      result = result + 1;
-    }
-  }
-  if(x == 0 && y == 0){
-    if(contains(locationsOfBombs , (y*5) + (x + 2))) {
-      result = result + 1;
-    }
-    if(contains(locationsOfBombs,((y+1)*5) + (x + 1))){
-      result = result + 1;
-    }
-    if(contains(locationsOfBombs,((y+1)*5) + (x + 2) )){
-      result = result + 1;
-    }
-  }
     return result;
   }
 
