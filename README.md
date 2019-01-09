@@ -30,4 +30,4 @@ Jionghao:I added the menu demo and a victory ascii art. i also added the flag an
 01-08-2019:                                                                                                                                
 Victoria: I added more comments to the TerminalDemo, which is now called Main. I corrected the backslashes in the victory message and debugged Main so that it would compile because it compiled yesterday but not today in class. Jionghao and I had some difficulty pushing his files from the school's computer and that took a few commits, but then we successfully got it pushed to GitHub.
 
-Jionghao:
+Jionghao: I added branch bombaround to develop the method numberofbombsaround, found two different ways to go but unsure which to use yet, might need to use a 2d array instead to save the locations of bombs.
