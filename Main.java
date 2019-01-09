@@ -89,25 +89,29 @@ public class Main {
 
 				if (key.getKind() == Key.Kind.ArrowLeft) {
 					terminal.moveCursor(x,y);
-					terminal.putCharacter('\u2B1B');
+					//terminal.putCharacter('\u2B1B');
+					terminal.putCharacter(' ');
 					x--;
 				}
 
 				if (key.getKind() == Key.Kind.ArrowRight) {
 					terminal.moveCursor(x,y);
-					terminal.putCharacter('\u2B1B');
+					//terminal.putCharacter('\u2B1B');
+					terminal.putCharacter(' ');
 					x++;
 				}
 
 				if (key.getKind() == Key.Kind.ArrowUp) {
 					terminal.moveCursor(x,y);
-					terminal.putCharacter('\u2B1B');
+					//terminal.putCharacter('\u2B1B');
+					terminal.putCharacter(' ');
 					y--;
 				}
 
 				if (key.getKind() == Key.Kind.ArrowDown) {
 					terminal.moveCursor(x,y);
-					terminal.putCharacter('\u2B1B');
+					//terminal.putCharacter('\u2B1B');
+					terminal.putCharacter(' ');
 					y++;
 				}
 				if (key.getKind() == Key.Kind.Enter) {
