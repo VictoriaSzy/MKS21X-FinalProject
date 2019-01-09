@@ -45,6 +45,7 @@ public class Board {
         for (int r = 0 ; r < 5 ; r++) {
           for (int c = 0 ; c < 5 ; c++) {
             layout[r][c] = new Tile(isARandomBomb(i)) ;
+            layout[r][c].setNumber(i) ;
             i++ ;
           }
         }
@@ -178,6 +179,27 @@ public class Board {
     return bombs;
   }
   */
+  public int numberOfBombsAround(Tile n){
+    int result = 0 ;
+    int tileLocation = n.getNumber() ;
+    int roww = tileLocation / layout.length ;
+    int coll = tileLocation % layout.length ;
+    /*for(int r=0; r < layout.length ; r++){
+      for(int c=0; c < layout.length ; c++){
+        if(r == 0 && c == 0){
+          if(layout[1][0].getIdentifier().equals("*")){
+            result = result + 1;
+          }
+          if(layout[1][1].getIdentifier().equals("*")){
+            result = result + 1;
+          }
+          if(layout[0][1].getIdentifier().equals("*")){
+            result = result + 1;
+          }
+        }
+      }
+    }*/
+  }
   //contains method to check inside locationsofbomb
   public boolean contains( int[] ary, int number){
     for (int r = 0 ; r < ary.length ; r++) {
@@ -196,42 +218,42 @@ public class Board {
   public int numberOfBombsAround(int x, int y){
     int result = 0;
     if(x != 0 && y != 0 && x != 4 && y != 4){
-    if(contains(locationsOfBombs,((y-1)*5) + x )) {
-      result = result + 1;
+      if(contains(locationsOfBombs,((y-1)*5) + x )) {
+        result = result + 1;
+      }
+      if(contains(locationsOfBombs, ((y-1)*5) + (x + 1) )) {
+        result = result + 1;
+      }
+      if(contains(locationsOfBombs,((y-1)*5) + (x + 2) )){
+        result = result + 1;
+      }
+      if(contains(locationsOfBombs, (y*5) + x )){
+        result = result + 1;
+      }
+      if(contains(locationsOfBombs , (y*5) + (x + 2))) {
+        result = result + 1;
+      }
+      if(contains(locationsOfBombs,((y+1)*5) + x)){
+        result = result + 1;
+      }
+      if(contains(locationsOfBombs,((y+1)*5) + (x + 1))){
+        result = result + 1;
+      }
+      if(contains(locationsOfBombs,((y+1)*5) + (x + 2) )){
+        result = result + 1;
+      }
     }
-    if(contains(locationsOfBombs, ((y-1)*5) + (x + 1) )) {
-      result = result + 1;
+    if(x == 0 && y == 0){
+      if(contains(locationsOfBombs , (y*5) + (x + 2))) {
+        result = result + 1;
+      }
+      if(contains(locationsOfBombs,((y+1)*5) + (x + 1))){
+        result = result + 1;
+      }
+      if(contains(locationsOfBombs,((y+1)*5) + (x + 2) )){
+        result = result + 1;
+      }
     }
-    if(contains(locationsOfBombs,((y-1)*5) + (x + 2) )){
-      result = result + 1;
-    }
-    if(contains(locationsOfBombs, (y*5) + x )){
-      result = result + 1;
-    }
-    if(contains(locationsOfBombs , (y*5) + (x + 2))) {
-      result = result + 1;
-    }
-    if(contains(locationsOfBombs,((y+1)*5) + x)){
-      result = result + 1;
-    }
-    if(contains(locationsOfBombs,((y+1)*5) + (x + 1))){
-      result = result + 1;
-    }
-    if(contains(locationsOfBombs,((y+1)*5) + (x + 2) )){
-      result = result + 1;
-    }
-  }
-  if(x == 0 && y == 0){
-    if(contains(locationsOfBombs , (y*5) + (x + 2))) {
-      result = result + 1;
-    }
-    if(contains(locationsOfBombs,((y+1)*5) + (x + 1))){
-      result = result + 1;
-    }
-    if(contains(locationsOfBombs,((y+1)*5) + (x + 2) )){
-      result = result + 1;
-    }
-  }
     return result;
   }
 
