@@ -4,6 +4,7 @@ import java.io.* ;
 public class Board {
   // Variables:
   private Tile[][] layout ;
+  private int[][] neighbors;
   private int[] locationsOfBombs ;
   private String mode,level ;
   private int numberFlagged, numberOfBombsClicked, numberOfChances ;
@@ -166,24 +167,49 @@ public class Board {
   }
   */
   //contains method to check inside locationsofbomb
-    public static boolean contains(int[] ary, int number){
-      for (int r = 0 ; r < ary.length ; r++) {
-        if(ary[r] == number){
-          return true;
-        }
+  public boolean contains( int[] ary, int number){
+    for (int r = 0 ; r < ary.length ; r++) {
+      if(ary[r] == number){
+        return true;
       }
-      return false;
     }
-  public boolean isBombNeighbor(int x, int y){
-    if( y * 5 + x ==)
-
+    return false;
   }
-  public void numberOfBombsAround(Tile n){
-    int result = 0;
-    for(int r=0; r < layout.length; r++){
-      for(int c=0; c < layout.length; c++){
-      }
+  public boolean isbombNeighbor(int x1, int y1, int x2, int y2 ){
+    if(x1 - x2 < 2 && x1 - x2 > -2 && y1 - y2 < 2 && y1 - y2 < -2 ){
+      return true;
     }
+    return false;
+  }
+  public int numberOfBombsAround(int x, int y){
+    int result = 0;
+    if(x != 0 && y != 0 && x != 4 && y != 4){
+    if(contains(locationsOfBombs,((y-1)*5) + x )) {
+      result = result + 1;
+    }
+    if(contains(locationsOfBombs, ((y-1)*5) + (x + 1) )) {
+      result = result + 1;
+    }
+    if(contains(locationsOfBombs,((y-1)*5) + (x + 2) )){
+      result = result + 1;
+    }
+    if(contains(locationsOfBombs, (y*5) + x )){
+      result = result + 1;
+    }
+    if(contains(locationsOfBombs , (y*5) + (x + 2))) {
+      result = result + 1;
+    }
+    if(contains(locationsOfBombs,((y+1)*5) + x)){
+      result = result + 1;
+    }
+    if(contains(locationsOfBombs,((y+1)*5) + (x + 1))){
+      result = result + 1;
+    }
+    if(contains(locationsOfBombs,((y+1)*5) + (x + 2) )){
+      result = result + 1;
+    }
+  }
+    return result;
   }
 
   // We can use this to print out a visual representation of the board
