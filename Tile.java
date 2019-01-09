@@ -44,8 +44,23 @@ public class Tile {
   }
 
   //action methods
-  public int numberOfBombsAround(){
-    return 0 ;
+  public int numberOfBombsAround(Tile n){
+    int result = 0;
+    for(int r=0; r < layout.length; r++){
+      for(int c=0; c < layout.length; c++){
+        if(r == 0 && c == 0){
+          if(layout[1][0].getIdentifier().equals("*")){
+            result = result + 1;
+          }
+          if(layout[1][1].getIdentifier().equals("*")){
+            result = result + 1;
+          }
+          if(layout[0][1].getIdentifier().equals("*")){
+            result = result + 1;
+          }
+        }
+      }
+    }
   }
   public void flag() {
 

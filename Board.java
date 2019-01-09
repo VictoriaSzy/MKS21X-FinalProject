@@ -136,6 +136,7 @@ public class Board {
       }
     }
   }
+
   // Determines whether the tile that is going to be created is supposed to be a bomb or not
   public boolean isARandomBomb(int counter) {
     for (int x = 0 ; x < locationsOfBombs.length ; x++) {
@@ -164,21 +165,23 @@ public class Board {
     return bombs;
   }
   */
+  //contains method to check inside locationsofbomb
+    public static boolean contains(int[] ary, int number){
+      for (int r = 0 ; r < ary.length ; r++) {
+        if(ary[r] == number){
+          return true;
+        }
+      }
+      return false;
+    }
+  public boolean isBombNeighbor(int x, int y){
+    if( y * 5 + x ==)
+
+  }
   public void numberOfBombsAround(Tile n){
     int result = 0;
     for(int r=0; r < layout.length; r++){
       for(int c=0; c < layout.length; c++){
-        if(r == 0 && c == 0){
-          if(layout[1][0].getIdentifier().equals("*")){
-            result = result + 1;
-          }
-          if(layout[1][1].getIdentifier().equals("*")){
-            result = result + 1;
-          }
-          if(layout[0][1].getIdentifier().equals("*")){
-            result = result + 1;
-          }
-        }
       }
     }
   }
