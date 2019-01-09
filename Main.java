@@ -78,6 +78,39 @@ public class Main {
 			terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
 			terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 
+
+
+			terminal.moveCursor((size.getColumns()/2) - 2,size.getRows()/2);
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.moveCursor((size.getColumns()/2) - 2,size.getRows()/2);
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.moveCursor((size.getColumns()/2) - 2,size.getRows()/2);
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.moveCursor((size.getColumns()/2) - 2,size.getRows()/2);
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.moveCursor((size.getColumns()/2) - 2,size.getRows()/2);
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+
 			Key key = terminal.readInput(); // determines what and whether the user typed a key in
 
 			if (key != null) {
