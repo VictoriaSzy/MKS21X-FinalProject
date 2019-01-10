@@ -170,6 +170,10 @@ public class Board {
   */
   // Determines the number of bombs around Tile n based off its "number" which we use to find its row and column in layout
   public int numberOfBombsAround(Tile n) {
+    if (n.isBomb()) {
+      n.setIdentifier("*") ;
+      return 0 ;
+    }
     int result = 0 ;
     int tileLocation = n.getNumber() ;
     int roww = tileLocation / layout.length ;
