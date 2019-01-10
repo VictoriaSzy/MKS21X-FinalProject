@@ -184,6 +184,33 @@ public class Board {
     int tileLocation = n.getNumber() ;
     int roww = tileLocation / layout.length ;
     int coll = tileLocation % layout.length ;
+    ///////////// TOP ROW ////////////////////////////
+    if (roww == 0) {
+      // the tile is in the top row
+      if (coll == 0) {
+        // the tile is in the upper left corner
+        Tile tileToTheRight = layout[roww][coll + 1] ;
+        Tile tileDirectlyBelow = layout[roww + 1][coll] ;
+        Tile tileDiagonallyRight = layout[roww + 1] [coll + 1] ;
+        if (tileToTheRight.isBomb()) result++ ;
+        if (tileDirectlyBelow.isBomb()) result++ ;
+        if (tileDiagonallyRight.isBomb()) result ++ ;
+      }
+      if (coll == layout.length - 1) {
+        // the tile is in the upper right corner
+      }
+    }
+    /////////// BOTTOM ROW ///////////////////////////
+    if (roww == layout.length - 1) {
+      // the tile is in the bottom row
+      if (coll == 0) {
+        // the tile is in the upper left corner
+
+      }
+      if (coll == layout.length - 1) {
+        // the tile is in the upper right corner
+      }
+    }
     /*for(int r=0; r < layout.length ; r++){
       for(int c=0; c < layout.length ; c++){
         if(r == 0 && c == 0){
