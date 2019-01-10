@@ -158,6 +158,33 @@ public class Main {
 			terminal.putCharacter('\u2B1B');
 			terminal.putCharacter('\u2B1B');
 			terminal.putCharacter('\u2B1B');
+			terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 5);
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 6);
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 7);
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
+			terminal.putCharacter('\u2B1B');
 
 			Key key = terminal.readInput(); // determines what and whether the user typed a key in
 
