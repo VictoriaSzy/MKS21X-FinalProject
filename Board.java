@@ -151,6 +151,13 @@ public class Board {
     }
   }
 
+  public String getMode(){
+    return this.mode;
+  }
+  public String getLevel(){
+    return this.level;
+  }
+
   // Determines whether the tile that is going to be created is supposed to be a bomb or not
   public boolean isARandomBomb(int counter) {
     for (int x = 0 ; x < locationsOfBombs.length ; x++) {
@@ -179,11 +186,11 @@ public class Board {
     return bombs;
   }
   */
-  public int numberOfBombsAround(Tile n){
-    int result = 0 ;
-    int tileLocation = n.getNumber() ;
-    int roww = tileLocation / layout.length ;
-    int coll = tileLocation % layout.length ;
+  // public int numberOfBombsAround(Tile n){
+  //   int result = 0 ;
+  //   int tileLocation = n.getNumber() ;
+  //   int roww = tileLocation / layout.length ;
+  //   int coll = tileLocation % layout.length ;
     /*for(int r=0; r < layout.length ; r++){
       for(int c=0; c < layout.length ; c++){
         if(r == 0 && c == 0){
@@ -199,7 +206,7 @@ public class Board {
         }
       }
     }*/
-  }
+  //}
   //contains method to check inside locationsofbomb
   public boolean contains( int[] ary, int number){
     for (int r = 0 ; r < ary.length ; r++) {
