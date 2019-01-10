@@ -225,10 +225,23 @@ public class Board {
       // the tile is in the bottom row
       if (coll == 0) {
         // the tile is in the upper left corner
-
+        Tile tileDirectlyAbove = layout[roww - 1][coll] ;
+        Tile tileDiagonallyRight = layout[roww - 1][coll + 1] ;
+        Tile tileToTheRight = layout[roww][coll + 1] ;
+        if (tileDirectlyAbove.isBomb()) result++ ;
+        if (tileDiagonallyRight.isBomb()) result++ ;
+        if (tileToTheRight.isBomb()) result++ ;
+        return result ;
       }
       if (coll == layout.length - 1) {
         // the tile is in the upper right corner
+        Tile tileDirectlyAbove = layout[roww - 1][coll] ;
+        Tile tileDiagonallyLeft = layout[roww - 1][coll - 1] ;
+        Tile tileToTheLeft = layout[roww][coll - 1] ;
+        if (tileDirectlyAbove.isBomb()) result++ ;
+        if (tileDiagonallyLeft.isBomb()) result++ ;
+        if (tileToTheLeft.isBomb()) result++ ;
+        return result ;
       }
     }
     /*for(int r=0; r < layout.length ; r++){
