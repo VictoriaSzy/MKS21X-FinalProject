@@ -243,22 +243,36 @@ public class Board {
         if (tileToTheLeft.isBomb()) result++ ;
         return result ;
       }
+      // Now, we can check tile to left, tile diagonally left, tile above, tile diagonally right, and tile to the right
+      Tile tileToTheLeft = layout[roww][coll - 1] ;
+      Tile tileDiagonallyLeft = layout[roww - 1][coll - 1] ;
+      Tile tileDirectlyAbove = layout[roww - 1][coll] ;
+      Tile tileDiagonallyRight = layout[roww - 1][coll + 1] ;
+      Tile tileToTheRight = layout[roww][coll + 1] ;
+      if (tileToTheLeft.isBomb()) result++ ;
+      if (tileDirectlyAbove.isBomb()) result++ ;
+      if (tileDiagonallyRight.isBomb()) result++ ;
+      if (tileToTheRight.isBomb()) result++ ;
+      return result ;
     }
-    /*for(int r=0; r < layout.length ; r++){
-      for(int c=0; c < layout.length ; c++){
-        if(r == 0 && c == 0){
-          if(layout[1][0].getIdentifier().equals("*")){
-            result = result + 1;
-          }
-          if(layout[1][1].getIdentifier().equals("*")){
-            result = result + 1;
-          }
-          if(layout[0][1].getIdentifier().equals("*")){
-            result = result + 1;
-          }
-        }
-      }
-    }*/
+    // Otherwise, we are able to check all 8 tiles around the specific tile
+    Tile tileDiagonallyLeftUp = layout[roww - 1][coll - 1] ;
+    Tile tileDirectlyAbove = layout[roww - 1][coll] ;
+    Tile tileDiagonallyRightUp = layout[roww - 1][coll + 1] ;
+    Tile tileToTheRight = layout[roww][coll + 1] ;
+    Tile tileDiagonallyRightDown = layout[roww + 1][coll + 1] ;
+    Tile tileDirectlyBelow = layout[roww + 1][coll] ;
+    Tile tileDiagonallyLeftDown = layout[roww + 1][coll - 1] ;
+    Tile tileToTheLeft = layout[roww][coll - 1] ;
+    if (tileDiagonallyLeftUp.isBomb()) result++ ;
+    if (tileDirectlyAbove.isBomb()) result++ ;
+    if (tileDiagonallyRightUp.isBomb()) result++ ;
+    if (tileToTheRight.isBomb()) result++ ;
+    if (tileDiagonallyRightDown.isBomb()) result++ ;
+    if (tileDirectlyBelow.isBomb()) result++ ;
+    if (tileDiagonallyLeftDown.isBomb()) result++ ;
+    if (tileToTheLeft.isBomb()) result++ ;
+    return result ;
   }
   //contains method to check inside locationsofbomb
   public boolean contains( int[] ary, int number){
