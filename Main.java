@@ -38,7 +38,7 @@ public class Main {
 		I think that we can display the timer and number of chances left on the bottom of the screen by using
 		size.getColumns()/2 and size.getRows() - 1 */
 
-		terminal.setCursorVisible(true);
+		terminal.setCursorVisible(false);
 
 		boolean running = true ;
 		///////// TIME //////////////////////////////////////////////
@@ -55,9 +55,9 @@ public class Main {
 			// Examples of other colors: BLACK, RED,GREEN,YELLOW,BLUE,MAGENTA,CYAN,WHITE,DEFAULT (depends on user)
 			//applySGR(a,b) for multiple modifiers (bold,blink) etc.
 			terminal.applySGR(Terminal.SGR.ENTER_UNDERLINE);
-			//terminal.putCharacter('\u2B1B'); // this is a black square that will go over the tiles
+			terminal.putCharacter('\u2B1B'); // this is a black square that will go over the tiles
 			// I got this Unicode character from https://www.fileformat.info/info/unicode/char/2b1b/index.htm along with the flag
-			//terminal.putCharacter(' ');
+			terminal.putCharacter(' ');
 			terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
 			terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 			terminal.applySGR(Terminal.SGR.RESET_ALL);
@@ -438,6 +438,8 @@ public class Main {
 				 lastSecond = System.currentTimeMillis();
 				 long currentTime = System.currentTimeMillis();
 			 }
+			  putString(1,4,terminal,"["+key.getCharacter() +"]");
+				putString(1,1,terminal,key+"        ");//to clear leftover letters pad withspaces
 		 }
 
 			//DO EVEN WHEN NO KEY PRESSED:
