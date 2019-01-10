@@ -195,10 +195,30 @@ public class Board {
         if (tileToTheRight.isBomb()) result++ ;
         if (tileDirectlyBelow.isBomb()) result++ ;
         if (tileDiagonallyRight.isBomb()) result ++ ;
+        return result ;
       }
       if (coll == layout.length - 1) {
         // the tile is in the upper right corner
+        Tile tileToTheLeft = layout[roww][coll - 1] ;
+        Tile tileDirectlyBelow = layout[roww + 1][coll] ;
+        Tile tileDiagonallyLeft = layout[roww + 1] [coll - 1] ;
+        if (tileToTheLeft.isBomb()) result++ ;
+        if (tileDirectlyBelow.isBomb()) result++ ;
+        if (tileDiagonallyLeft.isBomb()) result ++ ;
+        return result ;
       }
+      // Otherwise, we can check the tiles to the left, diagonally left, directly below, diagonally right, and to the right
+      Tile tileToTheLeft = layout[roww][coll - 1] ;
+      Tile tileDiagonallyLeft = layout[roww + 1] [coll - 1] ;
+      Tile tileDirectlyBelow = layout[roww + 1][coll] ;
+      Tile tileDiagonallyRight = layout[roww + 1] [coll + 1] ;
+      Tile tileToTheRight = layout[roww][coll + 1] ;
+      if (tileToTheLeft.isBomb()) result++ ;
+      if (tileDiagonallyLeft.isBomb()) result ++ ;
+      if (tileDirectlyBelow.isBomb()) result++ ;
+      if (tileDiagonallyRight.isBomb()) result ++ ;
+      if (tileToTheRight.isBomb()) result++ ;
+      return result ;
     }
     /////////// BOTTOM ROW ///////////////////////////
     if (roww == layout.length - 1) {
