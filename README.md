@@ -36,3 +36,8 @@ Jionghao: I added branch bombaround to develop the method numberofbombsaround, f
 Victoria: I moved numberOfBombsAround to the Board class in order to use layout.length. I also created a new variable in the Tile class to help me with finding the number of bombs around a specific tile by using division and %.
 
 Jionghao: 
+
+01-10-2019:                                                                                                                                
+Victoria: I finished numberOfBombsAround by splitting it up based on where the tile was located (first row, last row, first column, last column, in a corner, etc.). My version of Main.java does not leave a character behind when the arrow keys are clicked but in the CS Lab Jionghao's version did and we tried to figure out why. We started comparing our versions in class.
+
+Jionghao: 
