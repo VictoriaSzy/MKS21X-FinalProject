@@ -35,4 +35,12 @@ Jionghao: I added branch bombaround to develop the method numberofbombsaround, f
 01-09-2019:                                                                                                                                
 Victoria: I moved numberOfBombsAround to the Board class in order to use layout.length. I also created a new variable in the Tile class to help me with finding the number of bombs around a specific tile by using division and %.
 
-Jionghao: 
+Jionghao: I added printouts in the terminals for the different modes of the game, But the cursor is teleporting around.
+
+01-10-2019:                                                                                                                           
+Victoria: I finished numberOfBombsAround by splitting it up based on where the tile was located (first row, last row, first column, last column, in a corner, etc.). My version of Main.java does not leave a character behind when the arrow keys are clicked but in the CS Lab Jionghao's version did and we tried to figure out why. We started comparing our versions in class.
+
+Jionghao: my version of Main.java still prints out a white character trail, i tried to instantiate a Board with different modes to test printouts.
+
+01-11-2019:                                                                                                                                                                                                                                              
+Victoria: I created a new branch to test the cursor movement. Currently, when the f key is pressed, the flag character only appears in the corner of the board. I also added some more comments to Main.java to make our commands/actions clearer.
