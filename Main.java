@@ -54,7 +54,7 @@ public class Main {
 			// Examples of other colors: BLACK, RED,GREEN,YELLOW,BLUE,MAGENTA,CYAN,WHITE,DEFAULT (depends on user)
 			//applySGR(a,b) for multiple modifiers (bold,blink) etc.
 			terminal.applySGR(Terminal.SGR.ENTER_UNDERLINE);
-			terminal.putCharacter('\u2B1B'); // this is a black square that will go over the tiles
+			terminal.putCharacter('\u2B1B'); // this is a black square that will represent the tiles
 			// I got this Unicode character from https://www.fileformat.info/info/unicode/char/2b1b/index.htm along with the flag
 			//terminal.putCharacter(' ');
 			terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
@@ -68,7 +68,7 @@ public class Main {
 			terminal.applySGR(Terminal.SGR.ENTER_BOLD);
 			terminal.putCharacter(' ');
 			terminal.putCharacter(' ');
-			terminal.putCharacter('\u2691'); // this is the little image on the right hand side & testing the flag character
+			//terminal.putCharacter('\u2691'); // this is the little image on the right hand side & testing the flag character
 			terminal.putCharacter(' ');
 			terminal.moveCursor(size.getColumns()-5,6);
 			terminal.putCharacter(' ');
@@ -425,7 +425,7 @@ public class Main {
 					terminal.putCharacter('\u2691') ;
 				}
 				//pause button
-				if (key.getCharacter() == 'P') {
+				if (key.getCharacter() == 'p') {
 				 mode++;
 				 mode%=2;//2 modes
 				 terminal.clearScreen();
@@ -439,6 +439,7 @@ public class Main {
 			long tEnd = System.currentTimeMillis();
 			long millis = tEnd - tStart;
 			putString(1,2,terminal,"This is Minesweeper!\n"+" _    _      _                          _ \n| |  | |    | |                        | |\n| |  | | ___| | ___ ___  _ __ ___   ___| |\n| |/\\| |/ _ \\ |/ __/ _ \\| '_ ` _ \\ / _ \\ |\n\\  /\\  /  __/ | (_| (_) | | | | | |  __/_|\n \\/  \\/ \\___|_|\\___\\___/|_| |_| |_|\\___(_)" ) ;
+			// that is the welcome message being printed out
 			putString(2,10, terminal,"Please enter which mode and level you would like by doing NE (Normal Mode - Easy), NH (Normal Mode - Hard), CE (Crazy Mode - Easy), or CH (Crazy Mode - Hard)") ;
 			if(millis/1000 > lastSecond){
 				lastSecond = millis / 1000;
@@ -448,5 +449,6 @@ public class Main {
 
 			}
 		}
+		/// when it has stopped running
 	}
 }
