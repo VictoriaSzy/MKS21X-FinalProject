@@ -432,7 +432,7 @@ public class Main {
 				 lastSecond = System.currentTimeMillis();
 				 long currentTime = System.currentTimeMillis();
 			 }
-			 putString(1,1,terminal,key+"        ");//to clear leftover letters pad withspaces
+			 putString(1, 1, terminal, key + "        ") ;
 		 }
 
 			//DO EVEN WHEN NO KEY PRESSED:
