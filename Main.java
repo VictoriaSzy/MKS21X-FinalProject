@@ -294,7 +294,10 @@ public class Main {
 					}
 					//flag button
 					if (key.getCharacter() == 'f') {
+						terminal.moveCursor(x,y);
 						terminal.putCharacter('\u2691') ;
+						terminal.putCharacter(' ');
+						x++;
 					}
 					//pause button
 					if (key.getCharacter() == 'P') {
