@@ -9,10 +9,6 @@ public class Board {
   private String mode,level ;
   private int numberFlagged, numberOfBombsClicked, numberOfChances, neighbor ;
 
-  public static void main(String[] args) {
-    Board test = new Board("Normal","Easy") ;
-    System.out.println(test.toString()) ;
-  }
   // Constructor
   public Board(String m, String l) {
     numberOfBombsClicked = 0 ;
@@ -383,13 +379,14 @@ public class Board {
           result += layout[r][c].getIdentifier() + " ";
         }
         else {
-          result += "_";
+          result += "_ ";
         }
       }
       result += "\n" ;
     }
     return result;
   }
+
 
   public static void gameOverMessage() {
     System.out.println();
@@ -419,4 +416,24 @@ public class Board {
     System.out.println("  | | (_) | |_| | \\  /\\  / | | | |_|");
     System.out.println("  \\_/\\___/ \\__,_|  \\/  \\/|_|_| |_(_)");
   }
+
+  public Tile[][] getBoard(){
+    return this.layout;
+  }
+
+  public static void main(String[] args) {
+    Board game = new Board("Normal","Easy") ;
+    if(args[0].equals("Normal")){
+      if (args[1].equals("Easy")){
+        game = new Board("Normal","Easy");
+    }
+  }
+  if(args.length == 4){
+    int x = Integer.parseInt(args[2]);
+    int y = Integer.parseInt(args[3]);
+    Tile[][] test = game.getBoard();
+    test[x][y].setVisible(true);
+  }
+  System.out.println(game.toString()) ;
+}
 }
