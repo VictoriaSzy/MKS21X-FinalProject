@@ -44,3 +44,8 @@ Jionghao: my version of Main.java still prints out a white character trail, i tr
 
 01-11-2019:                                                                                                                                                                                                                                              
 Victoria: I created a new branch to test the cursor movement. Currently, when the f key is pressed, the flag character only appears in the corner of the board. I also added some more comments to Main.java to make our commands/actions clearer.
+
+
+01-12-2019
+
+Jionghao: I worked on the printout of the board and a way to add a number on the tile to show the number of bombs.
