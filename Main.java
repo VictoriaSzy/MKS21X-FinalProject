@@ -28,14 +28,32 @@ public class Main {
 	}
 	///////////////////////////////////////////////////////////////////////////////////////////
 	public static void main(String[] args) {
-		String directions = "To begin, make sure that you have downloaded all of the required files. From there, enter the directory containing the files." ;
-		directions += "Compile all of the required .java files by doing javac FileName.java, except for Main.java which will be compiled using \"javac -cp lanterna.jar:. Main.java\"";
+		String directions = "To begin, make sure that you have downloaded all of the required files. \nFrom there, enter the directory containing the files." ;
+		directions += "\nCompile all of the required .java files by doing javac FileName.java, except for Main.java which will be compiled using \"javac -cp lanterna.jar:. Main.java\"";
 		directions += "\nTo run the program, you must type in valid and appropriate parameters after \"java -cp lanterna.jar:. Main\"\n" ;
 		directions += "Here are your options:\n\"NE\" results in Normal Mode, but the level is easy with a board of size 5x5 and between 3 to 6 bombs." ;
 		directions += "\n\"NH\" results in Normal Mode, but the level is hard with a board of size 8x8 and between 6 to 12 bombs." ;
 		directions += "\n\"CE\" results in Crazy Mode, but the level is easy with a board of size 8x8 and between 10 to 20 bombs, which YOU MUST FIND IN ORDER TO WIN. You have 2 chances to click normal tiles, but after that, you lose!" ;
 		directions += "\n\"CH\" results in Crazy Mode, but the level is hard with a board of size 10x10 and between 5 to 10 bombs, which YOU MUST FIND IN ORDER TO WIN. You can only click on a tile accidentally once! After that, you're done!" ;
 		try {
+			String modeS = "" ;
+			String levelS = "" ;
+			if (args[0].equals("NE")) {
+				modeS = "Normal" ;
+				levelS = "Easy" ;
+			}
+			if (args[0].equals("NH")) {
+				modeS = "Normal" ;
+				levelS = "Hard" ;
+			}
+			if (args[0].equals("CE")) {
+				modeS = "Crazy" ;
+				levelS = "Easy" ;
+			}
+			if (args[0].equals("CH")) {
+				modeS = "Crazy" ;
+				levelS = "Hard" ;
+			}
 			int x = 10 ;
 			int y = 10 ;
 
@@ -50,7 +68,6 @@ public class Main {
 			size.getColumns()/2 and size.getRows() - 1 */
 
 			terminal.setCursorVisible(false);
-			//////////////////////////////////////////////////////////////////////////////////////////////////////
 			boolean running = true ;
 			///////// TIME //////////////////////////////////////////////
 			long tStart = System.currentTimeMillis() ;
@@ -457,7 +474,7 @@ public class Main {
 				}
 			}
 		} catch (Exception e) {
-			System.out.println("Are you sure that you read the instructions to this program? There seems to be an error with what you gave us. Here are the directions to help you play our awesome version of Minesweeper:") ;
+			System.out.println("Are you sure that you read the instructions to this program?\nThere seems to be an error with what you gave us. \nHere are the directions to help you play our awesome version of Minesweeper:") ;
 			System.out.println(directions) ;
 			System.exit(1) ;
 		}
