@@ -15,6 +15,8 @@ import com.googlecode.lanterna.input.InputProvider;
 import com.googlecode.lanterna.input.Key;
 import com.googlecode.lanterna.input.KeyMappingProfile;
 
+import java.util.* ;
+import java.io.* ;
 
 public class Main {
 	// So this part places a string onto the terminal screen
@@ -24,6 +26,7 @@ public class Main {
 			t.putCharacter(s.charAt(i)) ;
 		}
 	}
+	///////////////////////////////////////////////////////////////////////////////////////////
 	public static void main(String[] args) {
 		int x = 10 ;
 		int y = 10 ;
@@ -39,7 +42,7 @@ public class Main {
 		size.getColumns()/2 and size.getRows() - 1 */
 
 		terminal.setCursorVisible(false);
-
+		//////////////////////////////////////////////////////////////////////////////////////////////////////
 		boolean running = true ;
 		///////// TIME //////////////////////////////////////////////
 		long tStart = System.currentTimeMillis() ;
@@ -410,8 +413,7 @@ public class Main {
 					y++;
 				}
 				if (key.getKind() == Key.Kind.Enter) {
-					/* the user has hit down so we should check the tile here to see if it's revealed or not
-					*/
+					//the user has hit down so we should check the tile here to see if it's revealed or not
 				}
 				//space moves it diagonally
 				if (key.getCharacter() == ' ') {
@@ -444,7 +446,6 @@ public class Main {
 				//one second has passed.
 				putString(size.getRows()-1, size.getColumns()/2, terminal,"Seconds since start of program: "+lastSecond);
 				// this line will place the time left on the bottom middle
-
 			}
 		}
 	}
