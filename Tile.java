@@ -1,7 +1,7 @@
 public class Tile {
   // Variables are here:
   private boolean hasBomb, visible, flagged ;
-  private char identifier ;
+  private String identifier ;
   private int number ;
 
   /** Constructor
@@ -10,11 +10,11 @@ public class Tile {
   public Tile(boolean isABomb) {
     if (isABomb) {
       hasBomb = true ;
-      identifier = '*' ;
+      identifier = "*" ;
     }
     else {
       hasBomb = false ;
-      identifier = '0' ;
+      identifier = "0" ;
     }
     visible = false ;
     flagged = false ;
@@ -30,7 +30,7 @@ public class Tile {
   public boolean isFlagged() {
     return flagged ;
   }
-  public char getIdentifier() {
+  public String getIdentifier() {
     return identifier ;
   }
   public int getNumber() {
@@ -38,7 +38,7 @@ public class Tile {
   }
 
   // Mutator Methods
-  public void setIdentifier(char n){
+  public void setIdentifier(String n){
     identifier = n;
   }
   public void setVisible(boolean parameter) {
@@ -52,17 +52,14 @@ public class Tile {
   }
 
   // Action methods
-  public void flag() {
-    identifier = '\u2691' ;
-  }
-  public void unflag() {
-
+  public void flagORunflag() {
+    setFlagged(!isFlagged()) ;
   }
   public void reveal() {
 
   }
   public void blowUpNormal() {
-
+    Board.gameOverMessage() ;
   }
   public void blowUpCrazy() {
 
