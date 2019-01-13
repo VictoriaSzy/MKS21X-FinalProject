@@ -193,6 +193,8 @@ public class Main {
 		}
 
 			// //Crazy easy mode
+			//if(test.getMode().equals("Crazy")){
+			//	if(test.getLevel().equals("Easy")){
 			// terminal.moveCursor((size.getColumns()/2) - 4,size.getRows()/2);
 			// terminal.putCharacter('\u2B1B');
 			// terminal.putCharacter('\u2B1B');
@@ -265,8 +267,10 @@ public class Main {
 			// terminal.putCharacter('\u2B1B');
 			// terminal.putCharacter('\u2B1B');
 			// terminal.putCharacter('\u2B1B');
+			//}
 			//
 			// //Crazy Hard mode
+			//if(test.getLevel().equals("Hard")){
 			// terminal.moveCursor((size.getColumns()/2) - 5,size.getRows()/2);
 			// terminal.putCharacter('\u2B1B');
 			// terminal.putCharacter('\u2B1B');
@@ -377,6 +381,8 @@ public class Main {
 			// terminal.putCharacter('\u2B1B');
 			// terminal.putCharacter('\u2B1B');
 			// terminal.putCharacter('\u2B1B');
+			// }
+		  // }
 
 
 			Key key = terminal.readInput(); // determines what and whether the user typed a key in
