@@ -54,6 +54,7 @@ public class Main {
 				modeS = "Crazy" ;
 				levelS = "Hard" ;
 			}
+
 			int x = 10 ;
 			int y = 10 ;
 
@@ -82,15 +83,15 @@ public class Main {
 				// Examples of other colors: BLACK, RED,GREEN,YELLOW,BLUE,MAGENTA,CYAN,WHITE,DEFAULT (depends on user)
 				//applySGR(a,b) for multiple modifiers (bold,blink) etc.
 				terminal.applySGR(Terminal.SGR.ENTER_UNDERLINE);
-				//terminal.putCharacter('\u2B1B'); // this is a black square that will go over the tiles
+				terminal.putCharacter('\u2B1B'); // this is a black square = cursor, helps you see where you are as you move with the keys
 				// I got this Unicode character from https://www.fileformat.info/info/unicode/char/2b1b/index.htm along with the flag
 				//terminal.putCharacter(' ');
 				terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
 				terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 				terminal.applySGR(Terminal.SGR.RESET_ALL);
 
-
-				terminal.moveCursor(size.getColumns() - 5, 5);
+				// This is the part that changed the background of the right side to red
+				/*terminal.moveCursor(size.getColumns() - 5, 5);
 				terminal.applyBackgroundColor(Terminal.Color.RED);
 				terminal.applyForegroundColor(Terminal.Color.YELLOW);
 				terminal.applySGR(Terminal.SGR.ENTER_BOLD);
@@ -98,11 +99,11 @@ public class Main {
 				terminal.putCharacter(' ');
 				//terminal.putCharacter('\u2691'); // this is the little image on the right hand side & testing the flag character
 				terminal.putCharacter(' ');
+				*/
 				terminal.moveCursor(size.getColumns()-5,6);
-				terminal.putCharacter(' ');
-				terminal.putCharacter(' ');
-				terminal.putCharacter(' ');
-				terminal.putCharacter(' ');
+				for (int i = 0 ; i < 4; i++) {
+					terminal.putCharacter(' ');
+				}
 				terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
 				terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 
@@ -309,8 +310,8 @@ public class Main {
 				//DO EVEN WHEN NO KEY PRESSED:
 				long tEnd = System.currentTimeMillis();
 				long millis = tEnd - tStart;
-				putString(1,2,terminal,"This is Minesweeper!\n"+" _    _      _                          _ \n| |  | |    | |                        | |\n| |  | | ___| | ___ ___  _ __ ___   ___| |\n| |/\\| |/ _ \\ |/ __/ _ \\| '_ ` _ \\ / _ \\ |\n\\  /\\  /  __/ | (_| (_) | | | | | |  __/_|\n \\/  \\/ \\___|_|\\___\\___/|_| |_| |_|\\___(_)" ) ;
-				putString(2,10, terminal,"Please enter which mode and level you would like by doing NE (Normal Mode - Easy), NH (Normal Mode - Hard), CE (Crazy Mode - Easy), or CH (Crazy Mode - Hard)") ;
+				putString(1,2,terminal, "_    _      _                          _ \n| |  | |    | |                        | |\n| |  | | ___| | ___ ___  _ __ ___   ___| |\n| |/\\| |/ _ \\ |/ __/ _ \\| '_ ` _ \\ / _ \\ |\n\\  /\\  /  __/ | (_| (_) | | | | | |  __/_|\n \\/  \\/ \\___|_|\\___\\___/|_| |_| |_|\\___(_)" ) ;
+				//putString(2,10, terminal,"Please enter which mode and level you would like by doing NE (Normal Mode - Easy), NH (Normal Mode - Hard), CE (Crazy Mode - Easy), or CH (Crazy Mode - Hard)") ;
 				if(millis/1000 > lastSecond){
 					lastSecond = millis / 1000;
 					//one second has passed.
