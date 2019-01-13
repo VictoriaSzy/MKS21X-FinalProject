@@ -140,6 +140,13 @@ public class Board {
     }
   }
 
+  public String getMode(){
+    return this.mode;
+  }
+  public String getLevel(){
+    return this.level;
+  }
+
   // Determines whether the tile that is going to be created is supposed to be a bomb or not
   public boolean isARandomBomb(int counter) {
     for (int x = 0 ; x < locationsOfBombs.length ; x++) {
@@ -168,6 +175,7 @@ public class Board {
     return bombs;
   }
   */
+<<<<<<< HEAD
   // Determines the number of bombs around Tile n based off its "number" which we use to find its row and column in layout
   public int numberOfBombsAround(Tile n) {
     if (n.isBomb()) {
@@ -269,9 +277,29 @@ public class Board {
         }
         else {
           n.setIdentifier(Integer.toString(result)) ;
+=======
+  // public int numberOfBombsAround(Tile n){
+  //   int result = 0 ;
+  //   int tileLocation = n.getNumber() ;
+  //   int roww = tileLocation / layout.length ;
+  //   int coll = tileLocation % layout.length ;
+    /*for(int r=0; r < layout.length ; r++){
+      for(int c=0; c < layout.length ; c++){
+        if(r == 0 && c == 0){
+          if(layout[1][0].getIdentifier().equals("*")){
+            result = result + 1;
+          }
+          if(layout[1][1].getIdentifier().equals("*")){
+            result = result + 1;
+          }
+          if(layout[0][1].getIdentifier().equals("*")){
+            result = result + 1;
+          }
+>>>>>>> workonprintout
         }
         return result ;
       }
+<<<<<<< HEAD
       // Now, we can check tile to left, tile diagonally left, tile above, tile diagonally right, and tile to the right
       Tile tileToTheLeft = layout[roww][coll - 1] ;
       Tile tileDiagonallyLeft = layout[roww - 1][coll - 1] ;
@@ -310,6 +338,10 @@ public class Board {
     if (tileToTheLeft.isBomb()) result++ ;
     return result ;
   }
+=======
+    }*/
+  //}
+>>>>>>> workonprintout
   //contains method to check inside locationsofbomb
   public boolean contains( int[] ary, int number){
     for (int r = 0 ; r < ary.length ; r++) {
