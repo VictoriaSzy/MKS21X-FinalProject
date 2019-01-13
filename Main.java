@@ -82,7 +82,7 @@ public class Main {
 				// Examples of other colors: BLACK, RED,GREEN,YELLOW,BLUE,MAGENTA,CYAN,WHITE,DEFAULT (depends on user)
 				//applySGR(a,b) for multiple modifiers (bold,blink) etc.
 				terminal.applySGR(Terminal.SGR.ENTER_UNDERLINE);
-				terminal.putCharacter('\u2B1B'); // this is a black square that will go over the tiles
+				//terminal.putCharacter('\u2B1B'); // this is a black square that will go over the tiles
 				// I got this Unicode character from https://www.fileformat.info/info/unicode/char/2b1b/index.htm along with the flag
 				//terminal.putCharacter(' ');
 				terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
@@ -96,7 +96,7 @@ public class Main {
 				terminal.applySGR(Terminal.SGR.ENTER_BOLD);
 				terminal.putCharacter(' ');
 				terminal.putCharacter(' ');
-				terminal.putCharacter('\u2691'); // this is the little image on the right hand side & testing the flag character
+				//terminal.putCharacter('\u2691'); // this is the little image on the right hand side & testing the flag character
 				terminal.putCharacter(' ');
 				terminal.moveCursor(size.getColumns()-5,6);
 				terminal.putCharacter(' ');
@@ -108,298 +108,143 @@ public class Main {
 
 
 				// Normal easy mode!
-				terminal.moveCursor((size.getColumns()/2) - 2,size.getRows()/2);
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 1);
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 2);
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 3);
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 4);
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-
-
+				if (args[0].equals("NE")) {
+					terminal.moveCursor((size.getColumns()/2) - 2,size.getRows()/2);
+					for (int i = 0; i < 5; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 1);
+					for (int i = 0; i < 5; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 2);
+					for (int i = 0; i < 5; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 3);
+					for (int i = 0; i < 5; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 4);
+					for (int i = 0; i < 5; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+				}
 				//Normal Hard Mode
-				terminal.moveCursor((size.getColumns()/2) - 4,size.getRows()/2);
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 1);
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 2);
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 3);
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 4);
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 5);
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 6);
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 7);
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
+				if (args[0].equals("NH")) {
+					terminal.moveCursor((size.getColumns()/2) - 4,size.getRows()/2);
+					for (int i = 0; i < 8; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 1);
+					for (int i = 0; i < 8; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 2);
+					for (int i = 0; i < 8; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 3);
+					for (int i = 0; i < 8; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 4);
+					for (int i = 0; i < 8; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 5);
+					for (int i = 0; i < 8; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 6);
+					for (int i = 0; i < 8; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 7);
+					for (int i = 0; i < 8; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+				}
 
 				//Crazy easy mode
-				terminal.moveCursor((size.getColumns()/2) - 4,size.getRows()/2);
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 1);
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 2);
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 3);
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 4);
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 5);
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 6);
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 7);
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
+				if (args[0].equals("CE")) {
+					terminal.moveCursor((size.getColumns()/2) - 4,size.getRows()/2);
+					for (int i = 0; i < 8; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 1);
+					for (int i = 0; i < 8; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 2);
+					for (int i = 0; i < 8; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 3);
+					for (int i = 0; i < 8; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 4);
+					for (int i = 0; i < 8; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 5);
+					for (int i = 0; i < 8; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 6);
+					for (int i = 0; i < 8; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 7);
+					for (int i = 0; i < 8; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+				}
 
 				//Crazy Hard mode
-				terminal.moveCursor((size.getColumns()/2) - 5,size.getRows()/2);
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 1);
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 2);
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 3);
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 4);
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 5);
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 6);
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 7);
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 8);
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 9);
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-				terminal.putCharacter('\u2B1B');
-
+				if (args[0].equals("CH")) {
+					terminal.moveCursor((size.getColumns()/2) - 5,size.getRows()/2);
+					for (int i = 0; i < 10; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 1);
+					for (int i = 0; i < 10; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 2);
+					for (int i = 0; i < 10; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 3);
+					for (int i = 0; i < 10; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 4);
+					for (int i = 0; i < 10; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 5);
+					for (int i = 0; i < 10; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 6);
+					for (int i = 0; i < 10; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 7);
+					for (int i = 0; i < 10; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 8);
+					for (int i = 0; i < 10; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 9);
+					for (int i = 0; i < 10; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+				}
 
 				Key key = terminal.readInput(); // determines what and whether the user typed a key in
 
