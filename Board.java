@@ -25,9 +25,9 @@ public class Board {
       if (level.equals("Easy")) {
         // This is simple code that will be used for easy mode (Phase 1)
         layout = new Tile[5][5] ;
-        // This part generates the random locations of the bombs (3 to 5 bombs)
+        // This part generates the random locations of the bombs (3 to 6 bombs)
         Random ran = new Random() ;
-        int randomNumberOfBombs = Math.abs(ran.nextInt() % 3) + 3 ;
+        int randomNumberOfBombs = Math.abs(ran.nextInt() % 4) + 3 ;
         locationsOfBombs = new int[randomNumberOfBombs] ;
         // This part stores the locations of the generated bombs in the array locationsOfBombs
         for (int i = 0 ; i < locationsOfBombs.length ; i ++) {
