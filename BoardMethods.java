@@ -20,13 +20,13 @@ public class BoardMethods{
     game.refresh() ;
     Scanner scan = new Scanner(System.in);
     int x, y ;
-    System.out.println("Enter the x coordinate of the tile you want to select: ") ;
+    System.out.print("Enter the x coordinate of the tile you want to select: ") ;
     x = scan.nextInt() ;
     System.out.print("Enter the y coordinate of the tile you want to select: ") ;
     y = scan.nextInt() ;
 
     game.clear(x,y) ;
-    game.detect() ;
+    game.numberOfBombsAround() ;
     game.refresh() ;
     boolean running = true ;
     while (running) {
