@@ -14,8 +14,8 @@ public class BoardMethods{
     System.out.println("Good luck!") ;
   }
 
-  public static void go(int numberOfBombs) {
-    EasyBoard game = new EasyBoard() ;
+  public static void go(int numberOfBombs, int size) {
+    EasyBoard game = new EasyBoard(size) ;
     game.generateBombs(numberOfBombs) ;
     game.refresh() ;
     Scanner scan = new Scanner(System.in);
