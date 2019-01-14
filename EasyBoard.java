@@ -25,6 +25,10 @@ public String[][] layout = new String[12][12] ;   // 12 rows, 12 columns
       }
     }
   }
+  // this reprints the board after the user chose the coordinates
+  public void refresh() {
+    printGame(display) ;
+  }
 
   //Displays the layout, sort of like the toString
   public static void printGame(String[][] str){
@@ -59,18 +63,22 @@ public String[][] layout = new String[12][12] ;   // 12 rows, 12 columns
       }
     }
   }
+  // accessor method
+  public String getTile(int x, int y) {
+    return layout[x][y] ;
+  }
 
-//On first move, this clears the area around the selected tile.
-public void clear(int x, int y){
-  for(int i = (x - 1); i <= (x + 1); i++){
-    for(int j = (y - 1); j <= (y + 1); j++){
-      if(layout[i][j].equals(hidden) == true){
-        display[i][j] = empty;
-        layout[i][j] = empty;
+  //On first move, this clears the area around the selected tile.
+  public void clear(int x, int y){
+    for(int i = (x - 1); i <= (x + 1); i++){
+      for(int j = (y - 1); j <= (y + 1); j++){
+        if(layout[i][j].equals(hidden) == true){
+          display[i][j] = empty;
+          layout[i][j] = empty;
+        }
       }
     }
   }
-}
 
 
 
