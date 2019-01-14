@@ -19,12 +19,12 @@ public String[][] layout = new String[12][12] ;   // 12 rows, 12 columns
    return victory ;
  }
 
- public void showMines() {
-   // happens at the end once the user hits a mine!
+ public void showBombs() {
+   // happens at the end once the user hits a bomb!
    printGame(layout) ;
  }
-public void onEnd(){
-  printGame(field);
+public void showLayout() {
+  printGame(layout) ;
 }
  public EasyBoard(){
     int row = 0 ;
@@ -61,20 +61,20 @@ public void onEnd(){
     }
   }
   // Randomly places the bombs
-  public void generateMines(int n){
+  public void generateBombs(int n){
     for(int m = 0; m < n; m++){
-      boolean generatingAMine = true ;
-      while(generatingAMine){
+      boolean generatingABomb = true ;
+      while(generatingABomb){
         int x, y = 0 ;
         x = (int) ( 10 * Math.random() ) ;
         y = (int) ( 10 * Math.random() ) ;
-        //So that a mine is placed in a tile visible to the player
+        //So that a bomb is placed in a tile visible to the player
         if(x >= 1 && x <= 10){
           if(y >= 1 && y <= 10){
-            // Checks if a mine is already there
+            // Checks if a bomb is already there
             if(!layout[x][y].equals(bomb)){
               layout[x][y] = bomb;
-              generatingAMine = false ;
+              generatingABomb = false ;
             }
           }
         }
@@ -82,14 +82,14 @@ public void onEnd(){
     }
   }
   // called when the user chooses a tile
-  public void turn(int x, int y) {
+  public void move(int x, int y) {
     if (layout[x][y].equals(unknown) == true) {
       //If the spot hasn't been selected, it is cleared
       finished = false ;
       display[x][y] = empty ;
       layout[x][y] = empty ;
     }
-    else if (layout[x][y].equals(mine) == true) {
+    else if (layout[x][y].equals(bomb) == true) {
       finished = true ;
       victory = false ; // user lost
       System.out.println("Uh-oh! The game is OVER!!") ;
@@ -122,7 +122,7 @@ public void onEnd(){
           int numOfBombs = 0 ;
           for (int a = (x - 1) ; a <= (x + 1) ; a++) {
             for (int b = (y - 1) ; b <= (y + 1) ; b++) {
-              if (layout[a][b].equals(mine) == true) numOfBombs++ ;
+              if (layout[a][b].equals(bomb) == true) numOfBombs++ ;
             }
           }
           display[x][y] = " " + numOfBombs + " " ;
