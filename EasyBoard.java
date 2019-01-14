@@ -1,19 +1,18 @@
 public class EasyBoard {
 public String[][] layout = new String[12][12];   //12 rows, 12 columns.
  public String[][] display = new String[12][12]; //This is the field that is visible to the player.
- public Boolean complete = false;
- public Boolean victory = false;
+ public boolean complete = false ;
+ public boolean victory = false ;
 
- private String unknown = " ? ";
- private String mine = " * ";
+ private String hidden = " ? ";
+ private String bomb = " * ";
  private String empty = "   ";
 
  public EasyBoard(){
     int row = 0;
     int column = 0;
-
     for(int x = 0; x < layout.length; x++){
-      for(int y = 0; y < layout[0].length; y++){
+      for(int y = 0; y < layout[0].length ; y++){
         //Places blank spaces in buffer zones.
         if((x == 0 || x == layout.length - 1)||(y == 0 || y == layout[0].length - 1)){
           layout[x][y] = empty;
@@ -21,8 +20,8 @@ public String[][] layout = new String[12][12];   //12 rows, 12 columns.
         }
         //Places ? in game field.
         else{
-          layout[x][y] = unknown;
-          display[x][y] = unknown;
+          layout[x][y] = hidden;
+          display[x][y] = hidden;
         }
       }
     }
@@ -56,8 +55,8 @@ public void generateMines(int n){
       if(x >= 1 && x <= 10){
         if(y >= 1 && y <= 10){
           //Checks if a mine is present in a spot.
-          if(!field[x][y].equals(mine)){
-            field[x][y] = mine;
+          if(!field[x][y].equals(bomb)){
+            field[x][y] = bomb;
             break;
           }
         }
@@ -70,7 +69,7 @@ public void generateMines(int n){
 public void clear(int x, int y){
   for(int i = (x - 1); i <= (x + 1); i++){
     for(int j = (y - 1); j <= (y + 1); j++){
-      if(field[i][j].equals(unknown) == true){
+      if(field[i][j].equals(hidden) == true){
         display[i][j] = empty;
         layout[i][j] = empty;
       }
