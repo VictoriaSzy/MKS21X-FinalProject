@@ -44,15 +44,15 @@ public String[][] layout = new String[12][12] ;   // 12 rows, 12 columns
       boolean generatingAMine = true ;
       while(generatingAMine){
         int x, y = 0 ;
-        x = (int)(10*Math.random()) ;
-        y = (int)(10*Math.random()) ;
-        //So that a mine is placed in a tile visible to the player.
+        x = (int) ( 10 * Math.random() ) ;
+        y = (int) ( 10 * Math.random() ) ;
+        //So that a mine is placed in a tile visible to the player
         if(x >= 1 && x <= 10){
           if(y >= 1 && y <= 10){
-            //Checks if a mine is already there
+            // Checks if a mine is already there
             if(!layout[x][y].equals(bomb)){
               layout[x][y] = bomb;
-              break ; // maybe we can find a way to stop this --> change the boolean you were using
+              generatingAMine = false ;
             }
           }
         }
