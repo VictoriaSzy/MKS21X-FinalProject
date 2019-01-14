@@ -67,7 +67,41 @@ public String[][] layout = new String[12][12] ;   // 12 rows, 12 columns
   public String getTile(int x, int y) {
     return layout[x][y] ;
   }
+  // called when the user chooses a tile
+  public void turn(int x, int y) {
+    if (layout[x][y].equals(unknown) == true) {
+      //If the spot hasn't been selected, it is cleared
+      finished = false ;
+      display[x][y] = empty ;
+      layout[x][y] = empty ;
+    }
+    else if (layout[x][y].equals(mine) == true) {
+      finished = true ;
+      victory = false ; // user lost
+      System.out.println("Uh-oh! The game is OVER!!") ;
+    }
+    else if (display[x][y].equals(empty) == true && layout[x][y].equals(empty)) {
+      finished = false ;
+      System.out.println("The tile you chose was revealed!") ;
+    }
+  }
+  // Checking if the user has won
+  public void isVictory() {
+    int numOfTilesLeft = 0 ;
+    for (int a = 0 ; a < layout.length ; a++) {
+      for(int b = 0; b < layout.length; b++) {
+        if (layout[a][b].equals(unknown) == true) {
+          numOfTilesLeft++ ;
+        }
+      }
+    }
 
+    if(numOfTilesLeft != 0) victory = false ;
+    else {
+      victory = true ;
+      finished = true ;
+    }
+  }
   // Finds the number of bombs around a tile
   public void numberOfBombsAround() {
     for (int x = 1 ; x < display.length - 2 ; x++) {
