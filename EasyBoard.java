@@ -8,6 +8,24 @@ public String[][] layout = new String[12][12] ;   // 12 rows, 12 columns
  private String bomb = " * " ;
  private String empty = "   " ;
 
+ // accessor methods
+ public String getTile(int x, int y) {
+   return layout[x][y] ;
+ }
+ public boolean isFinished() {
+   return finished ;
+ }
+ public boolean isVictory() {
+   return victory ;
+ }
+
+ public void showMines() {
+   // happens at the end once the user hits a mine!
+   printGame(layout) ;
+ }
+public void onEnd(){
+  printGame(field);
+}
  public EasyBoard(){
     int row = 0 ;
     int column = 0 ;
@@ -63,10 +81,6 @@ public String[][] layout = new String[12][12] ;   // 12 rows, 12 columns
       }
     }
   }
-  // accessor method
-  public String getTile(int x, int y) {
-    return layout[x][y] ;
-  }
   // called when the user chooses a tile
   public void turn(int x, int y) {
     if (layout[x][y].equals(unknown) == true) {
@@ -90,9 +104,7 @@ public String[][] layout = new String[12][12] ;   // 12 rows, 12 columns
     int numOfTilesLeft = 0 ;
     for (int a = 0 ; a < layout.length ; a++) {
       for(int b = 0; b < layout.length; b++) {
-        if (layout[a][b].equals(unknown) == true) {
-          numOfTilesLeft++ ;
-        }
+        if (layout[a][b].equals(unknown) == true) numOfTilesLeft++ ;
       }
     }
 
@@ -130,7 +142,5 @@ public String[][] layout = new String[12][12] ;   // 12 rows, 12 columns
       }
     }
   }
-
-
 
 }
