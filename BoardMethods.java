@@ -11,7 +11,7 @@ public class BoardMethods{
     System.out.println("To choose a tile, enter the coordinates of the tile you want to select.") ;
     System.out.println("The size of the Normal Easy Mode Board is 5x5, while the hard mode has a size of 8x8.") ;
     System.out.println("The size of the Crazy Easy Mode Board is 8x8, while the hard mode has a size of 10x10.") ;
-    System.out.println("Good luck!") ;
+    System.out.println("\033[31mGood luck! \033[0m") ;
   }
 
   public static void go(int numberOfBombs) {
