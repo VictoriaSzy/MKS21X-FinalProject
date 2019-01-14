@@ -13,4 +13,47 @@ public class BoardMethods{
     System.out.println("The size of the Crazy Easy Mode Board is 8x8, while the hard mode has a size of 10x10.") ;
     System.out.println("Good luck!") ;
   }
+
+  public static void go(int numberOfBombs) {
+    EasyBoard game = new EasyBoard() ;
+    game.generateBombs(numberOfBombs) ;
+    game.refresh() ;
+    Scanner scan = new Scanner(System.in);
+    int x, y ;
+    System.out.println("Enter the x coordinate of the tile you want to select: ") ;
+    x = scan.nextInt() ;
+    System.out.print("Enter the y coordinate of the tile you want to select: ") ;
+    y = scan.nextInt() ;
+
+    game.clear(x,y) ;
+    game.detect() ;
+    game.refresh() ;
+    boolean running = true ;
+    while (running) {
+      if (game.isFinished() == true && game.getWin() == true) {
+        // PLAYER WON!
+        System.out.println("CONGRATULATIONS!! You win!") ;
+        game.showLayout() ;
+        running = false ;
+      }
+      else if (game.isFinished() == true) {
+        game.showLayout() ;
+        running = false ;
+      }
+      else if (game.isFinished() == false) {
+        // this is when the game is still going
+        x = -1 ;
+        y = -1 ;
+        System.out.print("Enter the x coordinate of the tile you want to select: ") ;
+        x = scan.nextInt() ;
+        System.out.print("Enter the y coordinate of the tile you want to select: ") ;
+        y = scan.nextInt() ;
+        game.move(x,y) ;
+        game.isVictory() ;
+        game.numberOfBombsAround() ;
+        game.refresh() ;
+      }
+    }
+  }
+  
 }
