@@ -1,83 +1,146 @@
 public class EasyBoard {
-public String[][] layout = new String[12][12];   //12 rows, 12 columns.
- public String[][] display = new String[12][12]; //This is the field that is visible to the player.
- public Boolean complete = false;
- public Boolean victory = false;
+public String[][] layout = new String[12][12] ;   // 12 rows, 12 columns
+ public String[][] display = new String[12][12] ; // This is what the user sees
+ public boolean finished = false ;
+ public boolean victory = false ;
 
- private String unknown = " ? ";
- private String mine = " * ";
- private String empty = "   ";
+ private String hidden = " ? " ;
+ private String bomb = " * " ;
+ private String empty = "   " ;
 
+ // accessor methods
+ public String getTile(int x, int y) {
+   return layout[x][y] ;
+ }
+ public boolean isFinished() {
+   return finished ;
+ }
+ public boolean isVictory() {
+   return victory ;
+ }
+
+ public void showBombs() {
+   // happens at the end once the user hits a bomb!
+   printGame(layout) ;
+ }
+public void showLayout() {
+  printGame(layout) ;
+}
  public EasyBoard(){
-    int row = 0;
-    int column = 0;
-
-    for(int x = 0; x < layout.length; x++){
-      for(int y = 0; y < layout[0].length; y++){
-        //Places blank spaces in buffer zones.
-        if((x == 0 || x == layout.length - 1)||(y == 0 || y == layout[0].length - 1)){
-          layout[x][y] = empty;
-          display[x][y] = empty;
+    int row = 0 ;
+    int column = 0 ;
+    for(int x = 0 ; x < layout.length ; x++){
+      for(int y = 0 ; y < layout.length ; y++){
+        if((x == 0 || x == layout.length - 1)||(y == 0 || y == layout.length - 1)){
+          layout[x][y] = empty ;
+          display[x][y] = empty ;
         }
-        //Places ? in game field.
+        // Otherwise put a "?" because the player doesn't know what it is
         else{
-          layout[x][y] = unknown;
-          display[x][y] = unknown;
+          layout[x][y] = hidden ;
+          display[x][y] = hidden ;
         }
       }
     }
   }
+  // this reprints the board after the user chose the coordinates
+  public void refresh() {
+    printGame(display) ;
+  }
 
-  //Displays the layout.
+  //Displays the layout, sort of like the toString
   public static void printGame(String[][] str){
-    for(int x = 1; x < str.length - 1; x++){
-      for(int y = 0; y < str[0].length ; y++){
-        //Formats row.
-        if(y > 0 && y < str[0].length)
-          System.out.print("|");
-        else
-          System.out.println("");
-
-        System.out.print(str[x][y]);  //Prints out content of each tile.
+    for(int x = 1 ; x < str.length - 1 ; x++){
+      for(int y = 0 ; y < str[0].length ; y++){
+        if (y > 0 && y < str[0].length) System.out.print("|") ;
+        else {
+          System.out.println("") ;
+        }
+        System.out.print(str[x][y]) ;  // Prints out the tile
       }
     }
   }
-
-  //Places n mines at random on the field.
-public void generateMines(int n){
-  for(int m = 0; m < n; m++){
-    //Loops until a mine is placed.
-    while(true){
-      int x, y = 0;   //Clears vars.
-      x = (int)(10*Math.random());
-      y = (int)(10*Math.random());
-
-      //So that a mine is placed in a tile visible to the player.
-      if(x >= 1 && x <= 10){
-        if(y >= 1 && y <= 10){
-          //Checks if a mine is present in a spot.
-          if(!field[x][y].equals(mine)){
-            field[x][y] = mine;
-            break;
+  // Randomly places the bombs
+  public void generateBombs(int n){
+    for(int m = 0; m < n; m++){
+      boolean generatingABomb = true ;
+      while(generatingABomb){
+        int x, y = 0 ;
+        x = (int) ( 10 * Math.random() ) ;
+        y = (int) ( 10 * Math.random() ) ;
+        //So that a bomb is placed in a tile visible to the player
+        if(x >= 1 && x <= 10){
+          if(y >= 1 && y <= 10){
+            // Checks if a bomb is already there
+            if(!layout[x][y].equals(bomb)){
+              layout[x][y] = bomb;
+              generatingABomb = false ;
+            }
           }
         }
       }
     }
   }
-}
+  // called when the user chooses a tile
+  public void move(int x, int y) {
+    if (layout[x][y].equals(unknown) == true) {
+      //If the spot hasn't been selected, it is cleared
+      finished = false ;
+      display[x][y] = empty ;
+      layout[x][y] = empty ;
+    }
+    else if (layout[x][y].equals(bomb) == true) {
+      finished = true ;
+      victory = false ; // user lost
+      System.out.println("Uh-oh! The game is OVER!!") ;
+    }
+    else if (display[x][y].equals(empty) == true && layout[x][y].equals(empty)) {
+      finished = false ;
+      System.out.println("The tile you chose was revealed!") ;
+    }
+  }
+  // Checking if the user has won
+  public void isVictory() {
+    int numOfTilesLeft = 0 ;
+    for (int a = 0 ; a < layout.length ; a++) {
+      for(int b = 0; b < layout.length; b++) {
+        if (layout[a][b].equals(unknown) == true) numOfTilesLeft++ ;
+      }
+    }
 
-//On first move, this clears the area around the selected tile.
-public void clear(int x, int y){
-  for(int i = (x - 1); i <= (x + 1); i++){
-    for(int j = (y - 1); j <= (y + 1); j++){
-      if(field[i][j].equals(unknown) == true){
-        display[i][j] = empty;
-        layout[i][j] = empty;
+    if(numOfTilesLeft != 0) victory = false ;
+    else {
+      victory = true ;
+      finished = true ;
+    }
+  }
+  // Finds the number of bombs around a tile
+  public void numberOfBombsAround() {
+    for (int x = 1 ; x < display.length - 2 ; x++) {
+      for (int y = 1 ; y < display.length - 2 ; y++) {
+        if (layout[x][y].equals(empty) == true) {
+          int numOfBombs = 0 ;
+          for (int a = (x - 1) ; a <= (x + 1) ; a++) {
+            for (int b = (y - 1) ; b <= (y + 1) ; b++) {
+              if (layout[a][b].equals(bomb) == true) numOfBombs++ ;
+            }
+          }
+          display[x][y] = " " + numOfBombs + " " ;
+        }
       }
     }
   }
-}
 
-
+  // clears the tiles around the specified coordinates
+  public void clear(int x, int y){
+    for(int i = (x - 1); i <= (x + 1); i++){
+      for(int j = (y - 1); j <= (y + 1); j++){
+        if(layout[i][j].equals(hidden) == true){
+          display[i][j] = empty;
+          layout[i][j] = empty;
+        }
+      }
+    }
+  }
 
 }
