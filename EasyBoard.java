@@ -43,6 +43,41 @@ public String[][] layout = new String[12][12];   //12 rows, 12 columns.
     }
   }
 
+  //Places n mines at random on the field.
+public void generateMines(int n){
+  for(int m = 0; m < n; m++){
+    //Loops until a mine is placed.
+    while(true){
+      int x, y = 0;   //Clears vars.
+      x = (int)(10*Math.random());
+      y = (int)(10*Math.random());
+
+      //So that a mine is placed in a tile visible to the player.
+      if(x >= 1 && x <= 10){
+        if(y >= 1 && y <= 10){
+          //Checks if a mine is present in a spot.
+          if(!field[x][y].equals(mine)){
+            field[x][y] = mine;
+            break;
+          }
+        }
+      }
+    }
+  }
+}
+
+//On first move, this clears the area around the selected tile.
+public void clear(int x, int y){
+  for(int i = (x - 1); i <= (x + 1); i++){
+    for(int j = (y - 1); j <= (y + 1); j++){
+      if(field[i][j].equals(unknown) == true){
+        display[i][j] = empty;
+        layout[i][j] = empty;
+      }
+    }
+  }
+}
+
 
 
 }
