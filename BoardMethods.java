@@ -30,7 +30,7 @@ public class BoardMethods{
     game.refresh() ;
     boolean running = true ;
     while (running) {
-      if (game.isFinished() == true && game.getWin() == true) {
+      if (game.isFinished() == true && game.isWin() == true) {
         // PLAYER WON!
         System.out.println("CONGRATULATIONS!! You win!") ;
         game.showLayout() ;
@@ -55,5 +55,5 @@ public class BoardMethods{
       }
     }
   }
-  
+
 }
