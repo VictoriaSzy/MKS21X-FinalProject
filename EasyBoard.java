@@ -68,7 +68,24 @@ public String[][] layout = new String[12][12] ;   // 12 rows, 12 columns
     return layout[x][y] ;
   }
 
-  //On first move, this clears the area around the selected tile.
+  // Finds the number of bombs around a tile
+  public void numberOfBombsAround() {
+    for (int x = 1 ; x < display.length - 2 ; x++) {
+      for (int y = 1 ; y < display.length - 2 ; y++) {
+        if (layout[x][y].equals(empty) == true) {
+          int numOfBombs = 0 ;
+          for (int a = (x - 1) ; a <= (x + 1) ; a++) {
+            for (int b = (y - 1) ; b <= (y + 1) ; b++) {
+              if (layout[a][b].equals(mine) == true) numOfBombs++ ;
+            }
+          }
+          display[x][y] = " " + numOfBombs + " " ;
+        }
+      }
+    }
+  }
+
+  // clears the tiles around the specified coordinates
   public void clear(int x, int y){
     for(int i = (x - 1); i <= (x + 1); i++){
       for(int j = (y - 1); j <= (y + 1); j++){
