@@ -51,3 +51,11 @@ Victoria: I created a new branch to test the cursor movement. Currently, when th
 Jionghao: I worked on the printout of the board and a way to add a number on the tile to show the number of bombs.
 
 Victoria: I created a new file called Test.java to test out the Console as a way to let the user type the mode and level they want to play. I tried experimenting with opening Main.java and running it based on the results of the user's input but then I couldn't type anything into the terminal. However, I did change the toString in Board so that I can see whether the correct Board is getting printed out.
+
+
+
+01-13-2019
+
+Jionghao: I created a new file with a simpler version of Minesweeper that doesn't use lanterna. Maybe we don't need it?
+
+Victoria: I extended on Jionghao's idea and created 2 more files to do the board methods and to run the board. SUCCESS! I used the scanner because originally I wanted to call another java file from a different java file, but then realized that I was overcomplicating it.
