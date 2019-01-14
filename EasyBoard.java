@@ -15,7 +15,7 @@ public String[][] layout = new String[12][12] ;   // 12 rows, 12 columns
  public boolean isFinished() {
    return finished ;
  }
- public boolean isVictory() {
+ public boolean isWin() {
    return victory ;
  }
 
@@ -83,7 +83,7 @@ public void showLayout() {
   }
   // called when the user chooses a tile
   public void move(int x, int y) {
-    if (layout[x][y].equals(unknown) == true) {
+    if (layout[x][y].equals(hidden) == true) {
       //If the spot hasn't been selected, it is cleared
       finished = false ;
       display[x][y] = empty ;
@@ -104,7 +104,7 @@ public void showLayout() {
     int numOfTilesLeft = 0 ;
     for (int a = 0 ; a < layout.length ; a++) {
       for(int b = 0; b < layout.length; b++) {
-        if (layout[a][b].equals(unknown) == true) numOfTilesLeft++ ;
+        if (layout[a][b].equals(hidden) == true) numOfTilesLeft++ ;
       }
     }
 
