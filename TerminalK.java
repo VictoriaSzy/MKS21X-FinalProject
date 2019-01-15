@@ -45,13 +45,15 @@ public class TerminalK {
 			terminal.moveCursor(x,y);
 			terminal.applyBackgroundColor(Terminal.Color.WHITE);
 			terminal.applyForegroundColor(Terminal.Color.BLACK);
+			// these are the colors used on the cursor
 			//applySGR(a,b) for multiple modifiers (bold,blink) etc.
 			terminal.applySGR(Terminal.SGR.ENTER_UNDERLINE);
-			terminal.putCharacter('\u00a4');
+			terminal.putCharacter('\u2691') ; // this is the character of the cursor that moves based on the keyboard keys
 			//terminal.putCharacter(' ');
 			terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
 			terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 			terminal.applySGR(Terminal.SGR.RESET_ALL);
+			// brings the terminal's colors back to normal when the cursor has left
 
 
 			terminal.moveCursor(size.getColumns()-5,5);
