@@ -59,3 +59,7 @@ Victoria: I extended on Jionghao's idea and created 2 more files to do the board
 01-14-2019
 
 Victoria: I added new parameters to some of the functions (go and the constructor) in our easy or simple version of Minesweeper in order to help us create different sized boards based on the mode and level.
+
+01-15-2019
+
+Victoria: I went to the CS Dojo to try to get help with using lanterna because the tiles are eaten by the cursor once it passes through. I think that I need to find a way to store how that certain coordinate of the terminal looked before the cursor goes over it or to make the certain tiles identify themselves differently. I think that I can do it based on the color maybe (sort of similar to the patches from NetLogo). I created a new file and went through it to make sure that I understand what code was doing and/or causing.
