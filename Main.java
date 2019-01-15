@@ -14,6 +14,7 @@ import com.googlecode.lanterna.input.InputDecoder;
 import com.googlecode.lanterna.input.InputProvider;
 import com.googlecode.lanterna.input.Key;
 import com.googlecode.lanterna.input.KeyMappingProfile;
+import com.googlecode.lanterna.screen.Screen;
 
 
 public class Main {
@@ -46,21 +47,23 @@ public class Main {
 		long lastSecond = 0 ;
 		int mode = 0;
 
+		Board test = new Board("Normal","Easy");
+		
 		while(running){
-			Board test = new Board("Normal","Easy");
+
 			terminal.moveCursor(x,y); // we can also do terminal.setCursorPosition(x,y) ;
 			// moveCursor(..) places the cursor somewhere else after writing something until the end of the row
-			terminal.applyBackgroundColor(Terminal.Color.WHITE);
-			terminal.applyForegroundColor(Terminal.Color.BLACK);
+			terminal.applyBackgroundColor(Terminal.Color.WHITE) ;
+			terminal.applyForegroundColor(Terminal.Color.BLACK) ;
 			// Examples of other colors: BLACK, RED,GREEN,YELLOW,BLUE,MAGENTA,CYAN,WHITE,DEFAULT (depends on user)
 			//applySGR(a,b) for multiple modifiers (bold,blink) etc.
-			terminal.applySGR(Terminal.SGR.ENTER_UNDERLINE);
+			terminal.applySGR(Terminal.SGR.ENTER_UNDERLINE) ;
 			terminal.putCharacter('\u2B1B'); // this is a black square that will go over the tiles
 			// I got this Unicode character from https://www.fileformat.info/info/unicode/char/2b1b/index.htm along with the flag
-			terminal.putCharacter(' ');
-			terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
-			terminal.applyForegroundColor(Terminal.Color.DEFAULT);
-			terminal.applySGR(Terminal.SGR.RESET_ALL);
+			terminal.putCharacter(' ') ;
+			terminal.applyBackgroundColor(Terminal.Color.DEFAULT) ;
+			terminal.applyForegroundColor(Terminal.Color.DEFAULT) ;
+			terminal.applySGR(Terminal.SGR.RESET_ALL) ;
 
 
 			terminal.moveCursor(size.getColumns() - 5, 5);
@@ -191,198 +194,6 @@ public class Main {
 				}
 				terminal.moveCursor(10,10);
 		}
-
-			// //Crazy easy mode
-			//if(test.getMode().equals("Crazy")){
-			//	if(test.getLevel().equals("Easy")){
-			// terminal.moveCursor((size.getColumns()/2) - 4,size.getRows()/2);
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 1);
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 2);
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 3);
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 4);
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 5);
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 6);
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 7);
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			//}
-			//
-			// //Crazy Hard mode
-			//if(test.getLevel().equals("Hard")){
-			// terminal.moveCursor((size.getColumns()/2) - 5,size.getRows()/2);
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 1);
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 2);
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 3);
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 4);
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 5);
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 6);
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 7);
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 8);
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 9);
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// terminal.putCharacter('\u2B1B');
-			// }
-		  // }
 
 
 			Key key = terminal.readInput(); // determines what and whether the user typed a key in
