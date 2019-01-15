@@ -1,6 +1,6 @@
 public class EasyBoard {
-public String[][] layout ;
- public String[][] display ; // This is what the user sees
+public String[][] layout = new String[12][12] ;   // 12 rows, 12 columns
+ public String[][] display = new String[12][12] ; // This is what the user sees
  public boolean finished = false ;
  public boolean victory = false ;
 
@@ -26,11 +26,9 @@ public String[][] layout ;
 public void showLayout() {
   printGame(layout) ;
 }
- public EasyBoard(int len) {
+ public EasyBoard(){
     int row = 0 ;
     int column = 0 ;
-    String[][] layout = new String[len][len] ;
-    String[][] display = new String[len][len] ;
     for(int x = 0 ; x < layout.length ; x++){
       for(int y = 0 ; y < layout.length ; y++){
         if((x == 0 || x == layout.length - 1)||(y == 0 || y == layout.length - 1)){
