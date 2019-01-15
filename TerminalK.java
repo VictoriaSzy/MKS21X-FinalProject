@@ -57,7 +57,9 @@ public class TerminalK {
 
 
 			terminal.moveCursor(size.getColumns()-5,5);
-			terminal.applyBackgroundColor(Terminal.Color.RED);
+			// This section colored the background of the terminal to red and placed the character on the upper right corner of the
+			// red section
+			/*terminal.applyBackgroundColor(Terminal.Color.RED);
 			terminal.applyForegroundColor(Terminal.Color.YELLOW);
 			terminal.applySGR(Terminal.SGR.ENTER_BOLD);
 			terminal.putCharacter(' ');
@@ -70,37 +72,30 @@ public class TerminalK {
 			terminal.putCharacter(' ');
 			terminal.putCharacter(' ');
 			terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
-			terminal.applyForegroundColor(Terminal.Color.DEFAULT);
+			terminal.applyForegroundColor(Terminal.Color.DEFAULT); */
 
 			Key key = terminal.readInput();
 
-			if (key != null)
-			{
-
+			if (key != null) {
 				if (key.getKind() == Key.Kind.Escape) {
-
 					terminal.exitPrivateMode();
 					running = false;
 				}
-
 				if (key.getKind() == Key.Kind.ArrowLeft) {
 					terminal.moveCursor(x,y);
 					terminal.putCharacter(' ');
 					x--;
 				}
-
 				if (key.getKind() == Key.Kind.ArrowRight) {
 					terminal.moveCursor(x,y);
 					terminal.putCharacter(' ');
 					x++;
 				}
-
 				if (key.getKind() == Key.Kind.ArrowUp) {
 					terminal.moveCursor(x,y);
 					terminal.putCharacter(' ');
 					y--;
 				}
-
 				if (key.getKind() == Key.Kind.ArrowDown) {
 					terminal.moveCursor(x,y);
 					terminal.putCharacter(' ');
@@ -114,9 +109,11 @@ public class TerminalK {
 					x++;
 				}
 				putString(1,4,terminal,"["+key.getCharacter() +"]");
-				putString(1,1,terminal,key+"        ");//to clear leftover letters pad withspaces
+				// in the brackets is the single character representing the key
+				putString(1,1,terminal,key+"        ");
+				//to clear leftover letters pad withspaces
 			}
-
+			// After we check whether the key is null or not
 			//DO EVEN WHEN NO KEY PRESSED:
 			long tEnd = System.currentTimeMillis();
 			long millis = tEnd - tStart;
