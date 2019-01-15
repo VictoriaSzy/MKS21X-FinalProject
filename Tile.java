@@ -36,6 +36,7 @@ public class Tile {
   public int getNumber() {
     return number ;
   }
+
   // Mutator Methods
   public void setIdentifier(String n){
     identifier = n;
@@ -50,18 +51,15 @@ public class Tile {
     number = i ;
   }
 
-  // action methods
-  public void flag() {
-
-  }
-  public void unflag() {
-
+  // Action methods
+  public void flagORunflag() {
+    setFlagged(!isFlagged()) ;
   }
   public void reveal() {
 
   }
   public void blowUpNormal() {
-
+    Board.gameOverMessage() ;
   }
   public void blowUpCrazy() {
 

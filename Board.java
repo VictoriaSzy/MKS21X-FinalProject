@@ -9,10 +9,6 @@ public class Board {
   private String mode,level ;
   private int numberFlagged, numberOfBombsClicked, numberOfChances, neighbor ;
 
-  public static void main(String[] args) {
-    Board test = new Board("Normal","Easy") ;
-    System.out.println(test.toString()) ;
-  }
   // Constructor
   public Board(String m, String l) {
     numberOfBombsClicked = 0 ;
@@ -25,9 +21,9 @@ public class Board {
       if (level.equals("Easy")) {
         // This is simple code that will be used for easy mode (Phase 1)
         layout = new Tile[5][5] ;
-        // This part generates the random locations of the bombs (3 to 5 bombs)
+        // This part generates the random locations of the bombs (3 to 6 bombs)
         Random ran = new Random() ;
-        int randomNumberOfBombs = Math.abs(ran.nextInt() % 3) + 3 ;
+        int randomNumberOfBombs = Math.abs(ran.nextInt() % 4) + 3 ;
         locationsOfBombs = new int[randomNumberOfBombs] ;
         // This part stores the locations of the generated bombs in the array locationsOfBombs
         for (int i = 0 ; i < locationsOfBombs.length ; i ++) {
@@ -56,6 +52,7 @@ public class Board {
         // This part generates the random locations of the bombs (6 to 12 bombs)
         Random ran = new Random() ;
         int randomNumberOfBombs = Math.abs(ran.nextInt() % 7) + 6 ;
+        locationsOfBombs = new int[randomNumberOfBombs] ;
         // This part stores the locations of the generated bombs in the array locationsOfBombs
         for (int i = 0 ; i < locationsOfBombs.length ; i ++) {
           Random rand = new Random() ;
@@ -138,14 +135,13 @@ public class Board {
       }
     }
   }
-
   public String getMode(){
     return this.mode;
   }
   public String getLevel(){
     return this.level;
   }
-
+  
   // Determines whether the tile that is going to be created is supposed to be a bomb or not
   public boolean isARandomBomb(int counter) {
     for (int x = 0 ; x < locationsOfBombs.length ; x++) {
@@ -275,7 +271,6 @@ public class Board {
         }
         else {
           n.setIdentifier(Integer.toString(result)) ;
-=======
   // public int numberOfBombsAround(Tile n){
   //   int result = 0 ;
   //   int tileLocation = n.getNumber() ;
@@ -293,11 +288,9 @@ public class Board {
           if(layout[0][1].getIdentifier().equals("*")){
             result = result + 1;
           }
->>>>>>> workonprintout
         }
         return result ;
       }
-<<<<<<< HEAD
       // Now, we can check tile to left, tile diagonally left, tile above, tile diagonally right, and tile to the right
       Tile tileToTheLeft = layout[roww][coll - 1] ;
       Tile tileDiagonallyLeft = layout[roww - 1][coll - 1] ;
@@ -336,12 +329,11 @@ public class Board {
     if (tileToTheLeft.isBomb()) result++ ;
     return result ;
   }
-=======
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     }*/
   //}
->>>>>>> workonprintout
   //contains method to check inside locationsofbomb
-  public boolean contains( int[] ary, int number){
+  public boolean contains(int[] ary, int number){
     for (int r = 0 ; r < ary.length ; r++) {
       if(ary[r] == number){
         return true;
@@ -351,9 +343,9 @@ public class Board {
   }
   public boolean isbombNeighbor(int x1, int y1, int x2, int y2 ){
     if(x1 - x2 < 2 && x1 - x2 > -2 && y1 - y2 < 2 && y1 - y2 < -2 ){
-      return true;
+      return true ;
     }
-    return false;
+    return false ;
   }
   public int numberOfBombsAround(int x, int y){
     int result = 0;
@@ -406,7 +398,7 @@ public class Board {
           result += layout[r][c].getIdentifier() + " ";
         }
         else {
-          result += "  ";
+          result += "_ ";
         }
       }
       result += "\n" ;
@@ -414,9 +406,10 @@ public class Board {
     return result;
   }
 
-  public void gameOverMessage() {
+
+  public static void gameOverMessage() {
     System.out.println();
-    System.out.println(" That's a Mine :(") ;
+    System.out.println("YOU HIT A MINE! OR A BOMB!") ;
     System.out.println("_____");
     System.out.println("|  __ \\  ");
     System.out.println("| |  \\/ __ _ _ __ ___   ___  _____   _____ _ __");
@@ -442,5 +435,25 @@ public class Board {
     System.out.println("  | | (_) | |_| | \\  /\\  / | | | |_|");
     System.out.println("  \\_/\\___/ \\__,_|  \\/  \\/|_|_| |_(_)");
   }
+
+  public Tile[][] getBoard(){
+    return this.layout;
+  }
+
+  public static void main(String[] args) {
+    Board game = new Board("Normal","Easy") ;
+    if(args[0].equals("Normal")){
+      if (args[1].equals("Easy")){
+        game = new Board("Normal","Easy");
+    }
+  }
+  if(args.length == 4){
+    int x = Integer.parseInt(args[2]);
+    int y = Integer.parseInt(args[3]);
+    Tile[][] test = game.getBoard();
+    test[x][y].setVisible(true);
+  }
+  System.out.println(game.toString()) ;
+}
 }
 }
