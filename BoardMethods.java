@@ -14,8 +14,8 @@ public class BoardMethods{
     System.out.println("Good luck!") ;
   }
 
-  public static void go(int numberOfBombs, int size) {
-    EasyBoard game = new EasyBoard(size) ;
+  public static void go(int numberOfBombs) {
+    EasyBoard game = new EasyBoard() ;
     game.generateBombs(numberOfBombs) ;
     game.refresh() ;
     Scanner scan = new Scanner(System.in);
@@ -44,9 +44,9 @@ public class BoardMethods{
         // this is when the game is still going
         x = -1 ;
         y = -1 ;
-        System.out.print("Enter the x coordinate of the tile you want to select: ") ;
+        System.out.print("\nEnter the x coordinate of the tile you want to select: ") ;
         x = scan.nextInt() ;
-        System.out.print("Enter the y coordinate of the tile you want to select: ") ;
+        System.out.print("\nEnter the y coordinate of the tile you want to select: ") ;
         y = scan.nextInt() ;
         game.move(x,y) ;
         game.isVictory() ;
