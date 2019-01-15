@@ -50,7 +50,6 @@ public class Board {
           }
         }
       }
-
       ///////////// HARD LEVEL //////////////////////////////////////////////////
       if (level.equals("Hard")) {
         layout = new Tile[8][8] ;
@@ -175,7 +174,6 @@ public class Board {
     return bombs;
   }
   */
-<<<<<<< HEAD
   // Determines the number of bombs around Tile n based off its "number" which we use to find its row and column in layout
   public int numberOfBombsAround(Tile n) {
     if (n.isBomb()) {
@@ -444,4 +442,5 @@ public class Board {
     System.out.println("  | | (_) | |_| | \\  /\\  / | | | |_|");
     System.out.println("  \\_/\\___/ \\__,_|  \\/  \\/|_|_| |_(_)");
   }
+}
 }
