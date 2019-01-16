@@ -76,153 +76,16 @@ public class Main {
 			int mode = 0;
 
 			// Normal easy mode!
-			if (args[0].equals("NE")) {
-				terminal.moveCursor((size.getColumns()/2) - 2,size.getRows()/2);
-				for (int i = 0; i < 5; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 1);
-				for (int i = 0; i < 5; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 2);
-				for (int i = 0; i < 5; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 3);
-				for (int i = 0; i < 5; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 4);
-				for (int i = 0; i < 5; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-			}
-			//Normal Hard Mode
-			if (args[0].equals("NH")) {
-				terminal.moveCursor((size.getColumns()/2) - 4,size.getRows()/2);
-				for (int i = 0; i < 8; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 1);
-				for (int i = 0; i < 8; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 2);
-				for (int i = 0; i < 8; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 3);
-				for (int i = 0; i < 8; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 4);
-				for (int i = 0; i < 8; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 5);
-				for (int i = 0; i < 8; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 6);
-				for (int i = 0; i < 8; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 7);
-				for (int i = 0; i < 8; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-			}
-
-			//Crazy easy mode
-			if (args[0].equals("CE")) {
-				terminal.moveCursor((size.getColumns()/2) - 4,size.getRows()/2);
-				for (int i = 0; i < 8; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 1);
-				for (int i = 0; i < 8; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 2);
-				for (int i = 0; i < 8; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 3);
-				for (int i = 0; i < 8; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 4);
-				for (int i = 0; i < 8; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 5);
-				for (int i = 0; i < 8; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 6);
-				for (int i = 0; i < 8; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 7);
-				for (int i = 0; i < 8; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-			}
-
-			//Crazy Hard mode
-			if (args[0].equals("CH")) {
-				terminal.moveCursor((size.getColumns()/2) - 5,size.getRows()/2);
-				for (int i = 0; i < 10; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 1);
-				for (int i = 0; i < 10; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 2);
-				for (int i = 0; i < 10; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 3);
-				for (int i = 0; i < 10; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 4);
-				for (int i = 0; i < 10; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 5);
-				for (int i = 0; i < 10; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 6);
-				for (int i = 0; i < 10; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 7);
-				for (int i = 0; i < 10; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 8);
-				for (int i = 0; i < 10; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 9);
-				for (int i = 0; i < 10; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-			}
 
 			while(running){
 				terminal.moveCursor(x,y); // we can also do terminal.setCursorPosition(x,y) ;
 				// moveCursor(..) places the cursor somewhere else after writing something until the end of the row
-				terminal.applyBackgroundColor(Terminal.Color.WHITE);
-				terminal.applyForegroundColor(Terminal.Color.BLACK);
+				terminal.applyBackgroundColor(Terminal.Color.BLUE);
+				terminal.applyForegroundColor(Terminal.Color.WHITE);
 				// Examples of other colors: BLACK, RED,GREEN,YELLOW,BLUE,MAGENTA,CYAN,WHITE,DEFAULT (depends on user)
 				//applySGR(a,b) for multiple modifiers (bold,blink) etc.
 				terminal.applySGR(Terminal.SGR.ENTER_UNDERLINE);
-				terminal.putCharacter('\u2B1B'); // this is a black square = cursor, helps you see where you are as you move with the keys
+				terminal.putCharacter('\u25A1'); // this is a white square = cursor, helps you see where you are as you move with the keys
 				// I got this Unicode character from https://www.fileformat.info/info/unicode/char/2b1b/index.htm along with the flag
 				//terminal.putCharacter(' ');
 				terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
@@ -245,6 +108,144 @@ public class Main {
 				}
 				terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
 				terminal.applyForegroundColor(Terminal.Color.DEFAULT);
+
+				if (args[0].equals("NE")) {
+					terminal.moveCursor((size.getColumns()/2) - 2,size.getRows()/2);
+					for (int i = 0; i < 5; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 1);
+					for (int i = 0; i < 5; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 2);
+					for (int i = 0; i < 5; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 3);
+					for (int i = 0; i < 5; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 4);
+					for (int i = 0; i < 5; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+				}
+				//Normal Hard Mode
+				if (args[0].equals("NH")) {
+					terminal.moveCursor((size.getColumns()/2) - 4,size.getRows()/2);
+					for (int i = 0; i < 8; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 1);
+					for (int i = 0; i < 8; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 2);
+					for (int i = 0; i < 8; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 3);
+					for (int i = 0; i < 8; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 4);
+					for (int i = 0; i < 8; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 5);
+					for (int i = 0; i < 8; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 6);
+					for (int i = 0; i < 8; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 7);
+					for (int i = 0; i < 8; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+				}
+
+				//Crazy easy mode
+				if (args[0].equals("CE")) {
+					terminal.moveCursor((size.getColumns()/2) - 4,size.getRows()/2);
+					for (int i = 0; i < 8; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 1);
+					for (int i = 0; i < 8; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 2);
+					for (int i = 0; i < 8; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 3);
+					for (int i = 0; i < 8; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 4);
+					for (int i = 0; i < 8; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 5);
+					for (int i = 0; i < 8; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 6);
+					for (int i = 0; i < 8; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 7);
+					for (int i = 0; i < 8; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+				}
+
+				//Crazy Hard mode
+				if (args[0].equals("CH")) {
+					terminal.moveCursor((size.getColumns()/2) - 5,size.getRows()/2);
+					for (int i = 0; i < 10; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 1);
+					for (int i = 0; i < 10; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 2);
+					for (int i = 0; i < 10; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 3);
+					for (int i = 0; i < 10; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 4);
+					for (int i = 0; i < 10; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 5);
+					for (int i = 0; i < 10; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 6);
+					for (int i = 0; i < 10; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 7);
+					for (int i = 0; i < 10; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 8);
+					for (int i = 0; i < 10; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 9);
+					for (int i = 0; i < 10; i++) {
+						terminal.putCharacter('\u2B1B');
+					}
+				}
 
 				Key key = terminal.readInput(); // determines what and whether the user typed a key in
 
