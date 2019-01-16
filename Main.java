@@ -58,7 +58,7 @@ public class Main {
 			int x = 10 ;
 			int y = 10 ;
 
-			Terminal terminal = TerminalFacade.createTerminal() ;
+			Terminal terminal = TerminalFacade.createTextTerminal() ;
 			terminal.enterPrivateMode() ; // this prevents scrolling
 			terminal.moveCursor(5,5) ;
 			// text printing always starts at the cursor's position so we need to make sure it goes where we want it to go
@@ -112,58 +112,58 @@ public class Main {
 				if (args[0].equals("NE")) {
 					terminal.moveCursor((size.getColumns()/2) - 2,size.getRows()/2);
 					for (int i = 0; i < 5; i++) {
-						terminal.putCharacter('\u2B1B');
+						terminal.putCharacter('\u25A2');
 					}
 					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 1);
 					for (int i = 0; i < 5; i++) {
-						terminal.putCharacter('\u2B1B');
+						terminal.putCharacter('\u25A2');
 					}
 					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 2);
 					for (int i = 0; i < 5; i++) {
-						terminal.putCharacter('\u2B1B');
+						terminal.putCharacter('\u25A2');
 					}
 					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 3);
 					for (int i = 0; i < 5; i++) {
-						terminal.putCharacter('\u2B1B');
+						terminal.putCharacter('\u25A2');
 					}
 					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 4);
 					for (int i = 0; i < 5; i++) {
-						terminal.putCharacter('\u2B1B');
+						terminal.putCharacter('\u25A2');
 					}
 				}
 				//Normal Hard Mode
 				if (args[0].equals("NH")) {
 					terminal.moveCursor((size.getColumns()/2) - 4,size.getRows()/2);
 					for (int i = 0; i < 8; i++) {
-						terminal.putCharacter('\u2B1B');
+						terminal.putCharacter('\u25A2');
 					}
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 1);
 					for (int i = 0; i < 8; i++) {
-						terminal.putCharacter('\u2B1B');
+						terminal.putCharacter('\u25A2');
 					}
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 2);
 					for (int i = 0; i < 8; i++) {
-						terminal.putCharacter('\u2B1B');
+						terminal.putCharacter('\u25A2');
 					}
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 3);
 					for (int i = 0; i < 8; i++) {
-						terminal.putCharacter('\u2B1B');
+						terminal.putCharacter('\u25A2');
 					}
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 4);
 					for (int i = 0; i < 8; i++) {
-						terminal.putCharacter('\u2B1B');
+						terminal.putCharacter('\u25A2');
 					}
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 5);
 					for (int i = 0; i < 8; i++) {
-						terminal.putCharacter('\u2B1B');
+						terminal.putCharacter('\u25A2');
 					}
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 6);
 					for (int i = 0; i < 8; i++) {
-						terminal.putCharacter('\u2B1B');
+						terminal.putCharacter('\u25A2');
 					}
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 7);
 					for (int i = 0; i < 8; i++) {
-						terminal.putCharacter('\u2B1B');
+						terminal.putCharacter('\u25A2');
 					}
 				}
 
@@ -171,35 +171,35 @@ public class Main {
 				if (args[0].equals("CE")) {
 					terminal.moveCursor((size.getColumns()/2) - 4,size.getRows()/2);
 					for (int i = 0; i < 8; i++) {
-						terminal.putCharacter('\u2B1B');
+						terminal.putCharacter('\u25A2');
 					}
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 1);
 					for (int i = 0; i < 8; i++) {
-						terminal.putCharacter('\u2B1B');
+						terminal.putCharacter('\u25A2');
 					}
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 2);
 					for (int i = 0; i < 8; i++) {
-						terminal.putCharacter('\u2B1B');
+						terminal.putCharacter('\u25A2');
 					}
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 3);
 					for (int i = 0; i < 8; i++) {
-						terminal.putCharacter('\u2B1B');
+						terminal.putCharacter('\u25A2');
 					}
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 4);
 					for (int i = 0; i < 8; i++) {
-						terminal.putCharacter('\u2B1B');
+						terminal.putCharacter('\u25A2');
 					}
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 5);
 					for (int i = 0; i < 8; i++) {
-						terminal.putCharacter('\u2B1B');
+						terminal.putCharacter('\u25A2');
 					}
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 6);
 					for (int i = 0; i < 8; i++) {
-						terminal.putCharacter('\u2B1B');
+						terminal.putCharacter('\u25A2');
 					}
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 7);
 					for (int i = 0; i < 8; i++) {
-						terminal.putCharacter('\u2B1B');
+						terminal.putCharacter('\u25A2');
 					}
 				}
 
@@ -207,43 +207,43 @@ public class Main {
 				if (args[0].equals("CH")) {
 					terminal.moveCursor((size.getColumns()/2) - 5,size.getRows()/2);
 					for (int i = 0; i < 10; i++) {
-						terminal.putCharacter('\u2B1B');
+						terminal.putCharacter('\u25A2');
 					}
 					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 1);
 					for (int i = 0; i < 10; i++) {
-						terminal.putCharacter('\u2B1B');
+						terminal.putCharacter('\u25A2');
 					}
 					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 2);
 					for (int i = 0; i < 10; i++) {
-						terminal.putCharacter('\u2B1B');
+						terminal.putCharacter('\u25A2');
 					}
 					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 3);
 					for (int i = 0; i < 10; i++) {
-						terminal.putCharacter('\u2B1B');
+						terminal.putCharacter('\u25A2');
 					}
 					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 4);
 					for (int i = 0; i < 10; i++) {
-						terminal.putCharacter('\u2B1B');
+						terminal.putCharacter('\u25A2');
 					}
 					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 5);
 					for (int i = 0; i < 10; i++) {
-						terminal.putCharacter('\u2B1B');
+						terminal.putCharacter('\u25A2');
 					}
 					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 6);
 					for (int i = 0; i < 10; i++) {
-						terminal.putCharacter('\u2B1B');
+						terminal.putCharacter('\u25A2');
 					}
 					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 7);
 					for (int i = 0; i < 10; i++) {
-						terminal.putCharacter('\u2B1B');
+						terminal.putCharacter('\u25A2');
 					}
 					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 8);
 					for (int i = 0; i < 10; i++) {
-						terminal.putCharacter('\u2B1B');
+						terminal.putCharacter('\u25A2');
 					}
 					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 9);
 					for (int i = 0; i < 10; i++) {
-						terminal.putCharacter('\u2B1B');
+						terminal.putCharacter('\u25A2');
 					}
 				}
 
@@ -258,28 +258,28 @@ public class Main {
 
 					if (key.getKind() == Key.Kind.ArrowLeft) {
 						terminal.moveCursor(x,y);
-						//terminal.putCharacter('\u2B1B');
+						//terminal.putCharacter('\u25A2');
 						terminal.putCharacter(' ');
 						x--;
 					}
 
 					if (key.getKind() == Key.Kind.ArrowRight) {
 						terminal.moveCursor(x,y);
-						//terminal.putCharacter('\u2B1B');
+						//terminal.putCharacter('\u25A2');
 						terminal.putCharacter(' ');
 						x++;
 					}
 
 					if (key.getKind() == Key.Kind.ArrowUp) {
 						terminal.moveCursor(x,y);
-						//terminal.putCharacter('\u2B1B');
+						//terminal.putCharacter('\u25A2');
 						terminal.putCharacter(' ');
 						y--;
 					}
 
 					if (key.getKind() == Key.Kind.ArrowDown) {
 						terminal.moveCursor(x,y);
-						//terminal.putCharacter('\u2B1B');
+						//terminal.putCharacter('\u25A2');
 						terminal.putCharacter(' ');
 						y++;
 					}
