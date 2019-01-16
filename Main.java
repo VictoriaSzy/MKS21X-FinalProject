@@ -80,7 +80,7 @@ public class Main {
 			while(running){
 				terminal.moveCursor(x,y); // we can also do terminal.setCursorPosition(x,y) ;
 				// moveCursor(..) places the cursor somewhere else after writing something until the end of the row
-				terminal.applyBackgroundColor(Terminal.Color.BLUE);
+				terminal.applyBackgroundColor(Terminal.Color.RED);
 				terminal.applyForegroundColor(Terminal.Color.WHITE);
 				// Examples of other colors: BLACK, RED,GREEN,YELLOW,BLUE,MAGENTA,CYAN,WHITE,DEFAULT (depends on user)
 				//applySGR(a,b) for multiple modifiers (bold,blink) etc.
@@ -106,30 +106,55 @@ public class Main {
 				for (int i = 0 ; i < 4; i++) {
 					terminal.putCharacter(' ');
 				}
-				terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
-				terminal.applyForegroundColor(Terminal.Color.DEFAULT);
-
 				if (args[0].equals("NE")) {
 					terminal.moveCursor((size.getColumns()/2) - 2,size.getRows()/2);
+					terminal.applyBackgroundColor(Terminal.Color.BLUE);
+					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 5; i++) {
-						terminal.putCharacter('\u25A2');
+						terminal.putCharacter('0');
 					}
+					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
+					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 1);
+					terminal.applyBackgroundColor(Terminal.Color.BLUE);
+					terminal.applyForegroundColor(Terminal.Color.WHITE);
+					terminal.applySGR(Terminal.SGR.ENTER_UNDERLINE);
 					for (int i = 0; i < 5; i++) {
-						terminal.putCharacter('\u25A2');
+						terminal.putCharacter('0');
 					}
+					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
+					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
+					terminal.applySGR(Terminal.SGR.RESET_ALL);
 					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 2);
+					terminal.applyBackgroundColor(Terminal.Color.BLUE);
+					terminal.applyForegroundColor(Terminal.Color.WHITE);
+					terminal.applySGR(Terminal.SGR.ENTER_UNDERLINE);
 					for (int i = 0; i < 5; i++) {
-						terminal.putCharacter('\u25A2');
+						terminal.putCharacter('0');
 					}
+					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
+					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
+					terminal.applySGR(Terminal.SGR.RESET_ALL);
 					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 3);
+					terminal.applyBackgroundColor(Terminal.Color.BLUE);
+					terminal.applyForegroundColor(Terminal.Color.WHITE);
+					terminal.applySGR(Terminal.SGR.ENTER_UNDERLINE);
 					for (int i = 0; i < 5; i++) {
-						terminal.putCharacter('\u25A2');
+						terminal.putCharacter('0');
 					}
+					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
+					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
+					terminal.applySGR(Terminal.SGR.RESET_ALL);
 					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 4);
+					terminal.applyBackgroundColor(Terminal.Color.BLUE);
+					terminal.applyForegroundColor(Terminal.Color.WHITE);
+					terminal.applySGR(Terminal.SGR.ENTER_UNDERLINE);
 					for (int i = 0; i < 5; i++) {
-						terminal.putCharacter('\u25A2');
+						terminal.putCharacter('0');
 					}
+					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
+					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
+					terminal.applySGR(Terminal.SGR.RESET_ALL);
 				}
 				//Normal Hard Mode
 				if (args[0].equals("NH")) {
