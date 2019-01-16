@@ -65,3 +65,5 @@ Jionghao: I added code that allow us to change the text colors. It is kind of a 
 01-15-2019
 
 Victoria: I went to the CS Dojo to try to get help with using lanterna because the tiles are eaten by the cursor once it passes through. I think that I need to find a way to store how that certain coordinate of the terminal looked before the cursor goes over it or to make the certain tiles identify themselves differently. I think that I can do it based on the color maybe (sort of similar to the patches from NetLogo). I created a new file and went through it to make sure that I understand what code was doing and/or causing.
+
+jionghao: I spent time looking through each line of code and compared it to our working commits, i fixed the problem where the cooridnates you enter were swapped. We still need to learn lanterna.
