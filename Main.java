@@ -85,7 +85,7 @@ public class Main {
 				// Examples of other colors: BLACK, RED,GREEN,YELLOW,BLUE,MAGENTA,CYAN,WHITE,DEFAULT (depends on user)
 				//applySGR(a,b) for multiple modifiers (bold,blink) etc.
 				terminal.applySGR(Terminal.SGR.ENTER_UNDERLINE);
-				terminal.putCharacter('\u25A1'); // this is a white square = cursor, helps you see where you are as you move with the keys
+				terminal.putCharacter('\u25AF'); // this is a white square = cursor, helps you see where you are as you move with the keys
 				// I got this Unicode character from https://www.fileformat.info/info/unicode/char/2b1b/index.htm along with the flag
 				//terminal.putCharacter(' ');
 				terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
