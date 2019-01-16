@@ -141,7 +141,7 @@ public class Board {
   public String getLevel(){
     return this.level;
   }
-  
+
   // Determines whether the tile that is going to be created is supposed to be a bomb or not
   public boolean isARandomBomb(int counter) {
     for (int x = 0 ; x < locationsOfBombs.length ; x++) {
@@ -271,23 +271,6 @@ public class Board {
         }
         else {
           n.setIdentifier(Integer.toString(result)) ;
-  // public int numberOfBombsAround(Tile n){
-  //   int result = 0 ;
-  //   int tileLocation = n.getNumber() ;
-  //   int roww = tileLocation / layout.length ;
-  //   int coll = tileLocation % layout.length ;
-    /*for(int r=0; r < layout.length ; r++){
-      for(int c=0; c < layout.length ; c++){
-        if(r == 0 && c == 0){
-          if(layout[1][0].getIdentifier().equals("*")){
-            result = result + 1;
-          }
-          if(layout[1][1].getIdentifier().equals("*")){
-            result = result + 1;
-          }
-          if(layout[0][1].getIdentifier().equals("*")){
-            result = result + 1;
-          }
         }
         return result ;
       }
@@ -330,10 +313,9 @@ public class Board {
     return result ;
   }
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    }*/
   //}
   //contains method to check inside locationsofbomb
-  public boolean contains(int[] ary, int number){
+  public boolean contains(int[] ary, int number) {
     for (int r = 0 ; r < ary.length ; r++) {
       if(ary[r] == number){
         return true;
@@ -445,15 +427,14 @@ public class Board {
     if(args[0].equals("Normal")){
       if (args[1].equals("Easy")){
         game = new Board("Normal","Easy");
+      }
     }
+    if(args.length == 4){
+      int x = Integer.parseInt(args[2]);
+      int y = Integer.parseInt(args[3]);
+      Tile[][] test = game.getBoard();
+      test[x][y].setVisible(true);
+    }
+    System.out.println(game.toString()) ;
   }
-  if(args.length == 4){
-    int x = Integer.parseInt(args[2]);
-    int y = Integer.parseInt(args[3]);
-    Tile[][] test = game.getBoard();
-    test[x][y].setVisible(true);
-  }
-  System.out.println(game.toString()) ;
-}
-}
 }
