@@ -58,7 +58,7 @@ public class Main {
 			int x = 10 ;
 			int y = 10 ;
 
-			Terminal terminal = TerminalFacade.createTextTerminal() ;
+			Terminal terminal = TerminalFacade.createTerminal() ;
 			terminal.enterPrivateMode() ; // this prevents scrolling
 			terminal.moveCursor(5,5) ;
 			// text printing always starts at the cursor's position so we need to make sure it goes where we want it to go

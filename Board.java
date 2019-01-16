@@ -141,7 +141,7 @@ public class Board {
   public String getLevel(){
     return this.level;
   }
-  
+
   // Determines whether the tile that is going to be created is supposed to be a bomb or not
   public boolean isARandomBomb(int counter) {
     for (int x = 0 ; x < locationsOfBombs.length ; x++) {
@@ -333,6 +333,7 @@ public class Board {
     }*/
   //}
   //contains method to check inside locationsofbomb
+}
   public boolean contains(int[] ary, int number){
     for (int r = 0 ; r < ary.length ; r++) {
       if(ary[r] == number){
