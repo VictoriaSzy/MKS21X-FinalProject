@@ -74,7 +74,7 @@ public class Main {
 			long tStart = System.currentTimeMillis() ;
 			long lastSecond = 0 ;
 			int mode = 0;
-
+			Board game = new Board(modeS,levelS) ;
 			// Normal easy mode!
 
 			while(running){
