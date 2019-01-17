@@ -118,43 +118,35 @@ public class Main {
 					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 1);
 					terminal.applyBackgroundColor(Terminal.Color.BLUE);
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
-					terminal.applySGR(Terminal.SGR.ENTER_UNDERLINE);
 					for (int i = 0; i < 5; i++) {
 						terminal.putCharacter('0');
 					}
 					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
 					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
-					terminal.applySGR(Terminal.SGR.RESET_ALL);
 					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 2);
 					terminal.applyBackgroundColor(Terminal.Color.BLUE);
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
-					terminal.applySGR(Terminal.SGR.ENTER_UNDERLINE);
 					for (int i = 0; i < 5; i++) {
 						terminal.putCharacter('0');
 					}
 					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
 					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
-					terminal.applySGR(Terminal.SGR.RESET_ALL);
 					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 3);
 					terminal.applyBackgroundColor(Terminal.Color.BLUE);
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
-					terminal.applySGR(Terminal.SGR.ENTER_UNDERLINE);
 					for (int i = 0; i < 5; i++) {
 						terminal.putCharacter('0');
 					}
 					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
 					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
-					terminal.applySGR(Terminal.SGR.RESET_ALL);
 					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 4);
 					terminal.applyBackgroundColor(Terminal.Color.BLUE);
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
-					terminal.applySGR(Terminal.SGR.ENTER_UNDERLINE);
 					for (int i = 0; i < 5; i++) {
 						terminal.putCharacter('0');
 					}
 					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
 					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
-					terminal.applySGR(Terminal.SGR.RESET_ALL);
 				}
 				//Normal Hard Mode
 				if (args[0].equals("NH")) {
