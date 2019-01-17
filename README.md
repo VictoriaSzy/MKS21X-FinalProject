@@ -71,3 +71,5 @@ jionghao: I spent time looking through each line of code and compared it to our 
 01-16-2019
 
 Victoria: I moved the creation of the tiles into the for loop and changed the cursor to be a different character. I tried to find a different character that would not take up too much space for the tiles and I tested it out and worked pretty well. We plan on changing the color of the background when the cursor goes over a tile (the rectangular character) and that should hopefully let the tile stay there once the cursor moves.
+
+jionghao: i also worked on finding a better tile to take the place of the cursor. I found a better one but we still have to implement the  actual game with lanterna.
