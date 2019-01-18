@@ -175,7 +175,7 @@ public class Main {
 					for (int i = 0; i < 8; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							terminal.putCharacter('\u25A2');
+							terminal.putCharacter('0');
 						}
 						counter++ ;
 					}
@@ -183,7 +183,7 @@ public class Main {
 					for (int i = 0; i < 8; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							terminal.putCharacter('\u25A2');
+							terminal.putCharacter('0');
 						}
 						counter++ ;
 					}
@@ -191,7 +191,7 @@ public class Main {
 					for (int i = 0; i < 8; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							terminal.putCharacter('\u25A2');
+							terminal.putCharacter('0') ;
 						}
 						counter++ ;
 					}
@@ -199,7 +199,7 @@ public class Main {
 					for (int i = 0; i < 8; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							terminal.putCharacter('\u25A2');
+							terminal.putCharacter('0') ;
 						}
 						counter++ ;
 					}
@@ -207,7 +207,7 @@ public class Main {
 					for (int i = 0; i < 8; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							terminal.putCharacter('\u25A2');
+							terminal.putCharacter('0') ;
 						}
 						counter++ ;
 					}
@@ -215,7 +215,7 @@ public class Main {
 					for (int i = 0; i < 8; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							terminal.putCharacter('\u25A2');
+							terminal.putCharacter('0') ;
 						}
 						counter++ ;
 					}
@@ -223,7 +223,7 @@ public class Main {
 					for (int i = 0; i < 8; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							terminal.putCharacter('\u25A2');
+							terminal.putCharacter('0') ;
 						}
 						counter++ ;
 					}
@@ -231,7 +231,7 @@ public class Main {
 					for (int i = 0; i < 8; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							terminal.putCharacter('\u25A2');
+							terminal.putCharacter('0') ;
 						}
 						counter++ ;
 					}
@@ -243,7 +243,7 @@ public class Main {
 					for (int i = 0; i < 8; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							terminal.putCharacter('\u25A2');
+							terminal.putCharacter('0') ;
 						}
 						counter++ ;
 					}
@@ -251,7 +251,7 @@ public class Main {
 					for (int i = 0; i < 8; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							terminal.putCharacter('\u25A2');
+							terminal.putCharacter('0') ;
 						}
 						counter++ ;
 					}
@@ -259,7 +259,7 @@ public class Main {
 					for (int i = 0; i < 8; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							terminal.putCharacter('\u25A2');
+							terminal.putCharacter('0') ;
 						}
 						counter++ ;
 					}
@@ -267,7 +267,7 @@ public class Main {
 					for (int i = 0; i < 8; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							terminal.putCharacter('\u25A2');
+							terminal.putCharacter('0') ;
 						}
 						counter++ ;
 					}
@@ -275,7 +275,7 @@ public class Main {
 					for (int i = 0; i < 8; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							terminal.putCharacter('\u25A2');
+							terminal.putCharacter('0') ;
 						}
 						counter++ ;
 					}
@@ -283,7 +283,7 @@ public class Main {
 					for (int i = 0; i < 8; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							terminal.putCharacter('\u25A2');
+							terminal.putCharacter('0') ;
 						}
 						counter++ ;
 					}
@@ -291,7 +291,7 @@ public class Main {
 					for (int i = 0; i < 8; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							terminal.putCharacter('\u25A2');
+							terminal.putCharacter('0') ;
 						}
 						counter++ ;
 					}
@@ -299,7 +299,7 @@ public class Main {
 					for (int i = 0; i < 8; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							terminal.putCharacter('\u25A2');
+							terminal.putCharacter('0') ;
 						}
 						counter++ ;
 					}
@@ -311,7 +311,7 @@ public class Main {
 					for (int i = 0; i < 10; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							terminal.putCharacter('\u25A2');
+							terminal.putCharacter('0') ;
 						}
 						counter++ ;
 					}
@@ -319,7 +319,7 @@ public class Main {
 					for (int i = 0; i < 10; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							terminal.putCharacter('\u25A2');
+							terminal.putCharacter('0') ;
 						}
 						counter++ ;
 					}
@@ -327,7 +327,7 @@ public class Main {
 					for (int i = 0; i < 10; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							terminal.putCharacter('\u25A2');
+							terminal.putCharacter('0') ;
 						}
 						counter++ ;
 					}
@@ -335,7 +335,7 @@ public class Main {
 					for (int i = 0; i < 10; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							terminal.putCharacter('\u25A2');
+							terminal.putCharacter('0') ;
 						}
 						counter++ ;
 					}
@@ -343,7 +343,7 @@ public class Main {
 					for (int i = 0; i < 10; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							terminal.putCharacter('\u25A2');
+							terminal.putCharacter('0') ;
 						}
 						counter++ ;
 					}
@@ -351,7 +351,7 @@ public class Main {
 					for (int i = 0; i < 10; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							terminal.putCharacter('\u25A2');
+							terminal.putCharacter('0') ;
 						}
 						counter++ ;
 					}
@@ -359,7 +359,7 @@ public class Main {
 					for (int i = 0; i < 10; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							terminal.putCharacter('\u25A2');
+							terminal.putCharacter('0') ;
 						}
 						counter++ ;
 					}
@@ -367,7 +367,7 @@ public class Main {
 					for (int i = 0; i < 10; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							terminal.putCharacter('\u25A2');
+							terminal.putCharacter('0') ;
 						}
 						counter++ ;
 					}
@@ -375,7 +375,7 @@ public class Main {
 					for (int i = 0; i < 10; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							terminal.putCharacter('\u25A2');
+							terminal.putCharacter('0') ;
 						}
 						counter++ ;
 					}
@@ -383,7 +383,7 @@ public class Main {
 					for (int i = 0; i < 10; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							terminal.putCharacter('\u25A2');
+							terminal.putCharacter('0') ;
 						}
 						counter++ ;
 					}
