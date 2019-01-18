@@ -107,11 +107,13 @@ public class Main {
 					terminal.putCharacter(' ');
 				}
 				int counter = 0 ;
+				Tile[][] t = game.getBoard();
 				if (args[0].equals("NE")) {
 					terminal.moveCursor((size.getColumns()/2) - 2,size.getRows()/2);
 					terminal.applyBackgroundColor(Terminal.Color.BLUE);
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 5; i++) {
+						String s = t[0][i];
 						//t = game.getTile(counter) ;
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 
@@ -128,7 +130,7 @@ public class Main {
 					for (int i = 0; i < 5; i++) {
 						String n = "1";
 						Character c = n.charAt(0);
-						if (game.isARandomBomb(counter)) terminal.putCharacter(c) ;
+						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
 							terminal.putCharacter('0');
 						}
