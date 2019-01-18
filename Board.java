@@ -315,7 +315,6 @@ public class Board {
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   //}
   //contains method to check inside locationsofbomb
-}
   public boolean contains(int[] ary, int number){
     for (int r = 0 ; r < ary.length ; r++) {
       if(ary[r] == number){
