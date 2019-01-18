@@ -113,8 +113,8 @@ public class Main {
 				Tile t = game.getTile(r,c) ;
 				if (args[0].equals("NE")) {
 					terminal.moveCursor((size.getColumns()/2) - 2,size.getRows()/2);
-					terminal.applyBackgroundColor(Terminal.Color.BLUE);
-					terminal.applyForegroundColor(Terminal.Color.WHITE);
+					//terminal.applyBackgroundColor(Terminal.Color.BLUE);
+					//terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 5; i++) {
 						t = game.getTile(r,c) ;
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
@@ -140,11 +140,11 @@ public class Main {
 						r++ ;
 						c++ ;
 					}
-					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
-					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
+					//terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
+					//terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 1);
-					terminal.applyBackgroundColor(Terminal.Color.BLUE);
-					terminal.applyForegroundColor(Terminal.Color.WHITE);
+					//terminal.applyBackgroundColor(Terminal.Color.BLUE);
+					//terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 5; i++) {
 						t = game.getTile(r,c) ;
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
@@ -170,11 +170,11 @@ public class Main {
 						r++ ;
 						c++ ;
 					}
-					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
-					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
+					//terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
+					//terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 2);
-					terminal.applyBackgroundColor(Terminal.Color.BLUE);
-					terminal.applyForegroundColor(Terminal.Color.WHITE);
+					//terminal.applyBackgroundColor(Terminal.Color.BLUE);
+					//terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 5; i++) {
 						t = game.getTile(r,c) ;
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
@@ -200,11 +200,11 @@ public class Main {
 						r++ ;
 						c++ ;
 					}
-					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
-					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
+					//terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
+					//terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 3);
-					terminal.applyBackgroundColor(Terminal.Color.BLUE);
-					terminal.applyForegroundColor(Terminal.Color.WHITE);
+					//terminal.applyBackgroundColor(Terminal.Color.BLUE);
+					//terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 5; i++) {
 						t = game.getTile(r,c) ;
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
@@ -230,11 +230,11 @@ public class Main {
 						r++ ;
 						c++ ;
 					}
-					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
-					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
+					//terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
+					//terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 4);
-					terminal.applyBackgroundColor(Terminal.Color.BLUE);
-					terminal.applyForegroundColor(Terminal.Color.WHITE);
+					//terminal.applyBackgroundColor(Terminal.Color.BLUE);
+					//terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 5; i++) {
 						t = game.getTile(r,c) ;
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
@@ -260,8 +260,8 @@ public class Main {
 						r++ ;
 						c++ ;
 					}
-					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
-					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
+					//terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
+					//terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 				}
 				//Normal Hard Mode
 				if (args[0].equals("NH")) {
