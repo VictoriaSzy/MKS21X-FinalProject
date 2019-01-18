@@ -107,16 +107,18 @@ public class Main {
 					terminal.putCharacter(' ');
 				}
 				int counter = 0 ;
-				//int r = 0;
-				//int c = 0;
+				int r = 0;
+				int c = 0;
 				//Tile t = game.getTile(counter);
+				Tile t = game.getTile(r,c) ;
 				if (args[0].equals("NE")) {
 					terminal.moveCursor((size.getColumns()/2) - 2,size.getRows()/2);
 					terminal.applyBackgroundColor(Terminal.Color.BLUE);
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 5; i++) {
-						//t = game.getTile(counter) ;
+						t = game.getTile(r,c) ;
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						int bombs = game.numberOfBombsAround(t) ;
 						/*if (game.numberOfBombsAround(t) != 0){
 							int n = t.getNumber() ;
 							String num = Integer.toString(n) ;
@@ -126,6 +128,8 @@ public class Main {
 							terminal.putCharacter('0');
 						}
 						counter++ ;
+						r++ ;
+						c++ ;
 					}
 					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
 					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
