@@ -73,3 +73,7 @@ jionghao: I spent time looking through each line of code and compared it to our 
 Victoria: I moved the creation of the tiles into the for loop and changed the cursor to be a different character. I tried to find a different character that would not take up too much space for the tiles and I tested it out and worked pretty well. We plan on changing the color of the background when the cursor goes over a tile (the rectangular character) and that should hopefully let the tile stay there once the cursor moves.
 
 jionghao: i also worked on finding a better tile to take the place of the cursor. I found a better one but we still have to implement the  actual game with lanterna.
+
+01-17-2019
+
+Victoria: I called the Board constructor to create a new Board based on the user's arguments (which determines the mode and level). I also changed how the tiles are set up by using a 0 or * to represent them. The * is currently for testing purposes to see whether the Board was constructed properly (which it was so far so yay!). I made this happen for all of the modes and levels.
