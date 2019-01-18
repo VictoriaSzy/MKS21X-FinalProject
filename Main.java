@@ -118,7 +118,7 @@ public class Main {
 					for (int i = 0; i < 5; i++) {
 						t = game.getTile(r,c) ;
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
-						int bombs = game.numberOfBombsAround(t) ;
+						//int bombs = game.numberOfBombsAround(t) ;
 						/*if (game.numberOfBombsAround(t) != 0){
 							int n = t.getNumber() ;
 							String num = Integer.toString(n) ;
@@ -138,7 +138,7 @@ public class Main {
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 5; i++) {
 						String n = "1";
-						Character c = n.charAt(0);
+						//Character c = n.charAt(0);
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
 							terminal.putCharacter('0');
