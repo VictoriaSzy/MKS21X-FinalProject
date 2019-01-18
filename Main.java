@@ -107,20 +107,21 @@ public class Main {
 					terminal.putCharacter(' ');
 				}
 				int counter = 0 ;
-				// int r = 0;
-				// int v = 0;
-				// Tile t = game.layout[r][v];
+				//int r = 0;
+				//int c = 0;
+				//Tile t = game.getTile(counter);
 				if (args[0].equals("NE")) {
 					terminal.moveCursor((size.getColumns()/2) - 2,size.getRows()/2);
 					terminal.applyBackgroundColor(Terminal.Color.BLUE);
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 5; i++) {
+						//t = game.getTile(counter) ;
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
-						// if (game.numberOfBombsAround(t) != 0){
-						// 	int n = t.getNumber();
-						// 	String num = Integer.parseInt(n);
-						// 	 terminal.putCharacter('num');
-						//  }
+						/*if (game.numberOfBombsAround(t) != 0){
+							int n = t.getNumber() ;
+							String num = Integer.toString(n) ;
+							terminal.putCharacter(num.charAt(0)) ;
+						}*/
 						else {
 							terminal.putCharacter('0');
 						}
