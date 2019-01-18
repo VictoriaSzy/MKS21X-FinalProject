@@ -74,155 +74,18 @@ public class Main {
 			long tStart = System.currentTimeMillis() ;
 			long lastSecond = 0 ;
 			int mode = 0;
-
+			Board game = new Board(modeS,levelS) ;
 			// Normal easy mode!
-			if (args[0].equals("NE")) {
-				terminal.moveCursor((size.getColumns()/2) - 2,size.getRows()/2);
-				for (int i = 0; i < 5; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 1);
-				for (int i = 0; i < 5; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 2);
-				for (int i = 0; i < 5; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 3);
-				for (int i = 0; i < 5; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 4);
-				for (int i = 0; i < 5; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-			}
-			//Normal Hard Mode
-			if (args[0].equals("NH")) {
-				terminal.moveCursor((size.getColumns()/2) - 4,size.getRows()/2);
-				for (int i = 0; i < 8; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 1);
-				for (int i = 0; i < 8; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 2);
-				for (int i = 0; i < 8; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 3);
-				for (int i = 0; i < 8; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 4);
-				for (int i = 0; i < 8; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 5);
-				for (int i = 0; i < 8; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 6);
-				for (int i = 0; i < 8; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 7);
-				for (int i = 0; i < 8; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-			}
-
-			//Crazy easy mode
-			if (args[0].equals("CE")) {
-				terminal.moveCursor((size.getColumns()/2) - 4,size.getRows()/2);
-				for (int i = 0; i < 8; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 1);
-				for (int i = 0; i < 8; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 2);
-				for (int i = 0; i < 8; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 3);
-				for (int i = 0; i < 8; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 4);
-				for (int i = 0; i < 8; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 5);
-				for (int i = 0; i < 8; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 6);
-				for (int i = 0; i < 8; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 7);
-				for (int i = 0; i < 8; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-			}
-
-			//Crazy Hard mode
-			if (args[0].equals("CH")) {
-				terminal.moveCursor((size.getColumns()/2) - 5,size.getRows()/2);
-				for (int i = 0; i < 10; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 1);
-				for (int i = 0; i < 10; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 2);
-				for (int i = 0; i < 10; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 3);
-				for (int i = 0; i < 10; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 4);
-				for (int i = 0; i < 10; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 5);
-				for (int i = 0; i < 10; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 6);
-				for (int i = 0; i < 10; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 7);
-				for (int i = 0; i < 10; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 8);
-				for (int i = 0; i < 10; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-				terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 9);
-				for (int i = 0; i < 10; i++) {
-					terminal.putCharacter('\u2B1B');
-				}
-			}
 
 			while(running){
 				terminal.moveCursor(x,y); // we can also do terminal.setCursorPosition(x,y) ;
 				// moveCursor(..) places the cursor somewhere else after writing something until the end of the row
-				terminal.applyBackgroundColor(Terminal.Color.WHITE);
-				terminal.applyForegroundColor(Terminal.Color.BLACK);
+				terminal.applyBackgroundColor(Terminal.Color.RED);
+				terminal.applyForegroundColor(Terminal.Color.WHITE);
 				// Examples of other colors: BLACK, RED,GREEN,YELLOW,BLUE,MAGENTA,CYAN,WHITE,DEFAULT (depends on user)
 				//applySGR(a,b) for multiple modifiers (bold,blink) etc.
 				terminal.applySGR(Terminal.SGR.ENTER_UNDERLINE);
-				terminal.putCharacter('\u2B1B'); // this is a black square = cursor, helps you see where you are as you move with the keys
+				terminal.putCharacter('\u25AF'); // this is a white square = cursor, helps you see where you are as you move with the keys
 				// I got this Unicode character from https://www.fileformat.info/info/unicode/char/2b1b/index.htm along with the flag
 				//terminal.putCharacter(' ');
 				terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
@@ -243,8 +106,358 @@ public class Main {
 				for (int i = 0 ; i < 4; i++) {
 					terminal.putCharacter(' ');
 				}
-				terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
-				terminal.applyForegroundColor(Terminal.Color.DEFAULT);
+				int counter = 0 ;
+				int r = 0;
+				int c = 0;
+				//Tile t = game.getTile(counter);
+				Tile t = game.getTile(r,c) ;
+				if (args[0].equals("NE")) {
+					terminal.moveCursor((size.getColumns()/2) - 2,size.getRows()/2);
+					terminal.applyBackgroundColor(Terminal.Color.BLUE);
+					terminal.applyForegroundColor(Terminal.Color.WHITE);
+					for (int i = 0; i < 5; i++) {
+						t = game.getTile(r,c) ;
+						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						int bombs = game.numberOfBombsAround(t) ;
+						/*if (game.numberOfBombsAround(t) != 0){
+							int n = t.getNumber() ;
+							String num = Integer.toString(n) ;
+							terminal.putCharacter(num.charAt(0)) ;
+						}*/
+						else {
+							terminal.putCharacter('0') ;
+						}
+						counter++ ;
+						r++ ;
+						c++ ;
+					}
+					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
+					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
+					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 1);
+					terminal.applyBackgroundColor(Terminal.Color.BLUE);
+					terminal.applyForegroundColor(Terminal.Color.WHITE);
+					for (int i = 0; i < 5; i++) {
+						String n = "1";
+						Character c = n.charAt(0);
+						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						else {
+							terminal.putCharacter('0');
+						}
+						counter++ ;
+					}
+					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
+					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
+					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 2);
+					terminal.applyBackgroundColor(Terminal.Color.BLUE);
+					terminal.applyForegroundColor(Terminal.Color.WHITE);
+					for (int i = 0; i < 5; i++) {
+						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						// if (game.numberOfBombsAround(t) != 0){
+						// 	int n = t.getNumber();
+						// 	String num = Integer.parseInt(n);
+						// 	 terminal.putCharacter('num');
+						//  }
+						else {
+							terminal.putCharacter('0');
+						}
+						counter++ ;
+					}
+					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
+					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
+					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 3);
+					terminal.applyBackgroundColor(Terminal.Color.BLUE);
+					terminal.applyForegroundColor(Terminal.Color.WHITE);
+					for (int i = 0; i < 5; i++) {
+						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						// if (game.numberOfBombsAround(t) != 0){
+						// 	int n = t.getNumber();
+						// 	String num = Integer.parseInt(n);
+						// 	 terminal.putCharacter('num');
+						//  }
+						else {
+							terminal.putCharacter('0');
+						}
+						counter++ ;
+					}
+					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
+					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
+					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 4);
+					terminal.applyBackgroundColor(Terminal.Color.BLUE);
+					terminal.applyForegroundColor(Terminal.Color.WHITE);
+					for (int i = 0; i < 5; i++) {
+						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						// if (game.numberOfBombsAround(t) != 0){
+						// 	int n = t.getNumber();
+						// 	String num = Integer.parseInt(n);
+						// 	 terminal.putCharacter('num');
+						//  }
+						else {
+							terminal.putCharacter('0');
+						}
+						counter++ ;
+					}
+					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
+					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
+				}
+				//Normal Hard Mode
+				if (args[0].equals("NH")) {
+					terminal.moveCursor((size.getColumns()/2) - 4,size.getRows()/2);
+					for (int i = 0; i < 8; i++) {
+						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						// if (game.numberOfBombsAround(t) != 0){
+						// 	int n = t.getNumber();
+						// 	String num = Integer.parseInt(n);
+						// 	 terminal.putCharacter('num');
+						//  }
+						else {
+							terminal.putCharacter('0');
+						}
+						counter++ ;
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 1);
+					for (int i = 0; i < 8; i++) {
+						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						// if (game.numberOfBombsAround(t) != 0){
+						// 	int n = t.getNumber();
+						// 	String num = Integer.parseInt(n);
+						// 	 terminal.putCharacter('num');
+						//  }
+						else {
+							terminal.putCharacter('0');
+						}
+						counter++ ;
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 2);
+					for (int i = 0; i < 8; i++) {
+						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						// if (game.numberOfBombsAround(t) != 0){
+						// 	int n = t.getNumber();
+						// 	String num = Integer.parseInt(n);
+						// 	 terminal.putCharacter('num');
+						//  }
+						else {
+							terminal.putCharacter('0') ;
+						}
+						counter++ ;
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 3);
+					for (int i = 0; i < 8; i++) {
+						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						// if (game.numberOfBombsAround(t) != 0){
+						// 	int n = t.getNumber();
+						// 	String num = Integer.parseInt(n);
+						// 	 terminal.putCharacter('num');
+						//  }
+						else {
+							terminal.putCharacter('0') ;
+						}
+						counter++ ;
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 4);
+					for (int i = 0; i < 8; i++) {
+						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						// if (game.numberOfBombsAround(t) != 0){
+						// 	int n = t.getNumber();
+						// 	String num = Integer.parseInt(n);
+						// 	 terminal.putCharacter('num');
+						//  }
+						else {
+							terminal.putCharacter('0') ;
+						}
+						counter++ ;
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 5);
+					for (int i = 0; i < 8; i++) {
+						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						// if (game.numberOfBombsAround(t) != 0){
+						// 	int n = t.getNumber();
+						// 	String num = Integer.parseInt(n);
+						// 	 terminal.putCharacter('num');
+						//  }
+						else {
+							terminal.putCharacter('0') ;
+						}
+						counter++ ;
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 6);
+					for (int i = 0; i < 8; i++) {
+						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						// if (game.numberOfBombsAround(t) != 0){
+						// 	int n = t.getNumber();
+						// 	String num = Integer.parseInt(n);
+						// 	 terminal.putCharacter('num');
+						//  }
+						else {
+							terminal.putCharacter('0') ;
+						}
+						counter++ ;
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 7);
+					for (int i = 0; i < 8; i++) {
+						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						// if (game.numberOfBombsAround(t) != 0){
+						// 	int n = t.getNumber();
+						// 	String num = Integer.parseInt(n);
+						// 	 terminal.putCharacter('num');
+						//  }
+						else {
+							terminal.putCharacter('0') ;
+						}
+						counter++ ;
+					}
+				}
+
+				//Crazy easy mode
+				if (args[0].equals("CE")) {
+					terminal.moveCursor((size.getColumns()/2) - 4,size.getRows()/2) ;
+					for (int i = 0; i < 8; i++) {
+						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						else {
+							terminal.putCharacter('0') ;
+						}
+						counter++ ;
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 1);
+					for (int i = 0; i < 8; i++) {
+						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						else {
+							terminal.putCharacter('0') ;
+						}
+						counter++ ;
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 2);
+					for (int i = 0; i < 8; i++) {
+						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						else {
+							terminal.putCharacter('0') ;
+						}
+						counter++ ;
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 3);
+					for (int i = 0; i < 8; i++) {
+						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						else {
+							terminal.putCharacter('0') ;
+						}
+						counter++ ;
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 4);
+					for (int i = 0; i < 8; i++) {
+						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						else {
+							terminal.putCharacter('0') ;
+						}
+						counter++ ;
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 5);
+					for (int i = 0; i < 8; i++) {
+						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						else {
+							terminal.putCharacter('0') ;
+						}
+						counter++ ;
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 6);
+					for (int i = 0; i < 8; i++) {
+						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						else {
+							terminal.putCharacter('0') ;
+						}
+						counter++ ;
+					}
+					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 7);
+					for (int i = 0; i < 8; i++) {
+						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						else {
+							terminal.putCharacter('0') ;
+						}
+						counter++ ;
+					}
+				}
+
+				//Crazy Hard mode
+				if (args[0].equals("CH")) {
+					terminal.moveCursor((size.getColumns()/2) - 5,size.getRows()/2);
+					for (int i = 0; i < 10; i++) {
+						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						else {
+							terminal.putCharacter('0') ;
+						}
+						counter++ ;
+					}
+					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 1);
+					for (int i = 0; i < 10; i++) {
+						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						else {
+							terminal.putCharacter('0') ;
+						}
+						counter++ ;
+					}
+					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 2);
+					for (int i = 0; i < 10; i++) {
+						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						else {
+							terminal.putCharacter('0') ;
+						}
+						counter++ ;
+					}
+					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 3);
+					for (int i = 0; i < 10; i++) {
+						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						else {
+							terminal.putCharacter('0') ;
+						}
+						counter++ ;
+					}
+					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 4);
+					for (int i = 0; i < 10; i++) {
+						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						else {
+							terminal.putCharacter('0') ;
+						}
+						counter++ ;
+					}
+					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 5);
+					for (int i = 0; i < 10; i++) {
+						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						else {
+							terminal.putCharacter('0') ;
+						}
+						counter++ ;
+					}
+					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 6);
+					for (int i = 0; i < 10; i++) {
+						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						else {
+							terminal.putCharacter('0') ;
+						}
+						counter++ ;
+					}
+					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 7);
+					for (int i = 0; i < 10; i++) {
+						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						else {
+							terminal.putCharacter('0') ;
+						}
+						counter++ ;
+					}
+					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 8);
+					for (int i = 0; i < 10; i++) {
+						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						else {
+							terminal.putCharacter('0') ;
+						}
+						counter++ ;
+					}
+					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 9);
+					for (int i = 0; i < 10; i++) {
+						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						else {
+							terminal.putCharacter('0') ;
+						}
+						counter++ ;
+					}
+				}
 
 				Key key = terminal.readInput(); // determines what and whether the user typed a key in
 
@@ -257,28 +470,28 @@ public class Main {
 
 					if (key.getKind() == Key.Kind.ArrowLeft) {
 						terminal.moveCursor(x,y);
-						//terminal.putCharacter('\u2B1B');
+						//terminal.putCharacter('\u25A2');
 						terminal.putCharacter(' ');
 						x--;
 					}
 
 					if (key.getKind() == Key.Kind.ArrowRight) {
 						terminal.moveCursor(x,y);
-						//terminal.putCharacter('\u2B1B');
+						//terminal.putCharacter('\u25A2');
 						terminal.putCharacter(' ');
 						x++;
 					}
 
 					if (key.getKind() == Key.Kind.ArrowUp) {
 						terminal.moveCursor(x,y);
-						//terminal.putCharacter('\u2B1B');
+						//terminal.putCharacter('\u25A2');
 						terminal.putCharacter(' ');
 						y--;
 					}
 
 					if (key.getKind() == Key.Kind.ArrowDown) {
 						terminal.moveCursor(x,y);
-						//terminal.putCharacter('\u2B1B');
+						//terminal.putCharacter('\u25A2');
 						terminal.putCharacter(' ');
 						y++;
 					}
