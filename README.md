@@ -78,4 +78,4 @@ jionghao: i also worked on finding a better tile to take the place of the cursor
 
 Victoria: I called the Board constructor to create a new Board based on the user's arguments (which determines the mode and level). I also changed how the tiles are set up by using a 0 or * to represent them. The * is currently for testing purposes to see whether the Board was constructed properly (which it was so far so yay!). I made this happen for all of the modes and levels. I think that we can use the numberOfBombsAround method to generate the numbers like this as well and store it in another variable in the main.
 
-Jionghao: I tried to print the number like victoria wanted but when we putstring we cant enter a variable. So well have to figure that ut 
+Jionghao: I tried to print the number like victoria wanted but when we putstring we cant enter a variable. So well have to figure that out 
