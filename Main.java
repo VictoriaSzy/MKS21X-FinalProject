@@ -120,7 +120,6 @@ public class Main {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
 							int bombs = game.numberOfBombsAround(t) ;
-							Character num ;
 							if (bombs == 0) terminal.putCharacter('0') ;
 							if (bombs == 1) terminal.putCharacter('1') ;
 							if (bombs == 2) terminal.putCharacter('2') ;
@@ -137,9 +136,10 @@ public class Main {
 							}*/
 						}
 						counter++ ;
-						r++ ;
 						c++ ;
 					}
+					r++ ;
+					c = 0 ;
 					//terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
 					//terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 1);
@@ -150,7 +150,6 @@ public class Main {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
 							int bombs = game.numberOfBombsAround(t) ;
-							Character num ;
 							if (bombs == 0) terminal.putCharacter('0') ;
 							if (bombs == 1) terminal.putCharacter('1') ;
 							if (bombs == 2) terminal.putCharacter('2') ;
@@ -167,9 +166,10 @@ public class Main {
 							}*/
 						}
 						counter++ ;
-						r++ ;
 						c++ ;
 					}
+					r++ ;
+					c = 0 ;
 					//terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
 					//terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 2);
@@ -180,7 +180,6 @@ public class Main {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
 							int bombs = game.numberOfBombsAround(t) ;
-							Character num ;
 							if (bombs == 0) terminal.putCharacter('0') ;
 							if (bombs == 1) terminal.putCharacter('1') ;
 							if (bombs == 2) terminal.putCharacter('2') ;
@@ -197,9 +196,10 @@ public class Main {
 							}*/
 						}
 						counter++ ;
-						r++ ;
 						c++ ;
 					}
+					r++ ;
+					c = 0 ;
 					//terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
 					//terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 3);
@@ -210,7 +210,6 @@ public class Main {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
 							int bombs = game.numberOfBombsAround(t) ;
-							Character num ;
 							if (bombs == 0) terminal.putCharacter('0') ;
 							if (bombs == 1) terminal.putCharacter('1') ;
 							if (bombs == 2) terminal.putCharacter('2') ;
@@ -227,9 +226,10 @@ public class Main {
 							}*/
 						}
 						counter++ ;
-						r++ ;
 						c++ ;
 					}
+					r++ ;
+					c = 0 ;
 					//terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
 					//terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 4);
@@ -240,7 +240,6 @@ public class Main {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
 							int bombs = game.numberOfBombsAround(t) ;
-							Character num ;
 							if (bombs == 0) terminal.putCharacter('0') ;
 							if (bombs == 1) terminal.putCharacter('1') ;
 							if (bombs == 2) terminal.putCharacter('2') ;
@@ -257,7 +256,6 @@ public class Main {
 							}*/
 						}
 						counter++ ;
-						r++ ;
 						c++ ;
 					}
 					//terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
