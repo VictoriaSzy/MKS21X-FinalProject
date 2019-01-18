@@ -107,12 +107,20 @@ public class Main {
 					terminal.putCharacter(' ');
 				}
 				int counter = 0 ;
+				// int r = 0;
+				// int v = 0;
+				// Tile t = game.layout[r][v];
 				if (args[0].equals("NE")) {
 					terminal.moveCursor((size.getColumns()/2) - 2,size.getRows()/2);
 					terminal.applyBackgroundColor(Terminal.Color.BLUE);
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 5; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						// if (game.numberOfBombsAround(t) != 0){
+						// 	int n = t.getNumber();
+						// 	String num = Integer.parseInt(n);
+						// 	 terminal.putCharacter('num');
+						//  }
 						else {
 							terminal.putCharacter('0');
 						}
@@ -125,6 +133,11 @@ public class Main {
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 5; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						// if (game.numberOfBombsAround(t) != 0){
+						// 	int n = t.getNumber();
+						// 	String num = Integer.parseInt(n);
+						// 	 terminal.putCharacter('num');
+						//  }
 						else {
 							terminal.putCharacter('0');
 						}
@@ -137,6 +150,11 @@ public class Main {
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 5; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						// if (game.numberOfBombsAround(t) != 0){
+						// 	int n = t.getNumber();
+						// 	String num = Integer.parseInt(n);
+						// 	 terminal.putCharacter('num');
+						//  }
 						else {
 							terminal.putCharacter('0');
 						}
@@ -149,6 +167,11 @@ public class Main {
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 5; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						// if (game.numberOfBombsAround(t) != 0){
+						// 	int n = t.getNumber();
+						// 	String num = Integer.parseInt(n);
+						// 	 terminal.putCharacter('num');
+						//  }
 						else {
 							terminal.putCharacter('0');
 						}
@@ -161,6 +184,11 @@ public class Main {
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 5; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						// if (game.numberOfBombsAround(t) != 0){
+						// 	int n = t.getNumber();
+						// 	String num = Integer.parseInt(n);
+						// 	 terminal.putCharacter('num');
+						//  }
 						else {
 							terminal.putCharacter('0');
 						}
@@ -174,6 +202,11 @@ public class Main {
 					terminal.moveCursor((size.getColumns()/2) - 4,size.getRows()/2);
 					for (int i = 0; i < 8; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						// if (game.numberOfBombsAround(t) != 0){
+						// 	int n = t.getNumber();
+						// 	String num = Integer.parseInt(n);
+						// 	 terminal.putCharacter('num');
+						//  }
 						else {
 							terminal.putCharacter('0');
 						}
@@ -182,6 +215,11 @@ public class Main {
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 1);
 					for (int i = 0; i < 8; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						// if (game.numberOfBombsAround(t) != 0){
+						// 	int n = t.getNumber();
+						// 	String num = Integer.parseInt(n);
+						// 	 terminal.putCharacter('num');
+						//  }
 						else {
 							terminal.putCharacter('0');
 						}
@@ -190,6 +228,11 @@ public class Main {
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 2);
 					for (int i = 0; i < 8; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						// if (game.numberOfBombsAround(t) != 0){
+						// 	int n = t.getNumber();
+						// 	String num = Integer.parseInt(n);
+						// 	 terminal.putCharacter('num');
+						//  }
 						else {
 							terminal.putCharacter('0') ;
 						}
@@ -198,6 +241,11 @@ public class Main {
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 3);
 					for (int i = 0; i < 8; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						// if (game.numberOfBombsAround(t) != 0){
+						// 	int n = t.getNumber();
+						// 	String num = Integer.parseInt(n);
+						// 	 terminal.putCharacter('num');
+						//  }
 						else {
 							terminal.putCharacter('0') ;
 						}
@@ -206,6 +254,11 @@ public class Main {
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 4);
 					for (int i = 0; i < 8; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						// if (game.numberOfBombsAround(t) != 0){
+						// 	int n = t.getNumber();
+						// 	String num = Integer.parseInt(n);
+						// 	 terminal.putCharacter('num');
+						//  }
 						else {
 							terminal.putCharacter('0') ;
 						}
@@ -214,6 +267,11 @@ public class Main {
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 5);
 					for (int i = 0; i < 8; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						// if (game.numberOfBombsAround(t) != 0){
+						// 	int n = t.getNumber();
+						// 	String num = Integer.parseInt(n);
+						// 	 terminal.putCharacter('num');
+						//  }
 						else {
 							terminal.putCharacter('0') ;
 						}
@@ -222,6 +280,11 @@ public class Main {
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 6);
 					for (int i = 0; i < 8; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						// if (game.numberOfBombsAround(t) != 0){
+						// 	int n = t.getNumber();
+						// 	String num = Integer.parseInt(n);
+						// 	 terminal.putCharacter('num');
+						//  }
 						else {
 							terminal.putCharacter('0') ;
 						}
@@ -230,6 +293,11 @@ public class Main {
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 7);
 					for (int i = 0; i < 8; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						// if (game.numberOfBombsAround(t) != 0){
+						// 	int n = t.getNumber();
+						// 	String num = Integer.parseInt(n);
+						// 	 terminal.putCharacter('num');
+						//  }
 						else {
 							terminal.putCharacter('0') ;
 						}
