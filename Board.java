@@ -421,11 +421,9 @@ public class Board {
   public Tile[][] getBoard(){
     return this.layout ;
   }
-  /*public Tile getTile(int co) {
-    int r = co % layout.length ;
-    int c = co % layout.length - 1;
+  public Tile getTile(int r, int c) {
     return layout[r][c] ;
-  }*/
+  }
 
   public static void main(String[] args) {
     Board game = new Board("Normal","Easy") ;
