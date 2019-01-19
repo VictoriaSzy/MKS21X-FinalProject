@@ -116,7 +116,9 @@ public class Main {
 						t = game.getTile(counter/5, counter % 5) ;
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							terminal.putCharacter(t.getIdentifier().charAt(0));
+							int label = t.getNumber() ;
+							String la = "" + label + "" ;
+							terminal.putCharacter(la.charAt(0));
 						}
 						counter++ ;
 					}
@@ -129,7 +131,9 @@ public class Main {
 						t = game.getTile(counter/5, counter % 5) ;
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							terminal.putCharacter(t.getIdentifier().charAt(0));
+							int label = t.getNumber() ;
+							String la = "" + label + "" ;
+							terminal.putCharacter(la.charAt(0));
 						}
 						counter++ ;
 					}
@@ -142,7 +146,9 @@ public class Main {
 						t = game.getTile(counter/5, counter % 5) ;
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							terminal.putCharacter(t.getIdentifier().charAt(0));
+							int label = t.getNumber() ;
+							String la = "" + label + "" ;
+							terminal.putCharacter(la.charAt(0));
 						}
 						counter++ ;
 					}
@@ -155,7 +161,9 @@ public class Main {
 						t = game.getTile(counter/5, counter % 5) ;
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							terminal.putCharacter(t.getIdentifier().charAt(0));
+							int label = t.getNumber() ;
+							String la = "" + label + "" ;
+							terminal.putCharacter(la.charAt(0));
 						}
 						counter++ ;
 					}
@@ -168,7 +176,9 @@ public class Main {
 						t = game.getTile(counter/5, counter % 5) ;
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							terminal.putCharacter(t.getIdentifier().charAt(0));
+							int label = t.getNumber() ;
+							String la = "" + label + "" ;
+							terminal.putCharacter(la.charAt(0));
 						}
 						counter++ ;
 					}
