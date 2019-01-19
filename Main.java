@@ -111,10 +111,12 @@ public class Main {
 				int c = 0;
 				//Tile t = game.getTile(counter);
 				Tile t = game.getTile(r,c) ;
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+				// Normal easy
 				if (args[0].equals("NE")) {
 					terminal.moveCursor((size.getColumns()/2) - 2,size.getRows()/2);
-					//terminal.applyBackgroundColor(Terminal.Color.BLUE);
-					//terminal.applyForegroundColor(Terminal.Color.WHITE);
+					terminal.applyBackgroundColor(Terminal.Color.BLUE);
+					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 5; i++) {
 						t = game.getTile(r,c) ;
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
@@ -125,7 +127,7 @@ public class Main {
 							terminal.putCharacter(num.charAt(0)) ;
 						}*/
 						else {
-							terminal.putCharacter('0') ;
+							terminal.putCharacter('0');
 						}
 						counter++ ;
 						r++ ;
@@ -134,8 +136,8 @@ public class Main {
 					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
 					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 1);
-					//terminal.applyBackgroundColor(Terminal.Color.BLUE);
-					//terminal.applyForegroundColor(Terminal.Color.WHITE);
+					terminal.applyBackgroundColor(Terminal.Color.BLUE);
+					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 5; i++) {
 						String n = "1";
 						//Character c = n.charAt(0);
@@ -148,8 +150,8 @@ public class Main {
 					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
 					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 2);
-					//terminal.applyBackgroundColor(Terminal.Color.BLUE);
-					//terminal.applyForegroundColor(Terminal.Color.WHITE);
+					terminal.applyBackgroundColor(Terminal.Color.BLUE);
+					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 5; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						// if (game.numberOfBombsAround(t) != 0){
@@ -165,8 +167,8 @@ public class Main {
 					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
 					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 3);
-					//terminal.applyBackgroundColor(Terminal.Color.BLUE);
-					//terminal.applyForegroundColor(Terminal.Color.WHITE);
+					terminal.applyBackgroundColor(Terminal.Color.BLUE);
+					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 5; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						// if (game.numberOfBombsAround(t) != 0){
@@ -182,8 +184,8 @@ public class Main {
 					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
 					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 4);
-					//terminal.applyBackgroundColor(Terminal.Color.BLUE);
-					//terminal.applyForegroundColor(Terminal.Color.WHITE);
+					terminal.applyBackgroundColor(Terminal.Color.BLUE);
+					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 5; i++) {
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						// if (game.numberOfBombsAround(t) != 0){
@@ -199,6 +201,7 @@ public class Main {
 					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
 					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 				}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 				//Normal Hard Mode
 				if (args[0].equals("NH")) {
 					terminal.moveCursor((size.getColumns()/2) - 4,size.getRows()/2);
@@ -306,7 +309,7 @@ public class Main {
 						counter++ ;
 					}
 				}
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 				//Crazy easy mode
 				if (args[0].equals("CE")) {
 					terminal.moveCursor((size.getColumns()/2) - 4,size.getRows()/2) ;
@@ -374,7 +377,7 @@ public class Main {
 						counter++ ;
 					}
 				}
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 				//Crazy Hard mode
 				if (args[0].equals("CH")) {
 					terminal.moveCursor((size.getColumns()/2) - 5,size.getRows()/2);
@@ -457,7 +460,8 @@ public class Main {
 						}
 						counter++ ;
 					}
-				}
+				} // finished construction of board
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 				Key key = terminal.readInput(); // determines what and whether the user typed a key in
 
