@@ -94,7 +94,7 @@ public void showLayout() {
       victory = false ; // user lost
       System.out.println("Uh-oh! The game is OVER!!") ;
     }
-    else if (display[x][y].equals(empty) == true && layout[x][y].equals(empty)) {
+    else if (display[x][y].equals(empty) && layout[x][y].equals(empty)) {
       finished = false ;
       System.out.println("The tile you chose was revealed!") ;
     }
