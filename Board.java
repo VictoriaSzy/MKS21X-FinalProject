@@ -41,6 +41,7 @@ public class Board {
         for (int r = 0 ; r < 5 ; r++) {
           for (int c = 0 ; c < 5 ; c++) {
             layout[r][c] = new Tile(isARandomBomb(i)) ;
+            layout[r][c].setIdentifier("" + numberOfBombsAround(layout[r][c]) + "") ;
             layout[r][c].setNumber(i) ;
             i++ ;
           }
@@ -69,6 +70,8 @@ public class Board {
         for (int r = 0 ; r < 8 ; r++) {
           for (int c = 0 ; c < 8 ; c++) {
             layout[r][c] = new Tile(isARandomBomb(i)) ;
+            layout[r][c].setIdentifier("" + numberOfBombsAround(layout[r][c]) + "") ;
+            layout[r][c].setNumber(i) ;
             i++ ;
           }
         }
@@ -101,6 +104,8 @@ public class Board {
         for (int r = 0 ; r < 8 ; r++) {
           for (int c = 0 ; c < 8 ; c++) {
             layout[r][c] = new Tile(isARandomBomb(i)) ;
+            layout[r][c].setIdentifier("" + numberOfBombsAround(layout[r][c]) + "") ;
+            layout[r][c].setNumber(i) ;
             i++ ;
           }
         }
@@ -129,6 +134,8 @@ public class Board {
         for (int r = 0 ; r < 10 ; r++) {
           for (int c = 0 ; c < 10 ; c++) {
             layout[r][c] = new Tile(isARandomBomb(i)) ;
+            layout[r][c].setIdentifier("" + numberOfBombsAround(layout[r][c]) + "") ;
+            layout[r][c].setNumber(i) ;
             i++ ;
           }
         }
@@ -178,8 +185,8 @@ public class Board {
     }
     int result = 0 ;
     int tileLocation = n.getNumber() ;
-    int roww = tileLocation / layout.length ;
-    int coll = tileLocation % layout.length ;
+    int roww = tileLocation / layout.length ; // divide to get the rows
+    int coll = tileLocation % layout.length ; // % to get the columns
     ///////////// TOP ROW ////////////////////////////
     if (roww == 0) {
       // the tile is in the top row
