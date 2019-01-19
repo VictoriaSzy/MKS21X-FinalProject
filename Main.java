@@ -118,7 +118,7 @@ public class Main {
 					terminal.applyBackgroundColor(Terminal.Color.BLUE);
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 5; i++) {
-						t = game.getTile(r,c) ;
+						//t = game.getTile(r,c) ;
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						//int bombs = game.numberOfBombsAround(t) ;
 						/*if (game.numberOfBombsAround(t) != 0){
