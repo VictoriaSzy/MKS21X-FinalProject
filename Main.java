@@ -114,97 +114,101 @@ public class Main {
 					terminal.moveCursor((size.getColumns()/2) - 2,size.getRows()/2);
 					terminal.applyBackgroundColor(Terminal.Color.BLUE);
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
-					for (int i = 0; i < 5; i++) {
+					for (int i = 0; i < 5 && c < 5; i++) {
 						t = game.getTile(r,c) ;
-						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
-						//int bombs = game.numberOfBombsAround(t) ;
-						/*if (game.numberOfBombsAround(t) != 0){
-							int n = t.getNumber() ;
-							String num = Integer.toString(n) ;
-							terminal.putCharacter(num.charAt(0)) ;
-						}*/
+						if (t.isBomb() && t.isVisible()) {
+							// the user has selected a bomb and the game must now end!
+							//game.gameOverMessage() ;
+						}
 						else {
-							int label = t.getNumber() ;
-							String la = t.getIdentifier();
-							terminal.putCharacter(la.charAt(0));
+							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
+							terminal.putCharacter(t.getIdentifier()) ;
 						}
 						counter++ ;
-						r++ ;
 						c++ ;
 					}
+					r++ ;
+					c = 0 ;
 					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
 					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 1);
 					terminal.applyBackgroundColor(Terminal.Color.BLUE);
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
-					for (int i = 0; i < 5; i++) {
-						String n = "1";
-						//Character c = n.charAt(0);
-						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+					for (int i = 0; i < 5 && c < 5; i++) {
+						t = game.getTile(r,c) ;
+						if (t.isBomb() && t.isVisible()) {
+							// the user has selected a bomb and the game must now end!
+							//game.gameOverMessage() ;
+						}
 						else {
-							int label = t.getNumber() ;
-							String la = "" + label + "" ;
-							terminal.putCharacter(la.charAt(0));
+							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
+							terminal.putCharacter(t.getIdentifier()) ;
 						}
 						counter++ ;
+						c++ ;
 					}
+					r++ ;
+					c = 0 ;
 					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
 					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 2);
 					terminal.applyBackgroundColor(Terminal.Color.BLUE);
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
-					for (int i = 0; i < 5; i++) {
-						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
-						// if (game.numberOfBombsAround(t) != 0){
-						// 	int n = t.getNumber();
-						// 	String num = Integer.parseInt(n);
-						// 	 terminal.putCharacter('num');
-						//  }
+					for (int i = 0; i < 5 && c < 5; i++) {
+						t = game.getTile(r,c) ;
+						if (t.isBomb() && t.isVisible()) {
+							// the user has selected a bomb and the game must now end!
+							//game.gameOverMessage() ;
+						}
 						else {
-							int label = t.getNumber() ;
-							String la = "" + label + "" ;
-							terminal.putCharacter(la.charAt(0));
+							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
+							terminal.putCharacter(t.getIdentifier()) ;
 						}
 						counter++ ;
+						c++ ;
 					}
+					r++ ;
+					c = 0 ;
 					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
 					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 3);
 					terminal.applyBackgroundColor(Terminal.Color.BLUE);
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
-					for (int i = 0; i < 5; i++) {
-						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
-						// if (game.numberOfBombsAround(t) != 0){
-						// 	int n = t.getNumber();
-						// 	String num = Integer.parseInt(n);
-						// 	 terminal.putCharacter('num');
-						//  }
+					for (int i = 0; i < 5 && c < 5; i++) {
+						t = game.getTile(r,c) ;
+						if (t.isBomb() && t.isVisible()) {
+							// the user has selected a bomb and the game must now end!
+							//game.gameOverMessage() ;
+						}
 						else {
-							int label = t.getNumber() ;
-							String la = "" + label + "" ;
-							terminal.putCharacter(la.charAt(0));
+							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
+							terminal.putCharacter(t.getIdentifier()) ;
 						}
 						counter++ ;
+						c++ ;
 					}
+					r++ ;
+					c = 0 ;
 					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
 					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 					terminal.moveCursor((size.getColumns()/2) - 2,(size.getRows()/2) + 4);
 					terminal.applyBackgroundColor(Terminal.Color.BLUE);
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
-					for (int i = 0; i < 5; i++) {
-						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
-						// if (game.numberOfBombsAround(t) != 0){
-						// 	int n = t.getNumber();
-						// 	String num = Integer.parseInt(n);
-						// 	 terminal.putCharacter('num');
-						//  }
+					for (int i = 0; i < 5 && c < 5; i++) {
+						t = game.getTile(r,c) ;
+						if (t.isBomb() && t.isVisible()) {
+							// the user has selected a bomb and the game must now end!
+							//game.gameOverMessage() ;
+						}
 						else {
-							int label = t.getNumber() ;
-							String la = "" + label + "" ;
-							terminal.putCharacter(la.charAt(0));
+							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
+							terminal.putCharacter(t.getIdentifier()) ;
 						}
 						counter++ ;
+						c++ ;
 					}
+					r++ ;
+					c = 0 ;
 					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
 					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 				}
