@@ -107,19 +107,29 @@ public class Main {
 					terminal.putCharacter(' ');
 				}
 				int counter = 0 ;
-				int t = game.getTile(0,0) ;
+				int r = 0;
+				int c = 0;
+				//Tile t = game.getTile(counter);
+				Tile t = game.getTile(r,c) ;
 				if (args[0].equals("NE")) {
 					terminal.moveCursor((size.getColumns()/2) - 2,size.getRows()/2);
 					terminal.applyBackgroundColor(Terminal.Color.BLUE);
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 5; i++) {
-						t = game.getTile(counter/5, counter % 5) ;
+						t = game.getTile(r,c) ;
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						//int bombs = game.numberOfBombsAround(t) ;
+						/*if (game.numberOfBombsAround(t) != 0){
+							int n = t.getNumber() ;
+							String num = Integer.toString(n) ;
+							terminal.putCharacter(num.charAt(0)) ;
+						}*/
 						else {
-							String thing = "" + t + "" ;
-							terminal.putCharacter(thing.charAt(0));
+							terminal.putCharacter('0');
 						}
 						counter++ ;
+						r++ ;
+						c++ ;
 					}
 					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
 					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
@@ -127,11 +137,11 @@ public class Main {
 					terminal.applyBackgroundColor(Terminal.Color.BLUE);
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 5; i++) {
-						t = game.getTile(counter/5, counter % 5) ;
+						String n = "1";
+						//Character c = n.charAt(0);
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							String thing = "" + t + "" ;
-							terminal.putCharacter(thing.charAt(0));
+							terminal.putCharacter('0');
 						}
 						counter++ ;
 					}
@@ -141,11 +151,14 @@ public class Main {
 					terminal.applyBackgroundColor(Terminal.Color.BLUE);
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 5; i++) {
-						t = game.getTile(counter/5, counter % 5) ;
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						// if (game.numberOfBombsAround(t) != 0){
+						// 	int n = t.getNumber();
+						// 	String num = Integer.parseInt(n);
+						// 	 terminal.putCharacter('num');
+						//  }
 						else {
-							String thing = "" + t + "" ;
-							terminal.putCharacter(thing.charAt(0));
+							terminal.putCharacter('0');
 						}
 						counter++ ;
 					}
@@ -155,11 +168,14 @@ public class Main {
 					terminal.applyBackgroundColor(Terminal.Color.BLUE);
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 5; i++) {
-						t = game.getTile(counter/5, counter % 5) ;
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						// if (game.numberOfBombsAround(t) != 0){
+						// 	int n = t.getNumber();
+						// 	String num = Integer.parseInt(n);
+						// 	 terminal.putCharacter('num');
+						//  }
 						else {
-							String thing = "" + t + "" ;
-							terminal.putCharacter(thing.charAt(0));
+							terminal.putCharacter('0');
 						}
 						counter++ ;
 					}
@@ -169,11 +185,14 @@ public class Main {
 					terminal.applyBackgroundColor(Terminal.Color.BLUE);
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 5; i++) {
-						t = game.getTile(counter/5, counter % 5) ;
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						// if (game.numberOfBombsAround(t) != 0){
+						// 	int n = t.getNumber();
+						// 	String num = Integer.parseInt(n);
+						// 	 terminal.putCharacter('num');
+						//  }
 						else {
-							String thing = "" + t + "" ;
-							terminal.putCharacter(thing.charAt(0));
+							terminal.putCharacter('0');
 						}
 						counter++ ;
 					}
@@ -515,12 +534,6 @@ public class Main {
 					// this line will place the time left on the bottom middle
 				}
 			}
-		} catch (ArrayIndexOutOfBoundsException e) {
-			System.out.println("There is an array index out of bounds exception somehow!") ;
-			System.exit(1) ;
-		} catch (NumberFormatException e) {
-			System.out.println("One of the values is not being converted properly to a string, char, or integer!") ;
-			System.exit(1) ;
 		} catch (Exception e) {
 			System.out.println("Are you sure that you read the instructions to this program?\nThere seems to be an error with what you gave us. \nHere are the directions to help you play our awesome version of Minesweeper:") ;
 			System.out.println(directions) ;
