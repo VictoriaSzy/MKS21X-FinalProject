@@ -69,6 +69,7 @@ public class Board {
         for (int r = 0 ; r < 8 ; r++) {
           for (int c = 0 ; c < 8 ; c++) {
             layout[r][c] = new Tile(isARandomBomb(i)) ;
+            layout[r][c].setNumber(i) ;
             i++ ;
           }
         }
@@ -101,6 +102,7 @@ public class Board {
         for (int r = 0 ; r < 8 ; r++) {
           for (int c = 0 ; c < 8 ; c++) {
             layout[r][c] = new Tile(isARandomBomb(i)) ;
+            layout[r][c].setNumber(i) ;
             i++ ;
           }
         }
@@ -129,19 +131,20 @@ public class Board {
         for (int r = 0 ; r < 10 ; r++) {
           for (int c = 0 ; c < 10 ; c++) {
             layout[r][c] = new Tile(isARandomBomb(i)) ;
+            layout[r][c].setNumber(i) ;
             i++ ;
           }
         }
       }
     }
   }
+  // accessor methods
   public String getMode(){
     return this.mode;
   }
   public String getLevel(){
     return this.level;
   }
-
   // Determines whether the tile that is going to be created is supposed to be a bomb or not
   public boolean isARandomBomb(int counter) {
     for (int x = 0 ; x < locationsOfBombs.length ; x++) {
@@ -156,24 +159,9 @@ public class Board {
     }
     return true ;
   }
-  /*
-  // counts the number of bombs on the board
-  public int numberOfBombs(){
-    int bombs = 0;
-    for(int r=0; r < layout.length; r++){
-      for(int c=0; c < layout.length; c++){
-        if(layout[r][c].getIdentifier().equals("*")){
-          bombs = bombs + 1;
-        }
-      }
-    }
-    return bombs;
-  }
-  */
   // Determines the number of bombs around Tile n based off its "number" which we use to find its row and column in layout
   public int numberOfBombsAround(Tile n) {
     if (n.isBomb()) {
-      n.setIdentifier("*") ;
       return 0 ;
     }
     int result = 0 ;
@@ -191,126 +179,90 @@ public class Board {
         if (tileToTheRight.isBomb()) result++ ;
         if (tileDirectlyBelow.isBomb()) result++ ;
         if (tileDiagonallyRight.isBomb()) result ++ ;
-        if (result == 0) {
-          // there are no bombs around this tile
-          n.setIdentifier(" ") ;
-        }
-        else {
-          n.setIdentifier(Integer.toString(result)) ;
-        }
         return result ;
       }
-      if (coll == layout.length - 1) {
+      else if (coll == layout.length - 1) {
         // the tile is in the upper right corner
         Tile tileToTheLeft = layout[roww][coll - 1] ;
         Tile tileDirectlyBelow = layout[roww + 1][coll] ;
-        Tile tileDiagonallyLeft = layout[roww + 1] [coll - 1] ;
+        Tile tileDiagonallyLeft = layout[roww + 1][coll - 1] ;
         if (tileToTheLeft.isBomb()) result++ ;
         if (tileDirectlyBelow.isBomb()) result++ ;
         if (tileDiagonallyLeft.isBomb()) result ++ ;
-        if (result == 0) {
-          // there are no bombs around this tile
-          n.setIdentifier(" ") ;
-        }
-        else {
-          n.setIdentifier(Integer.toString(result)) ;
-        }
         return result ;
       }
-      // Otherwise, we can check the tiles to the left, diagonally left, directly below, diagonally right, and to the right
-      Tile tileToTheLeft = layout[roww][coll - 1] ;
-      Tile tileDiagonallyLeft = layout[roww + 1] [coll - 1] ;
-      Tile tileDirectlyBelow = layout[roww + 1][coll] ;
-      Tile tileDiagonallyRight = layout[roww + 1] [coll + 1] ;
-      Tile tileToTheRight = layout[roww][coll + 1] ;
-      if (tileToTheLeft.isBomb()) result++ ;
-      if (tileDiagonallyLeft.isBomb()) result ++ ;
-      if (tileDirectlyBelow.isBomb()) result++ ;
-      if (tileDiagonallyRight.isBomb()) result ++ ;
-      if (tileToTheRight.isBomb()) result++ ;
-      if (result == 0) {
-        // there are no bombs around this tile
-        n.setIdentifier(" ") ;
-      }
       else {
-        n.setIdentifier(Integer.toString(result)) ;
+        // Otherwise, we can check the tiles to the left, diagonally left, directly below, diagonally right, and to the right
+        Tile tileToTheLeft = layout[roww][coll - 1] ;
+        Tile tileDiagonallyLeft = layout[roww + 1] [coll - 1] ;
+        Tile tileDirectlyBelow = layout[roww + 1][coll] ;
+        Tile tileDiagonallyRight = layout[roww + 1] [coll + 1] ;
+        Tile tileToTheRight = layout[roww][coll + 1] ;
+        if (tileToTheLeft.isBomb()) result++ ;
+        if (tileDiagonallyLeft.isBomb()) result ++ ;
+        if (tileDirectlyBelow.isBomb()) result++ ;
+        if (tileDiagonallyRight.isBomb()) result ++ ;
+        if (tileToTheRight.isBomb()) result++ ;
+        return result ;
       }
-      return result ;
     }
     /////////// BOTTOM ROW ///////////////////////////
-    if (roww == layout.length - 1) {
+    else if (roww == layout.length - 1) {
       // the tile is in the bottom row
       if (coll == 0) {
-        // the tile is in the upper left corner
+        // the tile is in the bottom left corner
         Tile tileDirectlyAbove = layout[roww - 1][coll] ;
         Tile tileDiagonallyRight = layout[roww - 1][coll + 1] ;
         Tile tileToTheRight = layout[roww][coll + 1] ;
         if (tileDirectlyAbove.isBomb()) result++ ;
         if (tileDiagonallyRight.isBomb()) result++ ;
         if (tileToTheRight.isBomb()) result++ ;
-        if (result == 0) {
-          // there are no bombs around this tile
-          n.setIdentifier(" ") ;
-        }
-        else {
-          n.setIdentifier(Integer.toString(result)) ;
-        }
         return result ;
       }
-      if (coll == layout.length - 1) {
-        // the tile is in the upper right corner
+      else if (coll == layout.length - 1) {
+        // the tile is in the bottom right corner
         Tile tileDirectlyAbove = layout[roww - 1][coll] ;
         Tile tileDiagonallyLeft = layout[roww - 1][coll - 1] ;
         Tile tileToTheLeft = layout[roww][coll - 1] ;
         if (tileDirectlyAbove.isBomb()) result++ ;
         if (tileDiagonallyLeft.isBomb()) result++ ;
         if (tileToTheLeft.isBomb()) result++ ;
-        if (result == 0) {
-          // there are no bombs around this tile
-          n.setIdentifier(" ") ;
-        }
-        else {
-          n.setIdentifier(Integer.toString(result)) ;
-        }
         return result ;
       }
-      // Now, we can check tile to left, tile diagonally left, tile above, tile diagonally right, and tile to the right
-      Tile tileToTheLeft = layout[roww][coll - 1] ;
-      Tile tileDiagonallyLeft = layout[roww - 1][coll - 1] ;
-      Tile tileDirectlyAbove = layout[roww - 1][coll] ;
-      Tile tileDiagonallyRight = layout[roww - 1][coll + 1] ;
-      Tile tileToTheRight = layout[roww][coll + 1] ;
-      if (tileToTheLeft.isBomb()) result++ ;
-      if (tileDirectlyAbove.isBomb()) result++ ;
-      if (tileDiagonallyRight.isBomb()) result++ ;
-      if (tileToTheRight.isBomb()) result++ ;
-      if (result == 0) {
-        // there are no bombs around this tile
-        n.setIdentifier(" ") ;
-      }
       else {
-        n.setIdentifier(Integer.toString(result)) ;
+        // Now, we can check tile to left, tile diagonally left, tile above, tile diagonally right, and tile to the right
+        Tile tileToTheLeft = layout[roww][coll - 1] ;
+        Tile tileDiagonallyLeft = layout[roww - 1][coll - 1] ;
+        Tile tileDirectlyAbove = layout[roww - 1][coll] ;
+        Tile tileDiagonallyRight = layout[roww - 1][coll + 1] ;
+        Tile tileToTheRight = layout[roww][coll + 1] ;
+        if (tileToTheLeft.isBomb()) result++ ;
+        if (tileDirectlyAbove.isBomb()) result++ ;
+        if (tileDiagonallyRight.isBomb()) result++ ;
+        if (tileToTheRight.isBomb()) result++ ;
+        return result ;
       }
+    }
+    else {
+      // Otherwise, we are able to check all 8 tiles around the specific tile
+      Tile tileDiagonallyLeftUp = layout[roww - 1][coll - 1] ;
+      Tile tileDirectlyAbove = layout[roww - 1][coll] ;
+      Tile tileDiagonallyRightUp = layout[roww - 1][coll + 1] ;
+      Tile tileToTheRight = layout[roww][coll + 1] ;
+      Tile tileDiagonallyRightDown = layout[roww + 1][coll + 1] ;
+      Tile tileDirectlyBelow = layout[roww + 1][coll] ;
+      Tile tileDiagonallyLeftDown = layout[roww + 1][coll - 1] ;
+      Tile tileToTheLeft = layout[roww][coll - 1] ;
+      if (tileDiagonallyLeftUp.isBomb()) result++ ;
+      if (tileDirectlyAbove.isBomb()) result++ ;
+      if (tileDiagonallyRightUp.isBomb()) result++ ;
+      if (tileToTheRight.isBomb()) result++ ;
+      if (tileDiagonallyRightDown.isBomb()) result++ ;
+      if (tileDirectlyBelow.isBomb()) result++ ;
+      if (tileDiagonallyLeftDown.isBomb()) result++ ;
+      if (tileToTheLeft.isBomb()) result++ ;
       return result ;
     }
-    // Otherwise, we are able to check all 8 tiles around the specific tile
-    Tile tileDiagonallyLeftUp = layout[roww - 1][coll - 1] ;
-    Tile tileDirectlyAbove = layout[roww - 1][coll] ;
-    Tile tileDiagonallyRightUp = layout[roww - 1][coll + 1] ;
-    Tile tileToTheRight = layout[roww][coll + 1] ;
-    Tile tileDiagonallyRightDown = layout[roww + 1][coll + 1] ;
-    Tile tileDirectlyBelow = layout[roww + 1][coll] ;
-    Tile tileDiagonallyLeftDown = layout[roww + 1][coll - 1] ;
-    Tile tileToTheLeft = layout[roww][coll - 1] ;
-    if (tileDiagonallyLeftUp.isBomb()) result++ ;
-    if (tileDirectlyAbove.isBomb()) result++ ;
-    if (tileDiagonallyRightUp.isBomb()) result++ ;
-    if (tileToTheRight.isBomb()) result++ ;
-    if (tileDiagonallyRightDown.isBomb()) result++ ;
-    if (tileDirectlyBelow.isBomb()) result++ ;
-    if (tileDiagonallyLeftDown.isBomb()) result++ ;
-    if (tileToTheLeft.isBomb()) result++ ;
-    return result ;
   }
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   //}
