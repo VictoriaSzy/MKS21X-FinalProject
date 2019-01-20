@@ -349,12 +349,12 @@ public class Main {
 					terminal.moveCursor((size.getColumns()/2) - 4,size.getRows()/2) ;
 					for (int i = 0; i < 8 && c < 8; i++) {
 						t = game.getTile(r,c) ;
-						if (t.isBomb() && t.isVisible()) {
-							// the user has selected a bomb and the game must now end!
-							//game.gameOverMessage() ;
+						if (!t.isBomb() && t.isVisible()) {
+							// the user has selected a tile that is NOT a bomb so game over!
+							// game.gameOverMessage() ;
 						}
 						else {
-							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
+							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
 							terminal.putCharacter(t.getIdentifier()) ;
 						}
 						counter++ ;
@@ -365,12 +365,12 @@ public class Main {
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 1);
 					for (int i = 0; i < 8 && c < 8; i++) {
 						t = game.getTile(r,c) ;
-						if (t.isBomb() && t.isVisible()) {
-							// the user has selected a bomb and the game must now end!
-							//game.gameOverMessage() ;
+						if (!t.isBomb() && t.isVisible()) {
+							// the user has selected a tile that is NOT a bomb so game over!
+							// game.gameOverMessage() ;
 						}
 						else {
-							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
+							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
 							terminal.putCharacter(t.getIdentifier()) ;
 						}
 						counter++ ;
@@ -381,12 +381,12 @@ public class Main {
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 2);
 					for (int i = 0; i < 8 && c < 8; i++) {
 						t = game.getTile(r,c) ;
-						if (t.isBomb() && t.isVisible()) {
-							// the user has selected a bomb and the game must now end!
-							//game.gameOverMessage() ;
+						if (!t.isBomb() && t.isVisible()) {
+							// the user has selected a tile that is NOT a bomb so game over!
+							// game.gameOverMessage() ;
 						}
 						else {
-							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
+							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
 							terminal.putCharacter(t.getIdentifier()) ;
 						}
 						counter++ ;
@@ -397,12 +397,12 @@ public class Main {
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 3);
 					for (int i = 0; i < 8 && c < 8; i++) {
 						t = game.getTile(r,c) ;
-						if (t.isBomb() && t.isVisible()) {
-							// the user has selected a bomb and the game must now end!
-							//game.gameOverMessage() ;
+						if (!t.isBomb() && t.isVisible()) {
+							// the user has selected a tile that is NOT a bomb so game over!
+							// game.gameOverMessage() ;
 						}
 						else {
-							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
+							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
 							terminal.putCharacter(t.getIdentifier()) ;
 						}
 						counter++ ;
@@ -413,12 +413,12 @@ public class Main {
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 4);
 					for (int i = 0; i < 8 && c < 8; i++) {
 						t = game.getTile(r,c) ;
-						if (t.isBomb() && t.isVisible()) {
-							// the user has selected a bomb and the game must now end!
-							//game.gameOverMessage() ;
+						if (!t.isBomb() && t.isVisible()) {
+							// the user has selected a tile that is NOT a bomb so game over!
+							// game.gameOverMessage() ;
 						}
 						else {
-							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
+							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
 							terminal.putCharacter(t.getIdentifier()) ;
 						}
 						counter++ ;
@@ -429,12 +429,12 @@ public class Main {
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 5);
 					for (int i = 0; i < 8 && c < 8; i++) {
 						t = game.getTile(r,c) ;
-						if (t.isBomb() && t.isVisible()) {
-							// the user has selected a bomb and the game must now end!
-							//game.gameOverMessage() ;
+						if (!t.isBomb() && t.isVisible()) {
+							// the user has selected a tile that is NOT a bomb so game over!
+							// game.gameOverMessage() ;
 						}
 						else {
-							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
+							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
 							terminal.putCharacter(t.getIdentifier()) ;
 						}
 						counter++ ;
@@ -445,12 +445,12 @@ public class Main {
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 6);
 					for (int i = 0; i < 8 && c < 8; i++) {
 						t = game.getTile(r,c) ;
-						if (t.isBomb() && t.isVisible()) {
-							// the user has selected a bomb and the game must now end!
-							//game.gameOverMessage() ;
+						if (!t.isBomb() && t.isVisible()) {
+							// the user has selected a tile that is NOT a bomb so game over!
+							// game.gameOverMessage() ;
 						}
 						else {
-							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
+							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
 							terminal.putCharacter(t.getIdentifier()) ;
 						}
 						counter++ ;
@@ -461,12 +461,12 @@ public class Main {
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 7);
 					for (int i = 0; i < 8 && c < 8; i++) {
 						t = game.getTile(r,c) ;
-						if (t.isBomb() && t.isVisible()) {
-							// the user has selected a bomb and the game must now end!
-							//game.gameOverMessage() ;
+						if (!t.isBomb() && t.isVisible()) {
+							// the user has selected a tile that is NOT a bomb so game over!
+							// game.gameOverMessage() ;
 						}
 						else {
-							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
+							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
 							terminal.putCharacter(t.getIdentifier()) ;
 						}
 						counter++ ;
@@ -480,12 +480,12 @@ public class Main {
 					terminal.moveCursor((size.getColumns()/2) - 5,size.getRows()/2);
 					for (int i = 0; i < 10 && c < 10; i++) {
 						t = game.getTile(r,c) ;
-						if (t.isBomb() && t.isVisible()) {
-							// the user has selected a bomb and the game must now end!
-							//game.gameOverMessage() ;
+						if (!t.isBomb() && t.isVisible()) {
+							// the user has selected a tile that is NOT a bomb so game over!
+							// game.gameOverMessage() ;
 						}
 						else {
-							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
+							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
 							terminal.putCharacter(t.getIdentifier()) ;
 						}
 						counter++ ;
@@ -496,12 +496,12 @@ public class Main {
 					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 1);
 					for (int i = 0; i < 10 && c < 10; i++) {
 						t = game.getTile(r,c) ;
-						if (t.isBomb() && t.isVisible()) {
-							// the user has selected a bomb and the game must now end!
-							//game.gameOverMessage() ;
+						if (!t.isBomb() && t.isVisible()) {
+							// the user has selected a tile that is NOT a bomb so game over!
+							// game.gameOverMessage() ;
 						}
 						else {
-							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
+							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
 							terminal.putCharacter(t.getIdentifier()) ;
 						}
 						counter++ ;
@@ -512,12 +512,12 @@ public class Main {
 					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 2);
 					for (int i = 0; i < 10 && c < 10; i++) {
 						t = game.getTile(r,c) ;
-						if (t.isBomb() && t.isVisible()) {
-							// the user has selected a bomb and the game must now end!
-							//game.gameOverMessage() ;
+						if (!t.isBomb() && t.isVisible()) {
+							// the user has selected a tile that is NOT a bomb so game over!
+							// game.gameOverMessage() ;
 						}
 						else {
-							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
+							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
 							terminal.putCharacter(t.getIdentifier()) ;
 						}
 						counter++ ;
@@ -528,12 +528,12 @@ public class Main {
 					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 3);
 					for (int i = 0; i < 10 && c < 10; i++) {
 						t = game.getTile(r,c) ;
-						if (t.isBomb() && t.isVisible()) {
-							// the user has selected a bomb and the game must now end!
-							//game.gameOverMessage() ;
+						if (!t.isBomb() && t.isVisible()) {
+							// the user has selected a tile that is NOT a bomb so game over!
+							// game.gameOverMessage() ;
 						}
 						else {
-							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
+							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
 							terminal.putCharacter(t.getIdentifier()) ;
 						}
 						counter++ ;
@@ -544,12 +544,12 @@ public class Main {
 					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 4);
 					for (int i = 0; i < 10 && c < 10; i++) {
 						t = game.getTile(r,c) ;
-						if (t.isBomb() && t.isVisible()) {
-							// the user has selected a bomb and the game must now end!
-							//game.gameOverMessage() ;
+						if (!t.isBomb() && t.isVisible()) {
+							// the user has selected a tile that is NOT a bomb so game over!
+							// game.gameOverMessage() ;
 						}
 						else {
-							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
+							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
 							terminal.putCharacter(t.getIdentifier()) ;
 						}
 						counter++ ;
@@ -560,12 +560,12 @@ public class Main {
 					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 5);
 					for (int i = 0; i < 10 && c < 10; i++) {
 						t = game.getTile(r,c) ;
-						if (t.isBomb() && t.isVisible()) {
-							// the user has selected a bomb and the game must now end!
-							//game.gameOverMessage() ;
+						if (!t.isBomb() && t.isVisible()) {
+							// the user has selected a tile that is NOT a bomb so game over!
+							// game.gameOverMessage() ;
 						}
 						else {
-							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
+							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
 							terminal.putCharacter(t.getIdentifier()) ;
 						}
 						counter++ ;
@@ -576,12 +576,12 @@ public class Main {
 					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 6);
 					for (int i = 0; i < 10 && c < 10; i++) {
 						t = game.getTile(r,c) ;
-						if (t.isBomb() && t.isVisible()) {
-							// the user has selected a bomb and the game must now end!
-							//game.gameOverMessage() ;
+						if (!t.isBomb() && t.isVisible()) {
+							// the user has selected a tile that is NOT a bomb so game over!
+							// game.gameOverMessage() ;
 						}
 						else {
-							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
+							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
 							terminal.putCharacter(t.getIdentifier()) ;
 						}
 						counter++ ;
@@ -592,12 +592,12 @@ public class Main {
 					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 7);
 					for (int i = 0; i < 10 && c < 10; i++) {
 						t = game.getTile(r,c) ;
-						if (t.isBomb() && t.isVisible()) {
-							// the user has selected a bomb and the game must now end!
-							//game.gameOverMessage() ;
+						if (!t.isBomb() && t.isVisible()) {
+							// the user has selected a tile that is NOT a bomb so game over!
+							// game.gameOverMessage() ;
 						}
 						else {
-							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
+							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
 							terminal.putCharacter(t.getIdentifier()) ;
 						}
 						counter++ ;
@@ -608,12 +608,12 @@ public class Main {
 					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 8);
 					for (int i = 0; i < 10 && c < 10; i++) {
 						t = game.getTile(r,c) ;
-						if (t.isBomb() && t.isVisible()) {
-							// the user has selected a bomb and the game must now end!
-							//game.gameOverMessage() ;
+						if (!t.isBomb() && t.isVisible()) {
+							// the user has selected a tile that is NOT a bomb so game over!
+							// game.gameOverMessage() ;
 						}
 						else {
-							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
+							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
 							terminal.putCharacter(t.getIdentifier()) ;
 						}
 						counter++ ;
@@ -624,12 +624,12 @@ public class Main {
 					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 9);
 					for (int i = 0; i < 10 && c < 10; i++) {
 						t = game.getTile(r,c) ;
-						if (t.isBomb() && t.isVisible()) {
-							// the user has selected a bomb and the game must now end!
-							//game.gameOverMessage() ;
+						if (!t.isBomb() && t.isVisible()) {
+							// the user has selected a tile that is NOT a bomb so game over!
+							// game.gameOverMessage() ;
 						}
 						else {
-							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
+							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
 							terminal.putCharacter(t.getIdentifier()) ;
 						}
 						counter++ ;
