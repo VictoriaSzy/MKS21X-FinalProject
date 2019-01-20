@@ -2,7 +2,7 @@ public class Tile {
   // Variables are here:
   private boolean hasBomb, visible, flagged ;
   private String identifier ;
-  private int number, numberOfBombsInArea ;
+  private int number ;
 
   /** Constructor
     *@param isABomb is a boolean that will determine whether the tile being created is going to become a bomb, which requires hasBomb to be true
@@ -16,7 +16,6 @@ public class Tile {
       hasBomb = false ;
       identifier = "0" ;
     }
-    numberOfBombsInArea = 0 ;
     visible = false ;
     flagged = false ;
   }
@@ -37,9 +36,6 @@ public class Tile {
   public int getNumber() {
     return number ;
   }
-  public int getNumberOfBombs() {
-    return numberOfBombsInArea ;
-  }
 
   // Mutator Methods
   public void setIdentifier(String n){
@@ -53,9 +49,6 @@ public class Tile {
   }
   public void setNumber(int i) {
     number = i ;
-  }
-  public void setBombs(int i) {
-    numberOfBombsInArea = i ;
   }
 
   // Action methods
