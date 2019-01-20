@@ -1,7 +1,7 @@
 public class Tile {
   // Variables are here:
   private boolean hasBomb, visible, flagged ;
-  private String identifier ;
+  private char identifier ;
   private int number ;
 
   /** Constructor
@@ -10,12 +10,11 @@ public class Tile {
   public Tile(boolean isABomb) {
     if (isABomb) {
       hasBomb = true ;
-      identifier = "*" ;
     }
     else {
       hasBomb = false ;
-      identifier = "0" ;
     }
+    identifier = '?' ;
     visible = false ;
     flagged = false ;
   }
@@ -30,7 +29,7 @@ public class Tile {
   public boolean isFlagged() {
     return flagged ;
   }
-  public String getIdentifier() {
+  public char getIdentifier() {
     return identifier ;
   }
   public int getNumber() {
@@ -38,7 +37,7 @@ public class Tile {
   }
 
   // Mutator Methods
-  public void setIdentifier(String n){
+  public void setIdentifier(char n){
     identifier = n;
   }
   public void setVisible(boolean parameter) {
