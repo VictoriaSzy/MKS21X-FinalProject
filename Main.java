@@ -650,33 +650,31 @@ public class Main {
 
 					if (key.getKind() == Key.Kind.ArrowLeft) {
 						terminal.moveCursor(x,y);
-						//terminal.putCharacter('\u25A2');
 						terminal.putCharacter(' ');
 						x--;
 					}
 
 					if (key.getKind() == Key.Kind.ArrowRight) {
 						terminal.moveCursor(x,y);
-						//terminal.putCharacter('\u25A2');
 						terminal.putCharacter(' ');
 						x++;
 					}
 
 					if (key.getKind() == Key.Kind.ArrowUp) {
 						terminal.moveCursor(x,y);
-						//terminal.putCharacter('\u25A2');
 						terminal.putCharacter(' ');
 						y--;
 					}
 
 					if (key.getKind() == Key.Kind.ArrowDown) {
 						terminal.moveCursor(x,y);
-						//terminal.putCharacter('\u25A2');
 						terminal.putCharacter(' ');
 						y++;
 					}
+					///////////// THIS IS WHAT WE NEED TO WORK ON ////////////////////
 					if (key.getKind() == Key.Kind.Enter) {
 						//the user has hit down so we should check the tile here to see if it's revealed or not
+
 					}
 					//space moves it diagonally
 					if (key.getCharacter() == ' ') {
