@@ -674,7 +674,8 @@ public class Main {
 					///////////// THIS IS WHAT WE NEED TO WORK ON ////////////////////
 					if (key.getKind() == Key.Kind.Enter) {
 						//the user has hit down so we should check the tile here to see if it's revealed or not
-
+						// We have to figure out how to change the identifier of the tile at x,y
+						// to the appropriate character, whether it be '*', ' ', or a number char
 					}
 					//space moves it diagonally
 					if (key.getCharacter() == ' ') {
