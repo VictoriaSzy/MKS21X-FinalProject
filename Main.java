@@ -107,20 +107,30 @@ public class Main {
 					terminal.putCharacter(' ');
 				}
 				int counter = 0 ;
+				int r = 0 ;
+				int c = 0 ;
 				Tile t = game.getTile(0,0) ;
 				if (args[0].equals("NE")) {
 					terminal.moveCursor((size.getColumns()/2) - 2,size.getRows()/2);
 					terminal.applyBackgroundColor(Terminal.Color.BLUE);
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 5; i++) {
-						t = game.getTile(counter/5, counter % 5) ;
+						t = game.getTile(r,c) ;
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						//int bombs = game.numberOfBombsAround(t) ;
+						/*if (game.numberOfBombsAround(t) != 0){
+							int n = t.getNumber() ;
+							String num = Integer.toString(n) ;
+							terminal.putCharacter(num.charAt(0)) ;
+						}*/
 						else {
 							int label = t.getNumber() ;
 							String la = "" + label + "" ;
 							terminal.putCharacter(la.charAt(0));
 						}
 						counter++ ;
+						r++ ;
+						c++ ;
 					}
 					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
 					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
@@ -128,7 +138,8 @@ public class Main {
 					terminal.applyBackgroundColor(Terminal.Color.BLUE);
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 5; i++) {
-						t = game.getTile(counter/5, counter % 5) ;
+						String n = "1";
+						//Character c = n.charAt(0);
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
 							int label = t.getNumber() ;
@@ -143,8 +154,12 @@ public class Main {
 					terminal.applyBackgroundColor(Terminal.Color.BLUE);
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 5; i++) {
-						t = game.getTile(counter/5, counter % 5) ;
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						// if (game.numberOfBombsAround(t) != 0){
+						// 	int n = t.getNumber();
+						// 	String num = Integer.parseInt(n);
+						// 	 terminal.putCharacter('num');
+						//  }
 						else {
 							int label = t.getNumber() ;
 							String la = "" + label + "" ;
@@ -158,8 +173,12 @@ public class Main {
 					terminal.applyBackgroundColor(Terminal.Color.BLUE);
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 5; i++) {
-						t = game.getTile(counter/5, counter % 5) ;
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						// if (game.numberOfBombsAround(t) != 0){
+						// 	int n = t.getNumber();
+						// 	String num = Integer.parseInt(n);
+						// 	 terminal.putCharacter('num');
+						//  }
 						else {
 							int label = t.getNumber() ;
 							String la = "" + label + "" ;
@@ -173,8 +192,12 @@ public class Main {
 					terminal.applyBackgroundColor(Terminal.Color.BLUE);
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 5; i++) {
-						t = game.getTile(counter/5, counter % 5) ;
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
+						// if (game.numberOfBombsAround(t) != 0){
+						// 	int n = t.getNumber();
+						// 	String num = Integer.parseInt(n);
+						// 	 terminal.putCharacter('num');
+						//  }
 						else {
 							int label = t.getNumber() ;
 							String la = "" + label + "" ;
