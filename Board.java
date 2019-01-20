@@ -9,7 +9,7 @@ public class Board {
   private String mode,level ;
   private int numberFlagged, numberOfBombsClicked, numberOfChances, neighbor ;
 
-  // Constructor
+  // Constructor based on the mode and level
   public Board(String m, String l) {
     numberOfBombsClicked = 0 ;
     numberFlagged = 0 ;
@@ -42,6 +42,7 @@ public class Board {
           for (int c = 0 ; c < 5 ; c++) {
             layout[r][c] = new Tile(isARandomBomb(i)) ;
             layout[r][c].setNumber(i) ;
+            layout[r][c].setBombs(this.numberOfBombsAround(layout[r][c])) ;
             i++ ;
           }
         }
@@ -135,6 +136,7 @@ public class Board {
       }
     }
   }
+  // accessor methods
   public String getMode(){
     return this.mode;
   }
@@ -323,6 +325,7 @@ public class Board {
     }
     return false;
   }
+  // The next two methods use coordinates instead
   public boolean isbombNeighbor(int x1, int y1, int x2, int y2 ){
     if(x1 - x2 < 2 && x1 - x2 > -2 && y1 - y2 < 2 && y1 - y2 < -2 ){
       return true ;
@@ -370,7 +373,6 @@ public class Board {
     }
     return result;
   }
-
   // We can use this to print out a visual representation of the board
   public String toString() {
     String result = "";
@@ -387,8 +389,7 @@ public class Board {
     }
     return result;
   }
-
-
+  // this is the game over message once the user loses
   public static void gameOverMessage() {
     System.out.println();
     System.out.println("YOU HIT A MINE! OR A BOMB!") ;
@@ -401,6 +402,7 @@ public class Board {
     System.out.println();
     System.exit(0) ;
   }
+  // this is the welcome message which we currently display in the upper left corner
   public void welcomeMessage() {
     System.out.println(" _    _      _                          _ ");
     System.out.println("| |  | |    | |                        | |");
@@ -409,6 +411,7 @@ public class Board {
     System.out.println("\\  /\\  /  __/ | (_| (_) | | | | | |  __/_|");
     System.out.println(" \\/  \\/ \\___|_|\\___\\___/|_| |_| |_|\\___(_)") ;
   }
+  // prints out the winning message
   public void winMessage() {
     System.out.println("__   __            _    _ _       _");
     System.out.println("\\ \\ / /           | |  | (_)     | |");
@@ -417,14 +420,17 @@ public class Board {
     System.out.println("  | | (_) | |_| | \\  /\\  / | | | |_|");
     System.out.println("  \\_/\\___/ \\__,_|  \\/  \\/|_|_| |_(_)");
   }
-
+  // returns the 2D array that we used to create the Board
   public Tile[][] getBoard(){
     return this.layout ;
   }
-  public Tile getTile(int r, int c) {
-    return layout[r][c] ;
+  // This was originally going to return the tile but I think it is more useful if it returns the number of bombs
+  // around the tile based on the given row and column
+  public int getTile(int r, int c) {
+    Tile a = layout[r][c] ;
+    return numberOfBombsAround(a) ;
   }
-
+  // for testing purposes
   public static void main(String[] args) {
     Board game = new Board("Normal","Easy") ;
     if(args[0].equals("Normal")){
