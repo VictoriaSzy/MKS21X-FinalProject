@@ -125,7 +125,7 @@ public class Main {
 						}*/
 						else {
 							int label = t.getNumber() ;
-							String la = "" + label + "" ;
+							String la = t.getIdentifier();
 							terminal.putCharacter(la.charAt(0));
 						}
 						counter++ ;
