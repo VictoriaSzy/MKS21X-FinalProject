@@ -107,7 +107,7 @@ public class Main {
 					terminal.putCharacter(' ');
 				}
 				int counter = 0 ;
-				int t = game.getTile(0,0) ;
+				Tile t = game.getTile(0,0) ;
 				if (args[0].equals("NE")) {
 					terminal.moveCursor((size.getColumns()/2) - 2,size.getRows()/2);
 					terminal.applyBackgroundColor(Terminal.Color.BLUE);
@@ -116,8 +116,9 @@ public class Main {
 						t = game.getTile(counter/5, counter % 5) ;
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							String thing = "" + t + "" ;
-							terminal.putCharacter(thing.charAt(0));
+							int label = t.getNumber() ;
+							String la = "" + label + "" ;
+							terminal.putCharacter(la.charAt(0));
 						}
 						counter++ ;
 					}
@@ -130,8 +131,9 @@ public class Main {
 						t = game.getTile(counter/5, counter % 5) ;
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							String thing = "" + t + "" ;
-							terminal.putCharacter(thing.charAt(0));
+							int label = t.getNumber() ;
+							String la = "" + label + "" ;
+							terminal.putCharacter(la.charAt(0));
 						}
 						counter++ ;
 					}
@@ -144,8 +146,9 @@ public class Main {
 						t = game.getTile(counter/5, counter % 5) ;
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							String thing = "" + t + "" ;
-							terminal.putCharacter(thing.charAt(0));
+							int label = t.getNumber() ;
+							String la = "" + label + "" ;
+							terminal.putCharacter(la.charAt(0));
 						}
 						counter++ ;
 					}
@@ -158,8 +161,9 @@ public class Main {
 						t = game.getTile(counter/5, counter % 5) ;
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							String thing = "" + t + "" ;
-							terminal.putCharacter(thing.charAt(0));
+							int label = t.getNumber() ;
+							String la = "" + label + "" ;
+							terminal.putCharacter(la.charAt(0));
 						}
 						counter++ ;
 					}
@@ -172,8 +176,9 @@ public class Main {
 						t = game.getTile(counter/5, counter % 5) ;
 						if (game.isARandomBomb(counter)) terminal.putCharacter('*') ;
 						else {
-							String thing = "" + t + "" ;
-							terminal.putCharacter(thing.charAt(0));
+							int label = t.getNumber() ;
+							String la = "" + label + "" ;
+							terminal.putCharacter(la.charAt(0));
 						}
 						counter++ ;
 					}
@@ -515,12 +520,6 @@ public class Main {
 					// this line will place the time left on the bottom middle
 				}
 			}
-		} catch (ArrayIndexOutOfBoundsException e) {
-			System.out.println("There is an array index out of bounds exception somehow!") ;
-			System.exit(1) ;
-		} catch (NumberFormatException e) {
-			System.out.println("One of the values is not being converted properly to a string, char, or integer!") ;
-			System.exit(1) ;
 		} catch (Exception e) {
 			System.out.println("Are you sure that you read the instructions to this program?\nThere seems to be an error with what you gave us. \nHere are the directions to help you play our awesome version of Minesweeper:") ;
 			System.out.println(directions) ;
