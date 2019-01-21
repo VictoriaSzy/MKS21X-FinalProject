@@ -59,3 +59,27 @@ Victoria: I extended on Jionghao's idea and created 2 more files to do the board
 01-14-2019
 
 Victoria: I added new parameters to some of the functions (go and the constructor) in our easy or simple version of Minesweeper in order to help us create different sized boards based on the mode and level.
+
+Jionghao: I added code that allow us to change the text colors. It is kind of a clunky system and maybe there is a better way to do it.
+
+01-15-2019
+
+Victoria: I went to the CS Dojo to try to get help with using lanterna because the tiles are eaten by the cursor once it passes through. I think that I need to find a way to store how that certain coordinate of the terminal looked before the cursor goes over it or to make the certain tiles identify themselves differently. I think that I can do it based on the color maybe (sort of similar to the patches from NetLogo). I created a new file and went through it to make sure that I understand what code was doing and/or causing.
+
+jionghao: I spent time looking through each line of code and compared it to our working commits, i fixed the problem where the coordinates you enter were swapped.
+
+01-16-2019
+
+Victoria: I moved the creation of the tiles into the for loop and changed the cursor to be a different character. I tried to find a different character that would not take up too much space for the tiles and I tested it out and worked pretty well. We plan on changing the color of the background when the cursor goes over a tile (the rectangular character) and that should hopefully let the tile stay there once the cursor moves.
+
+jionghao: i also worked on finding a better tile to take the place of the cursor. I found a better one but we still have to implement the  actual game with lanterna.
+
+01-17-2019
+
+Victoria: I called the Board constructor to create a new Board based on the user's arguments (which determines the mode and level). I also changed how the tiles are set up by using a 0 or * to represent them. The * is currently for testing purposes to see whether the Board was constructed properly (which it was so far so yay!). I made this happen for all of the modes and levels. I think that we can use the numberOfBombsAround method to generate the numbers like this as well and store it in another variable in the main.
+
+Jionghao: I tried to print the number like Victoria wanted but when we putstring we can't enter a variable. So we'll have to figure that out.
+
+01-18-2019
+
+Victoria: I changed the background and foreground color in Main.java so that we can focus on the numbers representing the tiles. I tried experimenting with using the numberOfBombsAround method from the Board class but it triggered some sort of exception so we need to figure that out.

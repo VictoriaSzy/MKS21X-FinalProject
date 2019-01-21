@@ -31,18 +31,28 @@ public class TerminalK {
 
 		Terminal terminal = TerminalFacade.createTextTerminal();
 		terminal.enterPrivateMode();
-
 		TerminalSize size = terminal.getTerminalSize();
 		terminal.setCursorVisible(false);
-
 		boolean running = true;
-
+		// Time vars:
 		long tStart = System.currentTimeMillis();
-		long lastSecond = 0;
+		long lastSecond = 0 ;
 
+		Board game = new Board("Normal","Easy") ; // just for testing purposes
 		while(running){
 
-			terminal.moveCursor(x,y);
+			terminal.moveCursor(x,y) ;
+      terminal.applyForegroundColor(Terminal.Color.RED) ;
+      terminal.putCharacter('\u25A1') ; // this is a small white square character
+			// this is the character of the cursor
+      terminal.applyBackgroundColor(Terminal.Color.DEFAULT) ;
+      terminal.applyForegroundColor(Terminal.Color.DEFAULT) ;
+      terminal.applySGR(Terminal.SGR.RESET_ALL) ;
+
+      Key key = terminal.readInput();
+
+			/* This part will create the tiles
+			terminal.moveCursor(size.getColumns()/2,size.getRows()/2) ;
 			terminal.applyBackgroundColor(Terminal.Color.WHITE);
 			terminal.applyForegroundColor(Terminal.Color.BLACK);
 			// these are the colors used on the cursor
@@ -53,10 +63,10 @@ public class TerminalK {
 			terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
 			terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 			terminal.applySGR(Terminal.SGR.RESET_ALL);
-			// brings the terminal's colors back to normal when the cursor has left
+			// brings the terminal's colors back to normal when the cursor has left*/
 
 
-			terminal.moveCursor(size.getColumns()-5,5);
+			terminal.moveCursor(size.getColumns()-5,5) ;
 			// This section colored the background of the terminal to red and placed the character on the upper right corner of the
 			// red section
 			/*terminal.applyBackgroundColor(Terminal.Color.RED);
@@ -74,39 +84,37 @@ public class TerminalK {
 			terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
 			terminal.applyForegroundColor(Terminal.Color.DEFAULT); */
 
-			Key key = terminal.readInput();
-
 			if (key != null) {
 				if (key.getKind() == Key.Kind.Escape) {
 					terminal.exitPrivateMode();
 					running = false;
 				}
 				if (key.getKind() == Key.Kind.ArrowLeft) {
-					terminal.moveCursor(x,y);
-					terminal.putCharacter(' ');
-					x--;
+					terminal.moveCursor(x,y) ;
+					terminal.putCharacter(' ') ;
+					x-- ;
 				}
 				if (key.getKind() == Key.Kind.ArrowRight) {
-					terminal.moveCursor(x,y);
-					terminal.putCharacter(' ');
-					x++;
+					terminal.moveCursor(x,y) ;
+					terminal.putCharacter(' ') ;
+					x++ ;
 				}
 				if (key.getKind() == Key.Kind.ArrowUp) {
-					terminal.moveCursor(x,y);
-					terminal.putCharacter(' ');
-					y--;
+					terminal.moveCursor(x,y) ;
+					terminal.putCharacter(' ') ;
+					y-- ;
 				}
 				if (key.getKind() == Key.Kind.ArrowDown) {
-					terminal.moveCursor(x,y);
-					terminal.putCharacter(' ');
-					y++;
+					terminal.moveCursor(x,y) ;
+					terminal.putCharacter(' ') ;
+					y++ ;
 				}
 				//space moves it diagonally
 				if (key.getCharacter() == ' ') {
-					terminal.moveCursor(x,y);
-					terminal.putCharacter(' ');
-					y++;
-					x++;
+					terminal.moveCursor(x,y) ;
+					terminal.putCharacter(' ') ;
+					y++ ;
+					x++ ;
 				}
 				putString(1,4,terminal,"["+key.getCharacter() +"]");
 				// in the brackets is the single character representing the key
@@ -115,16 +123,14 @@ public class TerminalK {
 			}
 			// After we check whether the key is null or not
 			//DO EVEN WHEN NO KEY PRESSED:
-			long tEnd = System.currentTimeMillis();
-			long millis = tEnd - tStart;
-			putString(1,2,terminal,"Milliseconds since start of program: "+millis);
+			long tEnd = System.currentTimeMillis() ;
+			long millis = tEnd - tStart ;
+			putString(1,2,terminal,"Milliseconds since start of program: "+millis) ;
 			if(millis/1000 > lastSecond){
-				lastSecond = millis / 1000;
+				lastSecond = millis / 1000 ;
 				//one second has passed.
-				putString(1,3,terminal,"Seconds since start of program: "+lastSecond);
-
+				putString(1,3,terminal,"Seconds since start of program: "+lastSecond) ;
 			}
-
 
 		}
 	}
