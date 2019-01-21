@@ -129,6 +129,7 @@ public class Main {
 							running = false ; //not sure if this will work but this can try to stop the game
 							// after the board stops being created then we will put the game over message
 							clearScreen();
+
 							System.out.println();
 							System.out.println("YOU HIT A MINE! OR A BOMB!") ;
 							System.out.println("_____");
@@ -138,6 +139,7 @@ public class Main {
 							System.out.println("| |_\\ \\ (_| | | | | | |  __/ (_) \\ V /  __/ |");
 							System.out.println(" \\____/\\__,_|_| |_| |_|\\___|\\___/ \\_/ \\___|_|");
 							System.out.println();
+
 
 						}
 						else {
