@@ -120,8 +120,10 @@ public class Main {
 						if (t.isBomb() && t.isVisible()) {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
+							terminal.exitPrivateMode();
 							running = false ; //not sure if this will work but this can try to stop the game
 							// after the board stops being created then we will put the game over message
+							game.gameOverMessage() ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
