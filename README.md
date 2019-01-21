@@ -1,8 +1,11 @@
 # MKS21X-FinalProject
-Welcome! This is our final project for AP Computer Science Fall Semester!
+Welcome! This is our final project for AP Computer Science Fall Semester! ~ M I N E S W E E P E R ~
 
-# What do I do with these amazing Java files besides read them? (Instructions)
-After you have cloned our directory, you'll have to compile two files: Main.java and Minesweeper.Java. These are the two different versions of our minesweeper game. One verson uses the scanner in which you enter x and y coordinates to play the game. The otherVerson uses lanterna and key movements. For the first version all you have to do is "javac Minesweepet.java" and "java Minesweeper". this is a 10X10 board which generates N number of bombs. For the lanterna version, you have to do "javac -cp lanterna.jar:. Main.java". and to run it "java -cp lanterna.jar:. Main". In this version you use the arrow keys to move the cursor and by hitting the enter button, it reveals the tile your cursor is on.
+# What do I do with these amazing Java files besides read them? (aka Instructions)
+After you have cloned our directory, you'll have to compile various java files (which you can do quickly by doing "javac *.java").        
+
+However, to compile Main.java, you will have to compile by typing in "javac -cp lanterna.jar:. Main.java".                               
+There are **2 different versions of Minesweeper**. One version uses the scanner in which you enter x and y coordinates to select the tiles. The other version uses lanterna and key movements in order to navigate across the board and select tiles. For the first version, all you have to do is type "java Minesweeper" to run it. This will create a simple 10X10 board and a low random number of bombs. For the lanterna version, to run it, you type in "java -cp lanterna.jar:. Main" followed by NE,NH,CE, or CH to determine the mode (Normal or Crazy) and the level (Easy or Hard). By hitting the enter button, it reveals the tile your cursor is on. Have fun playing!
 
 # Development Log
 01-03-2019: Creation of the Repository                                                                                                      
