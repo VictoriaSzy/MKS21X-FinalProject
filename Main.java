@@ -676,8 +676,13 @@ public class Main {
 						terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
 						terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 						terminal.applySGR(Terminal.SGR.RESET_ALL);
-						terminal.moveCursor(x,y) ;
+						if (args[0].equals("NE")) {
+							int v = (size.getColumns()/2) - 2;
+							int z = (size.getRows()/2) + 1;
+						terminal.moveCursor(v,z);
 						terminal.putCharacter('1');
+						v++;
+					}
 						terminal.applyBackgroundColor(Terminal.Color.RED);
 						terminal.applyForegroundColor(Terminal.Color.WHITE);
 						terminal.applySGR(Terminal.SGR.RESET_ALL);
