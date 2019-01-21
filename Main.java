@@ -122,6 +122,16 @@ public class Main {
 							//game.gameOverMessage() ;
 							running = false ; //not sure if this will work but this can try to stop the game
 							// after the board stops being created then we will put the game over message
+							terminal.exitPrivateMode() ;
+							System.out.println();
+							System.out.println("YOU HIT A MINE! OR A BOMB!") ;
+							System.out.println("_____");
+							System.out.println("|  __ \\  ");
+							System.out.println("| |  \\/ __ _ _ __ ___   ___  _____   _____ _ __");
+							System.out.println("| | __ / _` | '_ ` _ \\ / _ \\/ _ \\ \\ / / _ \\ '__|");
+							System.out.println("| |_\\ \\ (_| | | | | | |  __/ (_) \\ V /  __/ |");
+							System.out.println(" \\____/\\__,_|_| |_| |_|\\___|\\___/ \\_/ \\___|_|");
+							System.out.println();
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -143,6 +153,16 @@ public class Main {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
 							running = false ;
+							terminal.exitPrivateMode() ;
+							System.out.println();
+							System.out.println("YOU HIT A MINE! OR A BOMB!") ;
+							System.out.println("_____");
+							System.out.println("|  __ \\  ");
+							System.out.println("| |  \\/ __ _ _ __ ___   ___  _____   _____ _ __");
+							System.out.println("| | __ / _` | '_ ` _ \\ / _ \\/ _ \\ \\ / / _ \\ '__|");
+							System.out.println("| |_\\ \\ (_| | | | | | |  __/ (_) \\ V /  __/ |");
+							System.out.println(" \\____/\\__,_|_| |_| |_|\\___|\\___/ \\_/ \\___|_|");
+							System.out.println();
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -164,6 +184,16 @@ public class Main {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
 							running = false ;
+							terminal.exitPrivateMode() ;
+							System.out.println();
+							System.out.println("YOU HIT A MINE! OR A BOMB!") ;
+							System.out.println("_____");
+							System.out.println("|  __ \\  ");
+							System.out.println("| |  \\/ __ _ _ __ ___   ___  _____   _____ _ __");
+							System.out.println("| | __ / _` | '_ ` _ \\ / _ \\/ _ \\ \\ / / _ \\ '__|");
+							System.out.println("| |_\\ \\ (_| | | | | | |  __/ (_) \\ V /  __/ |");
+							System.out.println(" \\____/\\__,_|_| |_| |_|\\___|\\___/ \\_/ \\___|_|");
+							System.out.println();
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -185,6 +215,16 @@ public class Main {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
 							running = false ;
+							terminal.exitPrivateMode() ;
+							System.out.println();
+							System.out.println("YOU HIT A MINE! OR A BOMB!") ;
+							System.out.println("_____");
+							System.out.println("|  __ \\  ");
+							System.out.println("| |  \\/ __ _ _ __ ___   ___  _____   _____ _ __");
+							System.out.println("| | __ / _` | '_ ` _ \\ / _ \\/ _ \\ \\ / / _ \\ '__|");
+							System.out.println("| |_\\ \\ (_| | | | | | |  __/ (_) \\ V /  __/ |");
+							System.out.println(" \\____/\\__,_|_| |_| |_|\\___|\\___/ \\_/ \\___|_|");
+							System.out.println();
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -206,6 +246,16 @@ public class Main {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
 							running = false ;
+							terminal.exitPrivateMode() ;
+							System.out.println();
+					    System.out.println("YOU HIT A MINE! OR A BOMB!") ;
+					    System.out.println("_____");
+					    System.out.println("|  __ \\  ");
+					    System.out.println("| |  \\/ __ _ _ __ ___   ___  _____   _____ _ __");
+					    System.out.println("| | __ / _` | '_ ` _ \\ / _ \\/ _ \\ \\ / / _ \\ '__|");
+					    System.out.println("| |_\\ \\ (_| | | | | | |  __/ (_) \\ V /  __/ |");
+					    System.out.println(" \\____/\\__,_|_| |_| |_|\\___|\\___/ \\_/ \\___|_|");
+					    System.out.println();
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -676,8 +726,8 @@ public class Main {
 				if (key != null) {
 					if (key.getKind() == Key.Kind.Escape) {
 						// we need to exit the program --> THIS CAN STAY
-						terminal.exitPrivateMode() ;
 						running = false ;
+						terminal.exitPrivateMode() ;
 					}
 
 					if (key.getKind() == Key.Kind.ArrowLeft) {
