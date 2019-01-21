@@ -26,6 +26,11 @@ public class Main {
 			t.putCharacter(s.charAt(i)) ;
 		}
 	}
+
+	public static void clearScreen() {
+    System.out.print("\033[H\033[2J");
+    System.out.flush();
+}
 	///////////////////////////////////////////////////////////////////////////////////////////
 	public static void main(String[] args) {
 		String directions = "To begin, make sure that you have downloaded all of the required files. \nFrom there, enter the directory containing the files." ;
@@ -123,7 +128,11 @@ public class Main {
 							terminal.exitPrivateMode();
 							running = false ; //not sure if this will work but this can try to stop the game
 							// after the board stops being created then we will put the game over message
+<<<<<<< HEAD
 							terminal.exitPrivateMode() ;
+=======
+<<<<<<< HEAD	clearScreen();
+>>>>>>> e9a1506d53d97b7c295c9dc444ce7d669eb4066b
 							System.out.println();
 							System.out.println("YOU HIT A MINE! OR A BOMB!") ;
 							System.out.println("_____");
@@ -133,6 +142,11 @@ public class Main {
 							System.out.println("| |_\\ \\ (_| | | | | | |  __/ (_) \\ V /  __/ |");
 							System.out.println(" \\____/\\__,_|_| |_| |_|\\___|\\___/ \\_/ \\___|_|");
 							System.out.println();
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a01a370b9160a0babf94890659e636025296c42e
+>>>>>>> e9a1506d53d97b7c295c9dc444ce7d669eb4066b
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
