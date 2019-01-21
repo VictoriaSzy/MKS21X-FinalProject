@@ -121,7 +121,7 @@ public class Main {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
 							running = false ; //not sure if this will work but this can try to stop the game
-							// after the board stops being created then we will put the game over message 
+							// after the board stops being created then we will put the game over message
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -142,6 +142,7 @@ public class Main {
 						if (t.isBomb() && t.isVisible()) {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -162,6 +163,7 @@ public class Main {
 						if (t.isBomb() && t.isVisible()) {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -182,6 +184,7 @@ public class Main {
 						if (t.isBomb() && t.isVisible()) {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -202,6 +205,7 @@ public class Main {
 						if (t.isBomb() && t.isVisible()) {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -223,6 +227,7 @@ public class Main {
 						if (t.isBomb() && t.isVisible()) {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -239,6 +244,7 @@ public class Main {
 						if (t.isBomb() && t.isVisible()) {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -255,6 +261,7 @@ public class Main {
 						if (t.isBomb() && t.isVisible()) {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -271,6 +278,7 @@ public class Main {
 						if (t.isBomb() && t.isVisible()) {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -287,6 +295,7 @@ public class Main {
 						if (t.isBomb() && t.isVisible()) {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -303,6 +312,7 @@ public class Main {
 						if (t.isBomb() && t.isVisible()) {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -319,6 +329,7 @@ public class Main {
 						if (t.isBomb() && t.isVisible()) {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -335,6 +346,7 @@ public class Main {
 						if (t.isBomb() && t.isVisible()) {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -354,6 +366,7 @@ public class Main {
 						if (!t.isBomb() && t.isVisible()) {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -370,6 +383,7 @@ public class Main {
 						if (!t.isBomb() && t.isVisible()) {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -386,6 +400,7 @@ public class Main {
 						if (!t.isBomb() && t.isVisible()) {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -402,6 +417,7 @@ public class Main {
 						if (!t.isBomb() && t.isVisible()) {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -418,6 +434,7 @@ public class Main {
 						if (!t.isBomb() && t.isVisible()) {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -434,6 +451,7 @@ public class Main {
 						if (!t.isBomb() && t.isVisible()) {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -450,6 +468,7 @@ public class Main {
 						if (!t.isBomb() && t.isVisible()) {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -466,6 +485,7 @@ public class Main {
 						if (!t.isBomb() && t.isVisible()) {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -485,6 +505,7 @@ public class Main {
 						if (!t.isBomb() && t.isVisible()) {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -501,6 +522,7 @@ public class Main {
 						if (!t.isBomb() && t.isVisible()) {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -517,6 +539,7 @@ public class Main {
 						if (!t.isBomb() && t.isVisible()) {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -533,6 +556,7 @@ public class Main {
 						if (!t.isBomb() && t.isVisible()) {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -549,6 +573,7 @@ public class Main {
 						if (!t.isBomb() && t.isVisible()) {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -565,6 +590,7 @@ public class Main {
 						if (!t.isBomb() && t.isVisible()) {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -581,6 +607,7 @@ public class Main {
 						if (!t.isBomb() && t.isVisible()) {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -597,6 +624,7 @@ public class Main {
 						if (!t.isBomb() && t.isVisible()) {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -613,6 +641,7 @@ public class Main {
 						if (!t.isBomb() && t.isVisible()) {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -629,6 +658,7 @@ public class Main {
 						if (!t.isBomb() && t.isVisible()) {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -696,7 +726,7 @@ public class Main {
 							// From here I think that we can use these variables to help us get the tiles and change their identifiers
 							if (xdif < 5 && ydif < 5) {
 								// the user has clicked on an appropriate spot where there is a tile
-								Tile chosen = game.getTile(xdif,ydif) ;
+								Tile chosen = game.getTile(ydif,xdif) ;
 								chosen.setVisible(true) ;
 								int n = game.numberOfBombsAround(chosen) ;
 								String num = "" + n ;
