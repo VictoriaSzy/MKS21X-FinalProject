@@ -14,6 +14,7 @@ import com.googlecode.lanterna.input.InputDecoder;
 import com.googlecode.lanterna.input.InputProvider;
 import com.googlecode.lanterna.input.Key;
 import com.googlecode.lanterna.input.KeyMappingProfile;
+import com.googlecode.lanterna.screen.Screen ;
 
 import java.util.* ;
 import java.io.* ;
@@ -115,6 +116,7 @@ public class Main {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
 							running = false ;
+							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 						}
 						else {
@@ -137,6 +139,7 @@ public class Main {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
 							running = false ;
+							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 						}
 						else {
@@ -159,6 +162,7 @@ public class Main {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
 							running = false ;
+							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 						}
 						else {
@@ -181,6 +185,7 @@ public class Main {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
 							running = false ;
+							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 						}
 						else {
@@ -203,6 +208,7 @@ public class Main {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
 							running = false ;
+							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 						}
 						else {
@@ -226,6 +232,7 @@ public class Main {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
 							running = false ;
+							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 						}
 						else {
@@ -244,6 +251,7 @@ public class Main {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
 							running = false ;
+							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 						}
 						else {
@@ -262,6 +270,7 @@ public class Main {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
 							running = false ;
+							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 						}
 						else {
@@ -280,6 +289,7 @@ public class Main {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
 							running = false ;
+							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 						}
 						else {
@@ -298,6 +308,7 @@ public class Main {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
 							running = false ;
+							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 						}
 						else {
@@ -316,6 +327,7 @@ public class Main {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
 							running = false ;
+							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 						}
 						else {
@@ -334,6 +346,7 @@ public class Main {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
 							running = false ;
+							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 						}
 						else {
@@ -352,6 +365,7 @@ public class Main {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
 							running = false ;
+							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 						}
 						else {
@@ -373,6 +387,7 @@ public class Main {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
 							running = false ;
+							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 						}
 						else {
@@ -391,6 +406,7 @@ public class Main {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
 							running = false ;
+							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 						}
 						else {
@@ -409,6 +425,7 @@ public class Main {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
 							running = false ;
+							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 						}
 						else {
@@ -427,6 +444,7 @@ public class Main {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
 							running = false ;
+							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 						}
 						else {
@@ -445,6 +463,7 @@ public class Main {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
 							running = false ;
+							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 						}
 						else {
@@ -463,6 +482,7 @@ public class Main {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
 							running = false ;
+							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 						}
 						else {
@@ -481,6 +501,7 @@ public class Main {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
 							running = false ;
+							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 						}
 						else {
@@ -499,6 +520,7 @@ public class Main {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
 							running = false ;
+							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 						}
 						else {
@@ -520,6 +542,7 @@ public class Main {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
 							running = false ;
+							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 						}
 						else {
@@ -538,6 +561,7 @@ public class Main {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
 							running = false ;
+							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 						}
 						else {
@@ -556,6 +580,7 @@ public class Main {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
 							running = false ;
+							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 						}
 						else {
@@ -574,6 +599,7 @@ public class Main {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
 							running = false ;
+							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 						}
 						else {
@@ -592,6 +618,7 @@ public class Main {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
 							running = false ;
+							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 						}
 						else {
@@ -610,6 +637,7 @@ public class Main {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
 							running = false ;
+							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 						}
 						else {
@@ -628,6 +656,7 @@ public class Main {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
 							running = false ;
+							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 						}
 						else {
@@ -646,6 +675,7 @@ public class Main {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
 							running = false ;
+							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 						}
 						else {
@@ -664,6 +694,7 @@ public class Main {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
 							running = false ;
+							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 						}
 						else {
@@ -682,6 +713,7 @@ public class Main {
 							// the user has selected a tile that is NOT a bomb so game over!
 							// game.gameOverMessage() ;
 							running = false ;
+							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 						}
 						else {
