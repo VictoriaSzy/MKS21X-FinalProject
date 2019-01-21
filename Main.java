@@ -673,7 +673,14 @@ public class Main {
 					}
 					///////////// THIS IS WHAT WE NEED TO WORK ON ////////////////////
 					if (key.getKind() == Key.Kind.Enter) {
+						terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
+						terminal.applyForegroundColor(Terminal.Color.DEFAULT);
+						terminal.applySGR(Terminal.SGR.RESET_ALL);
+						terminal.moveCursor(x,y) ;
 						terminal.putCharacter('1');
+						terminal.applyBackgroundColor(Terminal.Color.RED);
+						terminal.applyForegroundColor(Terminal.Color.WHITE);
+						terminal.applySGR(Terminal.SGR.RESET_ALL);
 						//the user has hit down so we should check the tile here to see if it's revealed or not
 						// We have to figure out how to change the identifier of the tile at x,y
 						// to the appropriate character, whether it be '*', ' ', or a number char
