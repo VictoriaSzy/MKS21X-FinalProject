@@ -128,7 +128,7 @@ public class Main {
 							terminal.exitPrivateMode();
 							running = false ; //not sure if this will work but this can try to stop the game
 							// after the board stops being created then we will put the game over message
-<<<<<<< HEAD	clearScreen();
+							clearScreen();
 							System.out.println();
 							System.out.println("YOU HIT A MINE! OR A BOMB!") ;
 							System.out.println("_____");
@@ -138,8 +138,7 @@ public class Main {
 							System.out.println("| |_\\ \\ (_| | | | | | |  __/ (_) \\ V /  __/ |");
 							System.out.println(" \\____/\\__,_|_| |_| |_|\\___|\\___/ \\_/ \\___|_|");
 							System.out.println();
-=======
->>>>>>> a01a370b9160a0babf94890659e636025296c42e
+
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
