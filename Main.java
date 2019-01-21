@@ -65,8 +65,6 @@ public class Main {
 			int x = 10 ;
 			int y = 10 ;
 			Terminal terminal = TerminalFacade.createTextTerminal() ;
-			Screen s = new Screen(terminal);
-			s.startScreen();
 			terminal.enterPrivateMode() ; // this prevents scrolling
 			terminal.moveCursor(5,5) ;
 			// text printing always starts at the cursor's position so we need to make sure it goes where we want it to go
@@ -942,9 +940,9 @@ public class Main {
 						// this line will place the time left on the bottom middle
 					}
 				}
-				s.refresh();
 			}
 		} catch (Exception e) {
+			System.out.print("\033\143");
 			System.out.println("Are you sure that you read the instructions to this program?\nThere seems to be an error with what you gave us. \nHere are the directions to help you play our awesome version of Minesweeper:") ;
 			System.out.println(directions) ;
 			System.exit(1) ;
