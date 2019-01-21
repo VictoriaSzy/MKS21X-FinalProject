@@ -681,6 +681,29 @@ public class Main {
 						terminal.applyBackgroundColor(Terminal.Color.RED);
 						terminal.applyForegroundColor(Terminal.Color.WHITE);
 						terminal.applySGR(Terminal.SGR.RESET_ALL);
+
+						int xdif, ydif ; // these variables will store the difference between the current x and y coordinates
+						// in relation to the upper left corner of the board (which varies based on the board size and mode)
+						if (args[0].equals("NE")) {
+							xdif = x ;
+							xdif -= (size.getColumns()/2) - 2 ;
+							// if xdif is 0, then the cursor is currently in the first column of the board
+							ydif = y ;
+							ydif -= (size.getRows()/2) ;
+							// if ydif is 0, then the cursor is currently in the first row of the board
+							// From here I think that we can use these variables to help us get the tiles and change their identifiers
+							if (xdif < 5 && ydif < 5) {
+								// the user has clicked on an appropriate spot where there is a tile
+								Tile chosen = game.getTile(xdif,ydif) ;
+								chosen.setVisible(true) ;
+								int n = game.numberOfBombsAround(chosen) ;
+								String num = "" + n ;
+								chosen.setIdentifier(num.charAt(0)) ;
+							}
+							else {
+								putString(size.getColumns()/2,size.getRows() - 3,terminal,"WhY dId YoU tRy To ClIcK oN tHe ScReEn BuT nOt A tIlE!?") ;
+							}
+						}
 						//the user has hit down so we should check the tile here to see if it's revealed or not
 						// We have to figure out how to change the identifier of the tile at x,y
 						// to the appropriate character, whether it be '*', ' ', or a number char
