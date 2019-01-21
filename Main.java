@@ -119,9 +119,34 @@ public class Main {
 						if (t.isBomb() && t.isVisible()) {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
+<<<<<<< HEAD
+<<<<<<< HEAD
+							terminal.exitPrivateMode();
+							running = false ; //not sure if this will work but this can try to stop the game
+							// after the board stops being created then we will put the game over message
+							clearScreen();
+
+							System.out.println();
+							System.out.println("YOU HIT A MINE! OR A BOMB!") ;
+							System.out.println("_____");
+							System.out.println("|  __ \\  ");
+							System.out.println("| |  \\/ __ _ _ __ ___   ___  _____   _____ _ __");
+							System.out.println("| | __ / _` | '_ ` _ \\ / _ \\/ _ \\ \\ / / _ \\ '__|");
+							System.out.println("| |_\\ \\ (_| | | | | | |  __/ (_) \\ V /  __/ |");
+							System.out.println(" \\____/\\__,_|_| |_| |_|\\___|\\___/ \\_/ \\___|_|");
+							System.out.println();
+
+
+=======
+							running = false ;
+							terminal.clearScreen() ;
+							terminal.exitPrivateMode() ;
+>>>>>>> ee4c99d5ada808234f1ca25e3f7d4d58a4f3c260
+=======
 							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 							running = false ;
+>>>>>>> 746785ca7f7b412fe7ef96e1d05d0d3a6252906f
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
