@@ -673,9 +673,7 @@ public class Main {
 					}
 					///////////// THIS IS WHAT WE NEED TO WORK ON ////////////////////
 					if (key.getKind() == Key.Kind.Enter) {
-						terminal.moveCursor(x,y);
-						Tile t = t.getTile(x,y);
-						terminal.putCharacter(t.getIdentifier());
+						terminal.putCharacter('1');
 						//the user has hit down so we should check the tile here to see if it's revealed or not
 						// We have to figure out how to change the identifier of the tile at x,y
 						// to the appropriate character, whether it be '*', ' ', or a number char
