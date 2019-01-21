@@ -2,7 +2,7 @@
 Welcome! This is our final project for AP Computer Science Fall Semester! ~ M I N E S W E E P E R ~
 
 # What do I do with these amazing Java files besides read them? (aka Instructions)
-After you have cloned our directory, you'll have to compile various java files (which you can do quickly by doing "javac *.java").
+After you have cloned our directory, you'll have to compile various java files (which you can do quickly by typing into the terminal containing this repo "javac *.java").
 
 However, to compile Main.java, you will have to compile by typing in "javac -cp lanterna.jar:. Main.java". There are **2 different versions of Minesweeper**. One version uses the scanner in which you enter x and y coordinates to select the tiles. The other version uses lanterna and key movements in order to navigate across the board and select tiles. For the first version, all you have to do is type "java Minesweeper" to run it. This will create a simple 10X10 board and a low random number of bombs. For the lanterna version, to run it, you type in "java -cp lanterna.jar:. Main" followed by NE,NH,CE, or CH to determine the mode (Normal or Crazy) and the level (Easy or Hard). By hitting the enter button, it reveals the tile your cursor is on. Have fun playing!
 
@@ -93,4 +93,8 @@ Victoria: I tried adding a new variable to the Tile Class that would store the n
 
 01-20-2019
 
-Victoria: I continued working on the tile construction in Main and realized that we could just use the identifier as a char instead of a String. So for all of the levels and modes, I figured out how to make Main.java put the identifier out for each of the tiles. From here, we just need to make sure that when the user clicks enter, the tile at the specific x and y coordinates makes itself visible. This will cause either a bomb to show up or the number of bombs around it.
+Victoria: I continued working on the tile construction in Main and realized that we could just use the identifier as a char instead of a String. So for all of the levels and modes, I figured out how to make Main.java put the identifier out for each of the tiles. From here, we just need to make sure that when the user clicks enter, the tile at the specific x and y coordinates makes itself visible. This will cause either a bomb to show up or the number of bombs around it..
+
+01-21-2019
+
+Victoria: I finished up working on the enter key and made sure that it worked on all of the modes and levels. I made the game work so that when the enter key is hit, it changes the identifier of the tile based on the cursor's location relative to the x-coordinate of the first column of the board and the y-coordinate of the first row of the board. We tried including our gameover message but the screen didn't clear properly so Jionghao wants to figure it out. Jionghao and I both wrote the instructions together.
