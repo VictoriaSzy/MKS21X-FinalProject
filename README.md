@@ -83,3 +83,11 @@ Jionghao: I tried to print the number like Victoria wanted but when we putstring
 01-18-2019
 
 Victoria: I changed the background and foreground color in Main.java so that we can focus on the numbers representing the tiles. I tried experimenting with using the numberOfBombsAround method from the Board class but it triggered some sort of exception so we need to figure that out.
+
+01-19-2019
+
+Victoria: I tried adding a new variable to the Tile Class that would store the number of bombs around each tile and then I wrote the accessor and mutator methods for it. The problem is that that caused Main.java to have an exception so I had to revert back to the previous version.
+
+01-20-2019
+
+Victoria: I continued working on the tile construction in Main and realized that we could just use the identifier as a char instead of a String. So for all of the levels and modes, I figured out how to make Main.java put the identifier out for each of the tiles. From here, we just need to make sure that when the user clicks enter, the tile at the specific x and y coordinates makes itself visible. This will cause either a bomb to show up or the number of bombs around it.
