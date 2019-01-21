@@ -26,6 +26,11 @@ public class Main {
 			t.putCharacter(s.charAt(i)) ;
 		}
 	}
+
+	public static void clearScreen() {
+    System.out.print("\033[H\033[2J");
+    System.out.flush();
+}
 	///////////////////////////////////////////////////////////////////////////////////////////
 	public static void main(String[] args) {
 		String directions = "To begin, make sure that you have downloaded all of the required files. \nFrom there, enter the directory containing the files." ;
@@ -123,6 +128,7 @@ public class Main {
 							terminal.exitPrivateMode();
 							running = false ; //not sure if this will work but this can try to stop the game
 							// after the board stops being created then we will put the game over message
+							clearScreen();
 							game.gameOverMessage() ;
 						}
 						else {
