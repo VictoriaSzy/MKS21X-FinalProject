@@ -103,4 +103,4 @@ Jionghao: worked with victoria to figure out the enter button Still have work to
 
 Victoria: I finished up working on the enter key and made sure that it worked on all of the modes and levels. I made the game work so that when the enter key is hit, it changes the identifier of the tile based on the cursor's location relative to the x-coordinate of the first column of the board and the y-coordinate of the first row of the board. We tried including our gameover message but the screen didn't clear properly so Jionghao wants to figure it out. Jionghao and I both wrote the instructions together. 
 
-Jionghao: I worked on the exiting of the game back into the terminal. It exits properly but it appears you cant see the words you type out. terminal is still functionional.
+Jionghao: I worked on the exiting of the game back into the terminal. It exits properly but it appears you cant see the words you type out. terminal is still functionional. We recommend that the user quits the terminal and then opens a new window to play the game again.
