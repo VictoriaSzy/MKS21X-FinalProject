@@ -621,7 +621,7 @@ public class Main {
 								terminal.clearScreen() ;
 								terminal.exitPrivateMode() ;
 								running = false ;
-								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.out.println("You have hit too many tiles!! (ONE TOO MANY) The game is OVER!") ;
 								System.exit(1) ;
 								//System.out.print("\033\143");
 							}
@@ -645,7 +645,7 @@ public class Main {
 								terminal.clearScreen() ;
 								terminal.exitPrivateMode() ;
 								running = false ;
-								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.out.println("You have hit too many tiles!! (ONE TOO MANY) The game is OVER!") ;
 								System.exit(1) ;
 								//System.out.print("\033\143");
 							}
@@ -669,7 +669,7 @@ public class Main {
 								terminal.clearScreen() ;
 								terminal.exitPrivateMode() ;
 								running = false ;
-								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.out.println("You have hit too many tiles!! (ONE TOO MANY) The game is OVER!") ;
 								System.exit(1) ;
 								//System.out.print("\033\143");
 							}
@@ -693,7 +693,7 @@ public class Main {
 								terminal.clearScreen() ;
 								terminal.exitPrivateMode() ;
 								running = false ;
-								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.out.println("You have hit too many tiles!! (ONE TOO MANY) The game is OVER!") ;
 								System.exit(1) ;
 								//System.out.print("\033\143");
 							}
@@ -717,7 +717,7 @@ public class Main {
 								terminal.clearScreen() ;
 								terminal.exitPrivateMode() ;
 								running = false ;
-								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.out.println("You have hit too many tiles!! (ONE TOO MANY) The game is OVER!") ;
 								System.exit(1) ;
 								//System.out.print("\033\143");
 							}
@@ -741,7 +741,7 @@ public class Main {
 								terminal.clearScreen() ;
 								terminal.exitPrivateMode() ;
 								running = false ;
-								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.out.println("You have hit too many tiles!! (ONE TOO MANY) The game is OVER!") ;
 								System.exit(1) ;
 								//System.out.print("\033\143");
 							}
@@ -765,7 +765,7 @@ public class Main {
 								terminal.clearScreen() ;
 								terminal.exitPrivateMode() ;
 								running = false ;
-								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.out.println("You have hit too many tiles!! (ONE TOO MANY) The game is OVER!") ;
 								System.exit(1) ;
 								//System.out.print("\033\143");
 							}
@@ -789,7 +789,7 @@ public class Main {
 								terminal.clearScreen() ;
 								terminal.exitPrivateMode() ;
 								running = false ;
-								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.out.println("You have hit too many tiles!! (ONE TOO MANY) The game is OVER!") ;
 								System.exit(1) ;
 								//System.out.print("\033\143");
 							}
@@ -813,7 +813,7 @@ public class Main {
 								terminal.clearScreen() ;
 								terminal.exitPrivateMode() ;
 								running = false ;
-								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.out.println("You have hit too many tiles!! (ONE TOO MANY) The game is OVER!") ;
 								System.exit(1) ;
 								//System.out.print("\033\143");
 							}
@@ -837,7 +837,7 @@ public class Main {
 								terminal.clearScreen() ;
 								terminal.exitPrivateMode() ;
 								running = false ;
-								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.out.println("You have hit too many tiles!! (ONE TOO MANY) The game is OVER!") ;
 								System.exit(1) ;
 								//System.out.print("\033\143");
 							}
