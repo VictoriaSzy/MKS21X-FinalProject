@@ -119,7 +119,8 @@ public class Main {
 							terminal.exitPrivateMode();
 							running = false ; //not sure if this will work but this can try to stop the game
 							// after the board stops being created then we will put the game over message
-							System.out.print("\033\143");
+							System.exit(1) ;
+							//System.out.print("\033\143");
 							// System.out.println();
 							// System.out.println("YOU HIT A MINE! OR A BOMB!") ;
 							// System.out.println("_____");
@@ -152,7 +153,8 @@ public class Main {
 							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 							running = false ;
-							System.out.print("\033\143");
+							System.exit(1) ;
+							//System.out.print("\033\143");
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -176,7 +178,8 @@ public class Main {
 							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 							running = false ;
-							System.out.print("\033\143");
+							System.exit(1) ;
+							//System.out.print("\033\143");
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -200,7 +203,8 @@ public class Main {
 							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 							running = false ;
-							System.out.print("\033\143");
+							System.exit(1) ;
+							//System.out.print("\033\143");
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -224,7 +228,8 @@ public class Main {
 							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 							running = false ;
-							System.out.print("\033\143");
+							System.exit(1) ;
+							//System.out.print("\033\143");
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -249,6 +254,8 @@ public class Main {
 							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 							running = false ;
+							System.exit(1) ;
+							//System.out.print("\033\143");
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -268,6 +275,8 @@ public class Main {
 							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 							running = false ;
+							System.exit(1) ;
+							//System.out.print("\033\143");
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -287,6 +296,8 @@ public class Main {
 							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 							running = false ;
+							System.exit(1) ;
+							//System.out.print("\033\143");
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -306,6 +317,8 @@ public class Main {
 							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 							running = false ;
+							System.exit(1) ;
+							//System.out.print("\033\143");
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -325,6 +338,8 @@ public class Main {
 							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 							running = false ;
+							System.exit(1) ;
+							//System.out.print("\033\143");
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -344,6 +359,8 @@ public class Main {
 							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 							running = false ;
+							System.exit(1) ;
+							//System.out.print("\033\143");
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -363,6 +380,8 @@ public class Main {
 							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 							running = false ;
+							System.exit(1) ;
+							//System.out.print("\033\143");
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -382,6 +401,8 @@ public class Main {
 							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 							running = false ;
+							System.exit(1) ;
+							//System.out.print("\033\143");
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -405,6 +426,9 @@ public class Main {
 								terminal.clearScreen() ;
 								terminal.exitPrivateMode() ;
 								running = false ;
+								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.exit(1) ;
+								//System.out.print("\033\143");
 							}
 						}
 						else {
@@ -426,6 +450,9 @@ public class Main {
 								terminal.clearScreen() ;
 								terminal.exitPrivateMode() ;
 								running = false ;
+								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.exit(1) ;
+								//System.out.print("\033\143");
 							}
 						}
 						else {
@@ -447,6 +474,9 @@ public class Main {
 								terminal.clearScreen() ;
 								terminal.exitPrivateMode() ;
 								running = false ;
+								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.exit(1) ;
+								//System.out.print("\033\143");
 							}
 						}
 						else {
@@ -468,6 +498,9 @@ public class Main {
 								terminal.clearScreen() ;
 								terminal.exitPrivateMode() ;
 								running = false ;
+								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.exit(1) ;
+								//System.out.print("\033\143");
 							}
 						}
 						else {
@@ -489,6 +522,9 @@ public class Main {
 								terminal.clearScreen() ;
 								terminal.exitPrivateMode() ;
 								running = false ;
+								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.exit(1) ;
+								//System.out.print("\033\143");
 							}
 						}
 						else {
@@ -510,6 +546,9 @@ public class Main {
 								terminal.clearScreen() ;
 								terminal.exitPrivateMode() ;
 								running = false ;
+								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.exit(1) ;
+								//System.out.print("\033\143");
 							}
 						}
 						else {
@@ -531,6 +570,9 @@ public class Main {
 								terminal.clearScreen() ;
 								terminal.exitPrivateMode() ;
 								running = false ;
+								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.exit(1) ;
+								//System.out.print("\033\143");
 							}
 						}
 						else {
@@ -552,6 +594,9 @@ public class Main {
 								terminal.clearScreen() ;
 								terminal.exitPrivateMode() ;
 								running = false ;
+								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.exit(1) ;
+								//System.out.print("\033\143");
 							}
 						}
 						else {
@@ -576,6 +621,9 @@ public class Main {
 								terminal.clearScreen() ;
 								terminal.exitPrivateMode() ;
 								running = false ;
+								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.exit(1) ;
+								//System.out.print("\033\143");
 							}
 						}
 						else {
@@ -597,6 +645,9 @@ public class Main {
 								terminal.clearScreen() ;
 								terminal.exitPrivateMode() ;
 								running = false ;
+								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.exit(1) ;
+								//System.out.print("\033\143");
 							}
 						}
 						else {
@@ -618,6 +669,9 @@ public class Main {
 								terminal.clearScreen() ;
 								terminal.exitPrivateMode() ;
 								running = false ;
+								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.exit(1) ;
+								//System.out.print("\033\143");
 							}
 						}
 						else {
@@ -639,6 +693,9 @@ public class Main {
 								terminal.clearScreen() ;
 								terminal.exitPrivateMode() ;
 								running = false ;
+								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.exit(1) ;
+								//System.out.print("\033\143");
 							}
 						}
 						else {
@@ -660,6 +717,9 @@ public class Main {
 								terminal.clearScreen() ;
 								terminal.exitPrivateMode() ;
 								running = false ;
+								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.exit(1) ;
+								//System.out.print("\033\143");
 							}
 						}
 						else {
@@ -681,6 +741,9 @@ public class Main {
 								terminal.clearScreen() ;
 								terminal.exitPrivateMode() ;
 								running = false ;
+								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.exit(1) ;
+								//System.out.print("\033\143");
 							}
 						}
 						else {
@@ -702,6 +765,9 @@ public class Main {
 								terminal.clearScreen() ;
 								terminal.exitPrivateMode() ;
 								running = false ;
+								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.exit(1) ;
+								//System.out.print("\033\143");
 							}
 						}
 						else {
@@ -723,6 +789,9 @@ public class Main {
 								terminal.clearScreen() ;
 								terminal.exitPrivateMode() ;
 								running = false ;
+								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.exit(1) ;
+								//System.out.print("\033\143");
 							}
 						}
 						else {
@@ -744,6 +813,9 @@ public class Main {
 								terminal.clearScreen() ;
 								terminal.exitPrivateMode() ;
 								running = false ;
+								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.exit(1) ;
+								//System.out.print("\033\143");
 							}
 						}
 						else {
@@ -765,6 +837,9 @@ public class Main {
 								terminal.clearScreen() ;
 								terminal.exitPrivateMode() ;
 								running = false ;
+								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.exit(1) ;
+								//System.out.print("\033\143");
 							}
 						}
 						else {
