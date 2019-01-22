@@ -119,6 +119,7 @@ public class Main {
 							terminal.exitPrivateMode();
 							running = false ; //not sure if this will work but this can try to stop the game
 							// after the board stops being created then we will put the game over message
+							System.out.println("You hit a bomb! Game over!") ;
 							System.exit(1) ;
 							//System.out.print("\033\143");
 							// System.out.println();
@@ -153,6 +154,7 @@ public class Main {
 							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 							running = false ;
+							System.out.println("You hit a bomb! Game over!") ;
 							System.exit(1) ;
 							//System.out.print("\033\143");
 						}
@@ -178,6 +180,7 @@ public class Main {
 							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 							running = false ;
+							System.out.println("You hit a bomb! Game over!") ;
 							System.exit(1) ;
 							//System.out.print("\033\143");
 						}
@@ -203,6 +206,7 @@ public class Main {
 							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 							running = false ;
+							System.out.println("You hit a bomb! Game over!") ;
 							System.exit(1) ;
 							//System.out.print("\033\143");
 						}
@@ -228,6 +232,7 @@ public class Main {
 							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 							running = false ;
+							System.out.println("You hit a bomb! Game over!") ;
 							System.exit(1) ;
 							//System.out.print("\033\143");
 						}
