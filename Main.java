@@ -569,6 +569,14 @@ public class Main {
 								terminal.exitPrivateMode() ;
 								running = false ;
 								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.out.println();
+								System.out.println("_____");
+								System.out.println("|  __ \\  ");
+								System.out.println("| |  \\/ __ _ _ __ ___   ___  _____   _____ _ __");
+								System.out.println("| | __ / _` | '_ ` _ \\ / _ \\/ _ \\ \\ / / _ \\ '__|");
+								System.out.println("| |_\\ \\ (_| | | | | | |  __/ (_) \\ V /  __/ |");
+								System.out.println(" \\____/\\__,_|_| |_| |_|\\___|\\___/ \\_/ \\___|_|");
+								System.out.println();
 								System.exit(1) ;
 								//System.out.print("\033\143");
 							}
@@ -597,6 +605,14 @@ public class Main {
 								terminal.exitPrivateMode() ;
 								running = false ;
 								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.out.println();
+								System.out.println("_____");
+								System.out.println("|  __ \\  ");
+								System.out.println("| |  \\/ __ _ _ __ ___   ___  _____   _____ _ __");
+								System.out.println("| | __ / _` | '_ ` _ \\ / _ \\/ _ \\ \\ / / _ \\ '__|");
+								System.out.println("| |_\\ \\ (_| | | | | | |  __/ (_) \\ V /  __/ |");
+								System.out.println(" \\____/\\__,_|_| |_| |_|\\___|\\___/ \\_/ \\___|_|");
+								System.out.println();
 								System.exit(1) ;
 								//System.out.print("\033\143");
 							}
@@ -625,6 +641,14 @@ public class Main {
 								terminal.exitPrivateMode() ;
 								running = false ;
 								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.out.println();
+								System.out.println("_____");
+								System.out.println("|  __ \\  ");
+								System.out.println("| |  \\/ __ _ _ __ ___   ___  _____   _____ _ __");
+								System.out.println("| | __ / _` | '_ ` _ \\ / _ \\/ _ \\ \\ / / _ \\ '__|");
+								System.out.println("| |_\\ \\ (_| | | | | | |  __/ (_) \\ V /  __/ |");
+								System.out.println(" \\____/\\__,_|_| |_| |_|\\___|\\___/ \\_/ \\___|_|");
+								System.out.println();
 								System.exit(1) ;
 								//System.out.print("\033\143");
 							}
@@ -653,6 +677,14 @@ public class Main {
 								terminal.exitPrivateMode() ;
 								running = false ;
 								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.out.println();
+								System.out.println("_____");
+								System.out.println("|  __ \\  ");
+								System.out.println("| |  \\/ __ _ _ __ ___   ___  _____   _____ _ __");
+								System.out.println("| | __ / _` | '_ ` _ \\ / _ \\/ _ \\ \\ / / _ \\ '__|");
+								System.out.println("| |_\\ \\ (_| | | | | | |  __/ (_) \\ V /  __/ |");
+								System.out.println(" \\____/\\__,_|_| |_| |_|\\___|\\___/ \\_/ \\___|_|");
+								System.out.println();
 								System.exit(1) ;
 								//System.out.print("\033\143");
 							}
@@ -681,6 +713,14 @@ public class Main {
 								terminal.exitPrivateMode() ;
 								running = false ;
 								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.out.println();
+								System.out.println("_____");
+								System.out.println("|  __ \\  ");
+								System.out.println("| |  \\/ __ _ _ __ ___   ___  _____   _____ _ __");
+								System.out.println("| | __ / _` | '_ ` _ \\ / _ \\/ _ \\ \\ / / _ \\ '__|");
+								System.out.println("| |_\\ \\ (_| | | | | | |  __/ (_) \\ V /  __/ |");
+								System.out.println(" \\____/\\__,_|_| |_| |_|\\___|\\___/ \\_/ \\___|_|");
+								System.out.println();
 								System.exit(1) ;
 								//System.out.print("\033\143");
 							}
@@ -709,6 +749,14 @@ public class Main {
 								terminal.exitPrivateMode() ;
 								running = false ;
 								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.out.println();
+								System.out.println("_____");
+								System.out.println("|  __ \\  ");
+								System.out.println("| |  \\/ __ _ _ __ ___   ___  _____   _____ _ __");
+								System.out.println("| | __ / _` | '_ ` _ \\ / _ \\/ _ \\ \\ / / _ \\ '__|");
+								System.out.println("| |_\\ \\ (_| | | | | | |  __/ (_) \\ V /  __/ |");
+								System.out.println(" \\____/\\__,_|_| |_| |_|\\___|\\___/ \\_/ \\___|_|");
+								System.out.println();
 								System.exit(1) ;
 								//System.out.print("\033\143");
 							}
@@ -737,6 +785,14 @@ public class Main {
 								terminal.exitPrivateMode() ;
 								running = false ;
 								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.out.println();
+								System.out.println("_____");
+								System.out.println("|  __ \\  ");
+								System.out.println("| |  \\/ __ _ _ __ ___   ___  _____   _____ _ __");
+								System.out.println("| | __ / _` | '_ ` _ \\ / _ \\/ _ \\ \\ / / _ \\ '__|");
+								System.out.println("| |_\\ \\ (_| | | | | | |  __/ (_) \\ V /  __/ |");
+								System.out.println(" \\____/\\__,_|_| |_| |_|\\___|\\___/ \\_/ \\___|_|");
+								System.out.println();
 								System.exit(1) ;
 								//System.out.print("\033\143");
 							}
@@ -765,6 +821,14 @@ public class Main {
 								terminal.exitPrivateMode() ;
 								running = false ;
 								System.out.println("You have hit too many tiles!! The game is OVER!") ;
+								System.out.println();
+								System.out.println("_____");
+								System.out.println("|  __ \\  ");
+								System.out.println("| |  \\/ __ _ _ __ ___   ___  _____   _____ _ __");
+								System.out.println("| | __ / _` | '_ ` _ \\ / _ \\/ _ \\ \\ / / _ \\ '__|");
+								System.out.println("| |_\\ \\ (_| | | | | | |  __/ (_) \\ V /  __/ |");
+								System.out.println(" \\____/\\__,_|_| |_| |_|\\___|\\___/ \\_/ \\___|_|");
+								System.out.println();
 								System.exit(1) ;
 								//System.out.print("\033\143");
 							}
