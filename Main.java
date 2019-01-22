@@ -14,6 +14,7 @@ import com.googlecode.lanterna.input.InputDecoder;
 import com.googlecode.lanterna.input.InputProvider;
 import com.googlecode.lanterna.input.Key;
 import com.googlecode.lanterna.input.KeyMappingProfile;
+import com.googlecode.lanterna.screen.Screen ;
 
 import java.util.* ;
 import java.io.* ;
@@ -26,6 +27,7 @@ public class Main {
 			t.putCharacter(s.charAt(i)) ;
 		}
 	}
+
 	///////////////////////////////////////////////////////////////////////////////////////////
 	public static void main(String[] args) {
 		String directions = "To begin, make sure that you have downloaded all of the required files. \nFrom there, enter the directory containing the files." ;
@@ -38,26 +40,30 @@ public class Main {
 		try {
 			String modeS = "" ;
 			String levelS = "" ;
+			int chances = 1 ;
 			if (args[0].equals("NE")) {
 				modeS = "Normal" ;
 				levelS = "Easy" ;
+				chances = 1 ;
 			}
 			if (args[0].equals("NH")) {
 				modeS = "Normal" ;
 				levelS = "Hard" ;
+				chances = 1;
 			}
 			if (args[0].equals("CE")) {
 				modeS = "Crazy" ;
 				levelS = "Easy" ;
+				chances = 2 ;
 			}
 			if (args[0].equals("CH")) {
 				modeS = "Crazy" ;
 				levelS = "Hard" ;
+				chances =  1;
 			}
 
 			int x = 10 ;
 			int y = 10 ;
-
 			Terminal terminal = TerminalFacade.createTextTerminal() ;
 			terminal.enterPrivateMode() ; // this prevents scrolling
 			terminal.moveCursor(5,5) ;
@@ -91,17 +97,6 @@ public class Main {
 				terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
 				terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 				terminal.applySGR(Terminal.SGR.RESET_ALL);
-
-				// This is the part that changed the background of the right side to red
-				/*terminal.moveCursor(size.getColumns() - 5, 5);
-				terminal.applyBackgroundColor(Terminal.Color.RED);
-				terminal.applyForegroundColor(Terminal.Color.YELLOW);
-				terminal.applySGR(Terminal.SGR.ENTER_BOLD);
-				terminal.putCharacter(' ');
-				terminal.putCharacter(' ');
-				//terminal.putCharacter('\u2691'); // this is the little image on the right hand side & testing the flag character
-				terminal.putCharacter(' ');
-				*/
 				terminal.moveCursor(size.getColumns()-5,6);
 				for (int i = 0 ; i < 4; i++) {
 					terminal.putCharacter(' ');
@@ -120,6 +115,20 @@ public class Main {
 						if (t.isBomb() && t.isVisible()) {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
+							terminal.clearScreen();
+							terminal.exitPrivateMode();
+							running = false ; //not sure if this will work but this can try to stop the game
+							// after the board stops being created then we will put the game over message
+							System.out.print("\033\143");
+							// System.out.println();
+							// System.out.println("YOU HIT A MINE! OR A BOMB!") ;
+							// System.out.println("_____");
+							// System.out.println("|  __ \\  ");
+							// System.out.println("| |  \\/ __ _ _ __ ___   ___  _____   _____ _ __");
+							// System.out.println("| | __ / _` | '_ ` _ \\ / _ \\/ _ \\ \\ / / _ \\ '__|");
+							// System.out.println("| |_\\ \\ (_| | | | | | |  __/ (_) \\ V /  __/ |");
+							// System.out.println(" \\____/\\__,_|_| |_| |_|\\___|\\___/ \\_/ \\___|_|");
+							// System.out.println();
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -140,6 +149,10 @@ public class Main {
 						if (t.isBomb() && t.isVisible()) {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
+							terminal.clearScreen() ;
+							terminal.exitPrivateMode() ;
+							running = false ;
+							System.out.print("\033\143");
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -160,6 +173,10 @@ public class Main {
 						if (t.isBomb() && t.isVisible()) {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
+							terminal.clearScreen() ;
+							terminal.exitPrivateMode() ;
+							running = false ;
+							System.out.print("\033\143");
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -180,6 +197,10 @@ public class Main {
 						if (t.isBomb() && t.isVisible()) {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
+							terminal.clearScreen() ;
+							terminal.exitPrivateMode() ;
+							running = false ;
+							System.out.print("\033\143");
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -200,6 +221,10 @@ public class Main {
 						if (t.isBomb() && t.isVisible()) {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
+							terminal.clearScreen() ;
+							terminal.exitPrivateMode() ;
+							running = false ;
+							System.out.print("\033\143");
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -221,6 +246,9 @@ public class Main {
 						if (t.isBomb() && t.isVisible()) {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
+							terminal.clearScreen() ;
+							terminal.exitPrivateMode() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -237,6 +265,9 @@ public class Main {
 						if (t.isBomb() && t.isVisible()) {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
+							terminal.clearScreen() ;
+							terminal.exitPrivateMode() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -253,6 +284,9 @@ public class Main {
 						if (t.isBomb() && t.isVisible()) {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
+							terminal.clearScreen() ;
+							terminal.exitPrivateMode() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -269,6 +303,9 @@ public class Main {
 						if (t.isBomb() && t.isVisible()) {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
+							terminal.clearScreen() ;
+							terminal.exitPrivateMode() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -285,6 +322,9 @@ public class Main {
 						if (t.isBomb() && t.isVisible()) {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
+							terminal.clearScreen() ;
+							terminal.exitPrivateMode() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -301,6 +341,9 @@ public class Main {
 						if (t.isBomb() && t.isVisible()) {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
+							terminal.clearScreen() ;
+							terminal.exitPrivateMode() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -317,6 +360,9 @@ public class Main {
 						if (t.isBomb() && t.isVisible()) {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
+							terminal.clearScreen() ;
+							terminal.exitPrivateMode() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -333,6 +379,9 @@ public class Main {
 						if (t.isBomb() && t.isVisible()) {
 							// the user has selected a bomb and the game must now end!
 							//game.gameOverMessage() ;
+							terminal.clearScreen() ;
+							terminal.exitPrivateMode() ;
+							running = false ;
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a # or hidden
@@ -350,8 +399,13 @@ public class Main {
 					for (int i = 0; i < 8 && c < 8; i++) {
 						t = game.getTile(r,c) ;
 						if (!t.isBomb() && t.isVisible()) {
-							// the user has selected a tile that is NOT a bomb so game over!
-							// game.gameOverMessage() ;
+							// the user has selected a tile that is NOT a bomb so maybe game over!
+							chances-- ;
+							if (chances == 0) {
+								terminal.clearScreen() ;
+								terminal.exitPrivateMode() ;
+								running = false ;
+							}
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -366,8 +420,13 @@ public class Main {
 					for (int i = 0; i < 8 && c < 8; i++) {
 						t = game.getTile(r,c) ;
 						if (!t.isBomb() && t.isVisible()) {
-							// the user has selected a tile that is NOT a bomb so game over!
-							// game.gameOverMessage() ;
+							// the user has selected a tile that is NOT a bomb so maybe game over!
+							chances-- ;
+							if (chances == 0) {
+								terminal.clearScreen() ;
+								terminal.exitPrivateMode() ;
+								running = false ;
+							}
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -382,8 +441,13 @@ public class Main {
 					for (int i = 0; i < 8 && c < 8; i++) {
 						t = game.getTile(r,c) ;
 						if (!t.isBomb() && t.isVisible()) {
-							// the user has selected a tile that is NOT a bomb so game over!
-							// game.gameOverMessage() ;
+							// the user has selected a tile that is NOT a bomb so maybe game over!
+							chances-- ;
+							if (chances == 0) {
+								terminal.clearScreen() ;
+								terminal.exitPrivateMode() ;
+								running = false ;
+							}
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -398,8 +462,13 @@ public class Main {
 					for (int i = 0; i < 8 && c < 8; i++) {
 						t = game.getTile(r,c) ;
 						if (!t.isBomb() && t.isVisible()) {
-							// the user has selected a tile that is NOT a bomb so game over!
-							// game.gameOverMessage() ;
+							// the user has selected a tile that is NOT a bomb so maybe game over!
+							chances-- ;
+							if (chances == 0) {
+								terminal.clearScreen() ;
+								terminal.exitPrivateMode() ;
+								running = false ;
+							}
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -414,8 +483,13 @@ public class Main {
 					for (int i = 0; i < 8 && c < 8; i++) {
 						t = game.getTile(r,c) ;
 						if (!t.isBomb() && t.isVisible()) {
-							// the user has selected a tile that is NOT a bomb so game over!
-							// game.gameOverMessage() ;
+							// the user has selected a tile that is NOT a bomb so maybe game over!
+							chances-- ;
+							if (chances == 0) {
+								terminal.clearScreen() ;
+								terminal.exitPrivateMode() ;
+								running = false ;
+							}
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -430,8 +504,13 @@ public class Main {
 					for (int i = 0; i < 8 && c < 8; i++) {
 						t = game.getTile(r,c) ;
 						if (!t.isBomb() && t.isVisible()) {
-							// the user has selected a tile that is NOT a bomb so game over!
-							// game.gameOverMessage() ;
+							// the user has selected a tile that is NOT a bomb so maybe game over!
+							chances-- ;
+							if (chances == 0) {
+								terminal.clearScreen() ;
+								terminal.exitPrivateMode() ;
+								running = false ;
+							}
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -446,8 +525,13 @@ public class Main {
 					for (int i = 0; i < 8 && c < 8; i++) {
 						t = game.getTile(r,c) ;
 						if (!t.isBomb() && t.isVisible()) {
-							// the user has selected a tile that is NOT a bomb so game over!
-							// game.gameOverMessage() ;
+							// the user has selected a tile that is NOT a bomb so maybe game over!
+							chances-- ;
+							if (chances == 0) {
+								terminal.clearScreen() ;
+								terminal.exitPrivateMode() ;
+								running = false ;
+							}
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -462,8 +546,13 @@ public class Main {
 					for (int i = 0; i < 8 && c < 8; i++) {
 						t = game.getTile(r,c) ;
 						if (!t.isBomb() && t.isVisible()) {
-							// the user has selected a tile that is NOT a bomb so game over!
-							// game.gameOverMessage() ;
+							// the user has selected a tile that is NOT a bomb so maybe game over!
+							chances-- ;
+							if (chances == 0) {
+								terminal.clearScreen() ;
+								terminal.exitPrivateMode() ;
+								running = false ;
+							}
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -481,8 +570,13 @@ public class Main {
 					for (int i = 0; i < 10 && c < 10; i++) {
 						t = game.getTile(r,c) ;
 						if (!t.isBomb() && t.isVisible()) {
-							// the user has selected a tile that is NOT a bomb so game over!
-							// game.gameOverMessage() ;
+							// the user has selected a tile that is NOT a bomb so maybe game over!
+							chances-- ;
+							if (chances == 0) {
+								terminal.clearScreen() ;
+								terminal.exitPrivateMode() ;
+								running = false ;
+							}
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -497,8 +591,13 @@ public class Main {
 					for (int i = 0; i < 10 && c < 10; i++) {
 						t = game.getTile(r,c) ;
 						if (!t.isBomb() && t.isVisible()) {
-							// the user has selected a tile that is NOT a bomb so game over!
-							// game.gameOverMessage() ;
+							// the user has selected a tile that is NOT a bomb so maybe game over!
+							chances-- ;
+							if (chances == 0) {
+								terminal.clearScreen() ;
+								terminal.exitPrivateMode() ;
+								running = false ;
+							}
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -513,8 +612,13 @@ public class Main {
 					for (int i = 0; i < 10 && c < 10; i++) {
 						t = game.getTile(r,c) ;
 						if (!t.isBomb() && t.isVisible()) {
-							// the user has selected a tile that is NOT a bomb so game over!
-							// game.gameOverMessage() ;
+							// the user has selected a tile that is NOT a bomb so maybe game over!
+							chances-- ;
+							if (chances == 0) {
+								terminal.clearScreen() ;
+								terminal.exitPrivateMode() ;
+								running = false ;
+							}
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -529,8 +633,13 @@ public class Main {
 					for (int i = 0; i < 10 && c < 10; i++) {
 						t = game.getTile(r,c) ;
 						if (!t.isBomb() && t.isVisible()) {
-							// the user has selected a tile that is NOT a bomb so game over!
-							// game.gameOverMessage() ;
+							// the user has selected a tile that is NOT a bomb so maybe game over!
+							chances-- ;
+							if (chances == 0) {
+								terminal.clearScreen() ;
+								terminal.exitPrivateMode() ;
+								running = false ;
+							}
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -545,8 +654,13 @@ public class Main {
 					for (int i = 0; i < 10 && c < 10; i++) {
 						t = game.getTile(r,c) ;
 						if (!t.isBomb() && t.isVisible()) {
-							// the user has selected a tile that is NOT a bomb so game over!
-							// game.gameOverMessage() ;
+							// the user has selected a tile that is NOT a bomb so maybe game over!
+							chances-- ;
+							if (chances == 0) {
+								terminal.clearScreen() ;
+								terminal.exitPrivateMode() ;
+								running = false ;
+							}
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -561,8 +675,13 @@ public class Main {
 					for (int i = 0; i < 10 && c < 10; i++) {
 						t = game.getTile(r,c) ;
 						if (!t.isBomb() && t.isVisible()) {
-							// the user has selected a tile that is NOT a bomb so game over!
-							// game.gameOverMessage() ;
+							// the user has selected a tile that is NOT a bomb so maybe game over!
+							chances-- ;
+							if (chances == 0) {
+								terminal.clearScreen() ;
+								terminal.exitPrivateMode() ;
+								running = false ;
+							}
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -577,8 +696,13 @@ public class Main {
 					for (int i = 0; i < 10 && c < 10; i++) {
 						t = game.getTile(r,c) ;
 						if (!t.isBomb() && t.isVisible()) {
-							// the user has selected a tile that is NOT a bomb so game over!
-							// game.gameOverMessage() ;
+							// the user has selected a tile that is NOT a bomb so maybe game over!
+							chances-- ;
+							if (chances == 0) {
+								terminal.clearScreen() ;
+								terminal.exitPrivateMode() ;
+								running = false ;
+							}
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -593,8 +717,13 @@ public class Main {
 					for (int i = 0; i < 10 && c < 10; i++) {
 						t = game.getTile(r,c) ;
 						if (!t.isBomb() && t.isVisible()) {
-							// the user has selected a tile that is NOT a bomb so game over!
-							// game.gameOverMessage() ;
+							// the user has selected a tile that is NOT a bomb so maybe game over!
+							chances-- ;
+							if (chances == 0) {
+								terminal.clearScreen() ;
+								terminal.exitPrivateMode() ;
+								running = false ;
+							}
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -609,8 +738,13 @@ public class Main {
 					for (int i = 0; i < 10 && c < 10; i++) {
 						t = game.getTile(r,c) ;
 						if (!t.isBomb() && t.isVisible()) {
-							// the user has selected a tile that is NOT a bomb so game over!
-							// game.gameOverMessage() ;
+							// the user has selected a tile that is NOT a bomb so maybe game over!
+							chances-- ;
+							if (chances == 0) {
+								terminal.clearScreen() ;
+								terminal.exitPrivateMode() ;
+								running = false ;
+							}
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -625,8 +759,13 @@ public class Main {
 					for (int i = 0; i < 10 && c < 10; i++) {
 						t = game.getTile(r,c) ;
 						if (!t.isBomb() && t.isVisible()) {
-							// the user has selected a tile that is NOT a bomb so game over!
-							// game.gameOverMessage() ;
+							// the user has selected a tile that is NOT a bomb so maybe game over!
+							chances-- ;
+							if (chances == 0) {
+								terminal.clearScreen() ;
+								terminal.exitPrivateMode() ;
+								running = false ;
+							}
 						}
 						else {
 							// this will put the tile's identifier on the screen, which means that it can be a bomb or hidden
@@ -644,8 +783,8 @@ public class Main {
 				if (key != null) {
 					if (key.getKind() == Key.Kind.Escape) {
 						// we need to exit the program --> THIS CAN STAY
-						terminal.exitPrivateMode() ;
 						running = false ;
+						terminal.exitPrivateMode() ;
 					}
 
 					if (key.getKind() == Key.Kind.ArrowLeft) {
@@ -673,6 +812,97 @@ public class Main {
 					}
 					///////////// THIS IS WHAT WE NEED TO WORK ON ////////////////////
 					if (key.getKind() == Key.Kind.Enter) {
+						terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
+						terminal.applyForegroundColor(Terminal.Color.DEFAULT);
+						terminal.applySGR(Terminal.SGR.RESET_ALL);
+						terminal.moveCursor(x,y) ;
+						terminal.putCharacter('1');
+						terminal.applyBackgroundColor(Terminal.Color.RED);
+						terminal.applyForegroundColor(Terminal.Color.WHITE);
+						terminal.applySGR(Terminal.SGR.RESET_ALL);
+
+						int xdif, ydif ; // these variables will store the difference between the current x and y coordinates
+						// in relation to the upper left corner of the board (which varies based on the board size and mode)
+						if (args[0].equals("NE")) {
+							xdif = x ;
+							xdif -= (size.getColumns()/2) - 2 ;
+							// if xdif is 0, then the cursor is currently in the first column of the board
+							ydif = y ;
+							ydif -= (size.getRows()/2) ;
+							// if ydif is 0, then the cursor is currently in the first row of the board
+							// From here I think that we can use these variables to help us get the tiles and change their identifiers
+							if (xdif < 5 && ydif < 5) {
+								// the user has clicked on an appropriate spot where there is a tile
+								Tile chosen = game.getTile(ydif,xdif) ;
+								chosen.setVisible(true) ;
+								int n = game.numberOfBombsAround(chosen) ;
+								String num = "" + n ;
+								chosen.setIdentifier(num.charAt(0)) ;
+							}
+							else {
+								putString(size.getColumns()/2,size.getRows() - 3,terminal,"WhY dId YoU tRy To ClIcK oN tHe ScReEn BuT nOt A tIlE!?") ;
+							}
+						}
+						if (args[0].equals("NH")) {
+							xdif = x ;
+							xdif -= (size.getColumns()/2) - 4 ;
+							// if xdif is 0, then the cursor is currently in the first column of the board
+							ydif = y ;
+							ydif -= (size.getRows()/2) ;
+							// if ydif is 0, then the cursor is currently in the first row of the board
+							// From here I think that we can use these variables to help us get the tiles and change their identifiers
+							if (xdif < 8 && ydif < 8) {
+								// the user has clicked on an appropriate spot where there is a tile
+								Tile chosen = game.getTile(ydif,xdif) ;
+								chosen.setVisible(true) ;
+								int n = game.numberOfBombsAround(chosen) ;
+								String num = "" + n ;
+								chosen.setIdentifier(num.charAt(0)) ;
+							}
+							else {
+								putString(size.getColumns()/2,size.getRows() - 3,terminal,"WhY dId YoU tRy To ClIcK oN tHe ScReEn BuT nOt A tIlE!?") ;
+							}
+						}
+						if (args[0].equals("CE")) {
+							xdif = x ;
+							xdif -= (size.getColumns()/2) - 4 ;
+							// if xdif is 0, then the cursor is currently in the first column of the board
+							ydif = y ;
+							ydif -= (size.getRows()/2) ;
+							// if ydif is 0, then the cursor is currently in the first row of the board
+							// From here I think that we can use these variables to help us get the tiles and change their identifiers
+							if (xdif < 8 && ydif < 8) {
+								// the user has clicked on an appropriate spot where there is a tile
+								Tile chosen = game.getTile(ydif,xdif) ;
+								chosen.setVisible(true) ;
+								int n = game.numberOfBombsAround(chosen) ;
+								String num = "" + n ;
+								chosen.setIdentifier(num.charAt(0)) ;
+							}
+							else {
+								putString(size.getColumns()/2,size.getRows() - 3,terminal,"WhY dId YoU tRy To ClIcK oN tHe ScReEn BuT nOt A tIlE!?") ;
+							}
+						}
+						if (args[0].equals("CH")) {
+							xdif = x ;
+							xdif -= (size.getColumns()/2) - 5 ;
+							// if xdif is 0, then the cursor is currently in the first column of the board
+							ydif = y ;
+							ydif -= (size.getRows()/2) ;
+							// if ydif is 0, then the cursor is currently in the first row of the board
+							// From here I think that we can use these variables to help us get the tiles and change their identifiers
+							if (xdif < 10 && ydif < 10) {
+								// the user has clicked on an appropriate spot where there is a tile
+								Tile chosen = game.getTile(ydif,xdif) ;
+								chosen.setVisible(true) ;
+								int n = game.numberOfBombsAround(chosen) ;
+								String num = "" + n ;
+								chosen.setIdentifier(num.charAt(0)) ;
+							}
+							else {
+								putString(size.getColumns()/2,size.getRows() - 3,terminal,"WhY dId YoU tRy To ClIcK oN tHe ScReEn BuT nOt A tIlE!?") ;
+							}
+						}
 						//the user has hit down so we should check the tile here to see if it's revealed or not
 						// We have to figure out how to change the identifier of the tile at x,y
 						// to the appropriate character, whether it be '*', ' ', or a number char
@@ -704,16 +934,19 @@ public class Main {
 				//DO EVEN WHEN NO KEY PRESSED:
 				long tEnd = System.currentTimeMillis();
 				long millis = tEnd - tStart;
-				putString(1,2,terminal, "_    _      _                          _ \n| |  | |    | |                        | |\n| |  | | ___| | ___ ___  _ __ ___   ___| |\n| |/\\| |/ _ \\ |/ __/ _ \\| '_ ` _ \\ / _ \\ |\n\\  /\\  /  __/ | (_| (_) | | | | | |  __/_|\n \\/  \\/ \\___|_|\\___\\___/|_| |_| |_|\\___(_)" ) ;
-				//putString(2,10, terminal,"Please enter which mode and level you would like by doing NE (Normal Mode - Easy), NH (Normal Mode - Hard), CE (Crazy Mode - Easy), or CH (Crazy Mode - Hard)") ;
-				if(millis/1000 > lastSecond){
-					lastSecond = millis / 1000;
-					//one second has passed.
-					putString(size.getRows()-1, size.getColumns()/2, terminal,"Seconds since start of program: "+lastSecond);
-					// this line will place the time left on the bottom middle
+				if (running) {
+					putString(1,2,terminal, "_    _      _                          _ \n| |  | |    | |                        | |\n| |  | | ___| | ___ ___  _ __ ___   ___| |\n| |/\\| |/ _ \\ |/ __/ _ \\| '_ ` _ \\ / _ \\ |\n\\  /\\  /  __/ | (_| (_) | | | | | |  __/_|\n \\/  \\/ \\___|_|\\___\\___/|_| |_| |_|\\___(_)" ) ;
+					//putString(2,10, terminal,"Please enter which mode and level you would like by doing NE (Normal Mode - Easy), NH (Normal Mode - Hard), CE (Crazy Mode - Easy), or CH (Crazy Mode - Hard)") ;
+					if(millis/1000 > lastSecond){
+						lastSecond = millis / 1000;
+						//one second has passed.
+						putString(size.getRows()-1, size.getColumns()/2, terminal,"Seconds since start of program: "+lastSecond);
+						// this line will place the time left on the bottom middle
+					}
 				}
 			}
 		} catch (Exception e) {
+			System.out.print("\033\143");
 			System.out.println("Are you sure that you read the instructions to this program?\nThere seems to be an error with what you gave us. \nHere are the directions to help you play our awesome version of Minesweeper:") ;
 			System.out.println(directions) ;
 			System.exit(1) ;

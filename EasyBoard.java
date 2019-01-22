@@ -1,6 +1,6 @@
 public class EasyBoard {
-public String[][] layout = new String[12][12] ;   // 12 rows, 12 columns
- public String[][] display = new String[12][12] ; // This is what the user sees
+public String[][] layout = new String[10][10] ;
+ public String[][] display = new String[10][10] ; // This is what the user sees
  public boolean finished = false ;
  public boolean victory = false ;
 
@@ -35,7 +35,6 @@ public void showLayout() {
           layout[x][y] = empty ;
           display[x][y] = empty ;
         }
-        // Otherwise put a "?" because the player doesn't know what it is
         else{
           layout[x][y] = hidden ;
           display[x][y] = hidden ;
@@ -48,7 +47,7 @@ public void showLayout() {
     printGame(display) ;
   }
 
-  //Displays the layout, sort of like the toString
+  //Displays the layout, sort of like the toString from wordsearch except it goes straight to printing
   public static void printGame(String[][] str){
     for(int x = 1 ; x < str.length - 1 ; x++){
       for(int y = 0 ; y < str[0].length ; y++){
@@ -72,7 +71,7 @@ public void showLayout() {
         if(x >= 1 && x <= 10){
           if(y >= 1 && y <= 10){
             // Checks if a bomb is already there
-            if(!layout[x][y].equals(bomb)){
+            if(!layout[x][y].equals(bomb)) {
               layout[x][y] = bomb;
               generatingABomb = false ;
             }
@@ -83,20 +82,20 @@ public void showLayout() {
   }
   // called when the user chooses a tile
   public void move(int x, int y) {
-    if (layout[x][y].equals(hidden) == true) {
+    if (layout[x][y].equals(hidden)) {
       //If the spot hasn't been selected, it is cleared
       finished = false ;
       display[x][y] = empty ;
       layout[x][y] = empty ;
     }
-    else if (layout[x][y].equals(bomb) == true) {
+    else if (layout[x][y].equals(bomb)) {
       finished = true ;
       victory = false ; // user lost
       System.out.println("Uh-oh! The game is OVER!!") ;
     }
     else if (display[x][y].equals(empty) && layout[x][y].equals(empty)) {
       finished = false ;
-      System.out.println("The tile you chose was revealed!") ;
+      System.out.println("The tile you chose was revealed! Keep playing!") ;
     }
   }
   // Checking if the user has won
@@ -104,7 +103,7 @@ public void showLayout() {
     int numOfTilesLeft = 0 ;
     for (int a = 0 ; a < layout.length ; a++) {
       for(int b = 0; b < layout.length; b++) {
-        if (layout[a][b].equals(hidden) == true) numOfTilesLeft++ ;
+        if (layout[a][b].equals(hidden)) numOfTilesLeft++ ;
       }
     }
 
@@ -118,11 +117,11 @@ public void showLayout() {
   public void numberOfBombsAround() {
     for (int x = 1 ; x < display.length - 2 ; x++) {
       for (int y = 1 ; y < display.length - 2 ; y++) {
-        if (layout[x][y].equals(empty) == true) {
+        if (layout[x][y].equals(empty)) {
           int numOfBombs = 0 ;
           for (int a = (x - 1) ; a <= (x + 1) ; a++) {
             for (int b = (y - 1) ; b <= (y + 1) ; b++) {
-              if (layout[a][b].equals(bomb) == true) numOfBombs++ ;
+              if (layout[a][b].equals(bomb)) numOfBombs++ ;
             }
           }
           display[x][y] = " " + numOfBombs + " " ;
@@ -135,7 +134,7 @@ public void showLayout() {
   public void clear(int x, int y){
     for(int i = (x - 1); i <= (x + 1); i++){
       for(int j = (y - 1); j <= (y + 1); j++){
-        if(layout[i][j].equals(hidden) == true){
+        if(layout[i][j].equals(hidden)){
           display[i][j] = empty;
           layout[i][j] = empty;
         }
