@@ -91,10 +91,16 @@ Victoria: I changed the background and foreground color in Main.java so that we 
 
 Victoria: I tried adding a new variable to the Tile Class that would store the number of bombs around each tile and then I wrote the accessor and mutator methods for it. The problem is that that caused Main.java to have an exception so I had to revert back to the previous version.
 
+jionghao: worked on printing the numbers on the tile, victoria had the idea to find the center of the terminal and go from there.
+
 01-20-2019
 
 Victoria: I continued working on the tile construction in Main and realized that we could just use the identifier as a char instead of a String. So for all of the levels and modes, I figured out how to make Main.java put the identifier out for each of the tiles. From here, we just need to make sure that when the user clicks enter, the tile at the specific x and y coordinates makes itself visible. This will cause either a bomb to show up or the number of bombs around it..
 
+Jionghao: worked with victoria to figure out the enter button Still have work to do before we finish.
+
 01-21-2019
 
-Victoria: I finished up working on the enter key and made sure that it worked on all of the modes and levels. I made the game work so that when the enter key is hit, it changes the identifier of the tile based on the cursor's location relative to the x-coordinate of the first column of the board and the y-coordinate of the first row of the board. We tried including our gameover message but the screen didn't clear properly so Jionghao wants to figure it out. Jionghao and I both wrote the instructions together.
+Victoria: I finished up working on the enter key and made sure that it worked on all of the modes and levels. I made the game work so that when the enter key is hit, it changes the identifier of the tile based on the cursor's location relative to the x-coordinate of the first column of the board and the y-coordinate of the first row of the board. We tried including our gameover message but the screen didn't clear properly so Jionghao wants to figure it out. Jionghao and I both wrote the instructions together. 
+
+Jionghao: I worked on the exiting of the game back into the terminal. It exits properly but it appears you cant see the words you type out. terminal is still functionional.
