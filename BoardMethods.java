@@ -17,14 +17,18 @@ public class BoardMethods{
         game.refresh() ;
         Scanner scan = new Scanner(System.in);
         int x, y ;
-        System.out.print("\nEnter the x coordinate of the tile you want to select: ") ;
-        x = scan.nextInt() ;
-        System.out.print("\nEnter the y coordinate of the tile you want to select: ") ;
-        y = scan.nextInt() ;
-
-        game.clear(x,y) ;
-        game.numberOfBombsAround() ;
-        game.refresh() ;
+        try {
+          System.out.print("\nEnter the x coordinate of the tile you want to select: ") ;
+          x = scan.nextInt() ;
+          System.out.print("\nEnter the y coordinate of the tile you want to select: ") ;
+          y = scan.nextInt() ;
+          game.clear(x,y) ;
+          game.numberOfBombsAround() ;
+          game.refresh() ;
+        } catch (Exception e) {
+          System.out.println("Please enter valid coordinates! You will have to start a new game now!") ;
+          System.exit(1) ;
+        }
         boolean running = true ;
         while (running) {
           if (game.isFinished() && game.isWin()) {
