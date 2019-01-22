@@ -251,6 +251,8 @@ public class Main {
 /////////// Normal Hard ////////////////////////////////////////////////////////////////////////////
 				if (args[0].equals("NH")) {
 					terminal.moveCursor((size.getColumns()/2) - 4,size.getRows()/2);
+					terminal.applyBackgroundColor(Terminal.Color.BLUE);
+					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 8 && c < 8; i++) {
 						t = game.getTile(r,c) ;
 						if (t.isBomb() && t.isVisible()) {
@@ -272,7 +274,11 @@ public class Main {
 					}
 					r++ ;
 					c = 0 ;
+					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
+					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 1);
+					terminal.applyBackgroundColor(Terminal.Color.BLUE);
+					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 8 && c < 8; i++) {
 						t = game.getTile(r,c) ;
 						if (t.isBomb() && t.isVisible()) {
@@ -295,6 +301,8 @@ public class Main {
 					r++ ;
 					c = 0 ;
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 2);
+					terminal.applyBackgroundColor(Terminal.Color.BLUE);
+					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 8 && c < 8; i++) {
 						t = game.getTile(r,c) ;
 						if (t.isBomb() && t.isVisible()) {
@@ -317,6 +325,8 @@ public class Main {
 					r++ ;
 					c = 0 ;
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 3);
+					terminal.applyBackgroundColor(Terminal.Color.BLUE);
+					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 8 && c < 8; i++) {
 						t = game.getTile(r,c) ;
 						if (t.isBomb() && t.isVisible()) {
@@ -339,6 +349,8 @@ public class Main {
 					r++ ;
 					c = 0 ;
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 4);
+					terminal.applyBackgroundColor(Terminal.Color.BLUE);
+					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 8 && c < 8; i++) {
 						t = game.getTile(r,c) ;
 						if (t.isBomb() && t.isVisible()) {
@@ -361,6 +373,8 @@ public class Main {
 					r++ ;
 					c = 0 ;
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 5);
+					terminal.applyBackgroundColor(Terminal.Color.BLUE);
+					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 8 && c < 8; i++) {
 						t = game.getTile(r,c) ;
 						if (t.isBomb() && t.isVisible()) {
@@ -383,6 +397,8 @@ public class Main {
 					r++ ;
 					c = 0 ;
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 6);
+					terminal.applyBackgroundColor(Terminal.Color.BLUE);
+					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 8 && c < 8; i++) {
 						t = game.getTile(r,c) ;
 						if (t.isBomb() && t.isVisible()) {
@@ -405,6 +421,8 @@ public class Main {
 					r++ ;
 					c = 0 ;
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 7);
+					terminal.applyBackgroundColor(Terminal.Color.BLUE);
+					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 8 && c < 8; i++) {
 						t = game.getTile(r,c) ;
 						if (t.isBomb() && t.isVisible()) {
