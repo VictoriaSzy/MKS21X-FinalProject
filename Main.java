@@ -659,6 +659,8 @@ public class Main {
 /////////// Crazy Hard //////////////////////////////////////////////////////////////////////////
 				if (args[0].equals("CH")) {
 					terminal.moveCursor((size.getColumns()/2) - 5,size.getRows()/2);
+					terminal.applyBackgroundColor(Terminal.Color.GREEN);
+					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 10 && c < 10; i++) {
 						t = game.getTile(r,c) ;
 						if (!t.isBomb() && t.isVisible()) {
@@ -683,6 +685,8 @@ public class Main {
 					r++ ;
 					c = 0 ;
 					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 1);
+					terminal.applyBackgroundColor(Terminal.Color.GREEN);
+					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 10 && c < 10; i++) {
 						t = game.getTile(r,c) ;
 						if (!t.isBomb() && t.isVisible()) {
@@ -707,6 +711,8 @@ public class Main {
 					r++ ;
 					c = 0 ;
 					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 2);
+					terminal.applyBackgroundColor(Terminal.Color.GREEN);
+					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 10 && c < 10; i++) {
 						t = game.getTile(r,c) ;
 						if (!t.isBomb() && t.isVisible()) {
@@ -731,6 +737,8 @@ public class Main {
 					r++ ;
 					c = 0 ;
 					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 3);
+					terminal.applyBackgroundColor(Terminal.Color.GREEN);
+					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 10 && c < 10; i++) {
 						t = game.getTile(r,c) ;
 						if (!t.isBomb() && t.isVisible()) {
@@ -755,6 +763,8 @@ public class Main {
 					r++ ;
 					c = 0 ;
 					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 4);
+					terminal.applyBackgroundColor(Terminal.Color.GREEN);
+					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 10 && c < 10; i++) {
 						t = game.getTile(r,c) ;
 						if (!t.isBomb() && t.isVisible()) {
@@ -779,6 +789,8 @@ public class Main {
 					r++ ;
 					c = 0 ;
 					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 5);
+					terminal.applyBackgroundColor(Terminal.Color.GREEN);
+					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 10 && c < 10; i++) {
 						t = game.getTile(r,c) ;
 						if (!t.isBomb() && t.isVisible()) {
@@ -803,6 +815,8 @@ public class Main {
 					r++ ;
 					c = 0 ;
 					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 6);
+					terminal.applyBackgroundColor(Terminal.Color.GREEN);
+					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 10 && c < 10; i++) {
 						t = game.getTile(r,c) ;
 						if (!t.isBomb() && t.isVisible()) {
@@ -827,6 +841,8 @@ public class Main {
 					r++ ;
 					c = 0 ;
 					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 7);
+					terminal.applyBackgroundColor(Terminal.Color.GREEN);
+					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 10 && c < 10; i++) {
 						t = game.getTile(r,c) ;
 						if (!t.isBomb() && t.isVisible()) {
@@ -851,6 +867,8 @@ public class Main {
 					r++ ;
 					c = 0 ;
 					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 8);
+					terminal.applyBackgroundColor(Terminal.Color.GREEN);
+					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 10 && c < 10; i++) {
 						t = game.getTile(r,c) ;
 						if (!t.isBomb() && t.isVisible()) {
@@ -875,6 +893,8 @@ public class Main {
 					r++ ;
 					c = 0 ;
 					terminal.moveCursor((size.getColumns()/2) - 5,(size.getRows()/2) + 9);
+					terminal.applyBackgroundColor(Terminal.Color.GREEN);
+					terminal.applyForegroundColor(Terminal.Color.WHITE);
 					for (int i = 0; i < 10 && c < 10; i++) {
 						t = game.getTile(r,c) ;
 						if (!t.isBomb() && t.isVisible()) {
