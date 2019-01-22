@@ -259,6 +259,7 @@ public class Main {
 							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 							running = false ;
+							System.out.println("You hit a bomb! Game over!") ;
 							System.exit(1) ;
 							//System.out.print("\033\143");
 						}
@@ -280,6 +281,7 @@ public class Main {
 							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 							running = false ;
+							System.out.println("You hit a bomb! Game over!") ;
 							System.exit(1) ;
 							//System.out.print("\033\143");
 						}
@@ -301,6 +303,7 @@ public class Main {
 							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 							running = false ;
+							System.out.println("You hit a bomb! Game over!") ;
 							System.exit(1) ;
 							//System.out.print("\033\143");
 						}
@@ -322,6 +325,7 @@ public class Main {
 							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 							running = false ;
+							System.out.println("You hit a bomb! Game over!") ;
 							System.exit(1) ;
 							//System.out.print("\033\143");
 						}
@@ -343,6 +347,7 @@ public class Main {
 							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 							running = false ;
+							System.out.println("You hit a bomb! Game over!") ;
 							System.exit(1) ;
 							//System.out.print("\033\143");
 						}
@@ -364,6 +369,7 @@ public class Main {
 							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 							running = false ;
+							System.out.println("You hit a bomb! Game over!") ;
 							System.exit(1) ;
 							//System.out.print("\033\143");
 						}
@@ -385,6 +391,7 @@ public class Main {
 							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 							running = false ;
+							System.out.println("You hit a bomb! Game over!") ;
 							System.exit(1) ;
 							//System.out.print("\033\143");
 						}
@@ -406,6 +413,7 @@ public class Main {
 							terminal.clearScreen() ;
 							terminal.exitPrivateMode() ;
 							running = false ;
+							System.out.println("You hit a bomb! Game over!") ;
 							System.exit(1) ;
 							//System.out.print("\033\143");
 						}
