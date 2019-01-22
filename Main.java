@@ -487,6 +487,8 @@ public class Main {
 					}
 					r++ ;
 					c = 0 ;
+					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
+					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 1);
 					terminal.applyBackgroundColor(Terminal.Color.GREEN);
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
@@ -513,6 +515,8 @@ public class Main {
 					}
 					r++ ;
 					c = 0 ;
+					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
+					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 2);
 					terminal.applyBackgroundColor(Terminal.Color.GREEN);
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
@@ -539,6 +543,8 @@ public class Main {
 					}
 					r++ ;
 					c = 0 ;
+					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
+					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 3);
 					terminal.applyBackgroundColor(Terminal.Color.GREEN);
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
@@ -565,6 +571,8 @@ public class Main {
 					}
 					r++ ;
 					c = 0 ;
+					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
+					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 4);
 					terminal.applyBackgroundColor(Terminal.Color.GREEN);
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
@@ -591,6 +599,8 @@ public class Main {
 					}
 					r++ ;
 					c = 0 ;
+					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
+					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 5);
 					terminal.applyBackgroundColor(Terminal.Color.GREEN);
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
@@ -617,6 +627,8 @@ public class Main {
 					}
 					r++ ;
 					c = 0 ;
+					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
+					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 6);
 					terminal.applyBackgroundColor(Terminal.Color.GREEN);
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
@@ -643,6 +655,8 @@ public class Main {
 					}
 					r++ ;
 					c = 0 ;
+					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
+					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 					terminal.moveCursor((size.getColumns()/2) - 4,(size.getRows()/2) + 7);
 					terminal.applyBackgroundColor(Terminal.Color.GREEN);
 					terminal.applyForegroundColor(Terminal.Color.WHITE);
@@ -669,6 +683,8 @@ public class Main {
 					}
 					r = 0 ;
 					c = 0 ;
+					terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
+					terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 				}
 /////////// Crazy Hard //////////////////////////////////////////////////////////////////////////
 				if (args[0].equals("CH")) {
